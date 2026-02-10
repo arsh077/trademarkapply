@@ -48,7 +48,7 @@ export const ExperienceHero: React.FC<ExperienceHeroProps> = ({ onNavigate }) =>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-radial from-secondary/5 to-transparent rounded-full blur-2xl"></div>
       </div>
 
-      <div ref={revealRef} className="relative z-10 w-full flex flex-col md:flex-row p-8 md:p-14 lg:p-20 min-h-[90vh] items-center md:items-stretch gap-10">
+      <div ref={revealRef} className="relative z-10 w-full flex flex-col md:flex-row p-4 sm:p-8 md:p-14 lg:p-20 min-h-[90vh] items-center md:items-stretch gap-10">
         <div className="flex-1 min-w-0 flex flex-col justify-between pb-12 md:pb-8 w-full">
           <div className="flex items-center gap-3">
              <div className="relative w-2.5 h-2.5 bg-secondary rounded-full">
@@ -57,11 +57,11 @@ export const ExperienceHero: React.FC<ExperienceHeroProps> = ({ onNavigate }) =>
              <span className="font-mono text-[11px] font-bold text-white tracking-[0.2em] uppercase">TRADEMARK.APPLY</span>
           </div>
 
-          <div className="max-w-4xl lg:-translate-y-8 pr-12">
-            <h1 className="text-[clamp(3rem,8vw,8rem)] font-black leading-[0.87] tracking-tighter text-white uppercase italic-none">
+          <div className="max-w-4xl lg:-translate-y-8 pr-0 md:pr-12">
+            <h1 className="text-[clamp(2.5rem,10vw,8rem)] font-black leading-[0.9] tracking-tighter text-white uppercase italic-none">
               SECURE <br /> <span className="text-outline">YOUR BRAND</span>
             </h1>
-            <p className="mt-8 font-mono text-[11px] text-white/60 uppercase tracking-[0.35em] max-w-lg leading-relaxed">
+            <p className="mt-6 md:mt-8 font-mono text-[10px] md:text-[11px] text-white/60 uppercase tracking-[0.2em] md:tracking-[0.35em] max-w-lg leading-relaxed">
               Professional Trademark Registration & Legal Protection Services for Modern Businesses.
             </p>
           </div>
