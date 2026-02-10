@@ -12,7 +12,7 @@ const Reviews: React.FC = () => {
       iconClassName: "text-secondary",
       titleClassName: "text-slate-900",
       className:
-        "[grid-area:stack] hover:-translate-y-10 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-gray-200 before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-white/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0 shadow-xl z-10",
+        "[grid-area:stack] hover:-translate-y-10 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-gray-200 before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-white/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0 shadow-xl z-10 hidden sm:flex",
     },
     {
       icon: <CheckCircle2 className="size-4 text-secondary" />,
@@ -22,7 +22,7 @@ const Reviews: React.FC = () => {
       iconClassName: "text-secondary",
       titleClassName: "text-slate-900",
       className:
-        "[grid-area:stack] translate-x-12 translate-y-8 hover:-translate-y-1 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-gray-200 before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-white/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0 shadow-xl z-20",
+        "[grid-area:stack] translate-x-6 translate-y-4 sm:translate-x-12 sm:translate-y-8 hover:-translate-y-1 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-gray-200 before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-white/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0 shadow-xl z-20",
     },
     {
       icon: <UserCheck className="size-4 text-secondary" />,
@@ -32,7 +32,7 @@ const Reviews: React.FC = () => {
       iconClassName: "text-secondary",
       titleClassName: "text-slate-900",
       className:
-        "[grid-area:stack] translate-x-24 translate-y-16 hover:translate-y-8 shadow-xl bg-white z-30",
+        "[grid-area:stack] translate-x-12 translate-y-8 sm:translate-x-24 sm:translate-y-16 hover:translate-y-8 shadow-xl bg-white z-30",
     },
   ];
 
