@@ -73,7 +73,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ onNavigate }) => {
                     </div>
                   </div>
                   <div className="bg-white/5 border-l border-white/5 p-8 flex flex-col justify-center items-center text-center">
-                    <div className="text-4xl font-bold text-white mb-2">₹1,999</div>
+                    <div className="text-4xl font-bold text-white mb-2">₹699</div>
                     <div className="text-xs text-slate-500 mb-8 uppercase tracking-widest">+ Govt Fees</div>
                     <GlassButton onClick={() => onNavigate('trademark-registration')} className="bg-white text-black hover:bg-slate-200 w-full">
                       Start Filing

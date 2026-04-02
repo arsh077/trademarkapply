@@ -152,7 +152,7 @@ const TrademarkRegistrationPage: React.FC<TrademarkRegistrationPageProps> = ({ o
                 <CheckCircle2 className="text-green-600 dark:text-green-400 shrink-0 mt-0.5" size={20} />
                 <div>
                   <div className="font-bold text-green-800 dark:text-green-300 text-sm">Limited-Time Offer</div>
-                  <div className="text-green-700 dark:text-green-400 text-sm">Apply your 1st trademark only @<span className="font-bold">₹1999</span></div>
+                  <div className="text-green-700 dark:text-green-400 text-sm">Apply your 1st trademark only @<span className="font-bold">₹699</span></div>
                 </div>
               </div>
               
