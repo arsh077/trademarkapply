@@ -36,10 +36,10 @@ const GlassEffect: React.FC<GlassEffectProps> = ({
     <div className="relative flex w-full h-full items-center justify-center py-0.5">
       {/* Simplified Stylish Button Mechanism */}
       <div
-        className="absolute inset-0 z-0 bg-gradient-to-br from-white/20 to-transparent dark:from-white/10 dark:to-transparent opacity-50 group-hover:opacity-100 transition-opacity pointer-events-none"
+        className="absolute inset-0 z-0 bg-gradient-to-br from-white/20 to-transparent opacity-50 group-hover:opacity-100 transition-opacity pointer-events-none"
       />
       <div
-        className="absolute inset-0 z-10 border border-white/20 dark:border-white/10 rounded-inherit pointer-events-none shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]"
+        className="absolute inset-0 z-10 border border-white/20 rounded-inherit pointer-events-none shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]"
       />
 
       {/* Content */}

@@ -95,22 +95,22 @@ const OppositionHandlingPage: React.FC<OppositionHandlingPageProps> = ({ onNavig
   ];
 
   return (
-    <div className="bg-white dark:bg-slate-950 transition-colors duration-300">
+    <div className="bg-white transition-colors duration-300">
       {/* Breadcrumb */}
-      <div className="bg-slate-50 dark:bg-slate-900 border-b border-gray-200 dark:border-slate-800">
+      <div className="bg-slate-50 border-b border-gray-200">
         <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
-            <button onClick={() => onNavigate('home')} className="hover:text-primary dark:hover:text-blue-400 transition-colors">Home</button>
-            <span className="mx-2">→</span>
-            <button onClick={() => onNavigate('services')} className="hover:text-primary dark:hover:text-blue-400 transition-colors">Services</button>
-            <span className="mx-2">→</span>
-            <span className="font-semibold text-primary dark:text-blue-400">Opposition Handling</span>
+          <div className="flex items-center text-sm text-gray-500">
+            <button onClick={() => onNavigate('home')} className="hover:text-primary transition-colors">Home</button>
+            <span className="mx-2">Ã¢â€ â€™</span>
+            <button onClick={() => onNavigate('services')} className="hover:text-primary transition-colors">Services</button>
+            <span className="mx-2">Ã¢â€ â€™</span>
+            <span className="font-semibold text-primary">Opposition Handling</span>
           </div>
         </div>
       </div>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-900 to-red-900 dark:from-black dark:to-red-950 text-white py-12 lg:py-20 relative overflow-hidden transition-colors">
+      <section className="bg-gradient-to-br from-slate-900 to-red-900 text-white py-12 lg:py-20 relative overflow-hidden transition-colors">
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -127,7 +127,7 @@ const OppositionHandlingPage: React.FC<OppositionHandlingPageProps> = ({ onNavig
               
               <div className="grid grid-cols-3 gap-4 max-w-lg mb-8">
                 <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/10 text-center">
-                  <div className="text-2xl font-bold text-secondary mb-1">₹15k</div>
+                  <div className="text-2xl font-bold text-secondary mb-1">Ã¢â€šÂ¹15k</div>
                   <div className="text-xs text-gray-300">Per Case</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/10 text-center">
@@ -167,11 +167,11 @@ const OppositionHandlingPage: React.FC<OppositionHandlingPageProps> = ({ onNavig
       </section>
 
       {/* Services Detail */}
-      <section className="py-20 bg-white dark:bg-slate-950">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4 text-slate-900 dark:text-white">Comprehensive Opposition Services</h2>
-            <p className="text-gray-600 dark:text-gray-400">Complete legal support for all trademark opposition matters</p>
+            <h2 className="text-3xl font-bold mb-4 text-slate-900">Comprehensive Opposition Services</h2>
+            <p className="text-gray-600">Complete legal support for all trademark opposition matters</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -192,12 +192,12 @@ const OppositionHandlingPage: React.FC<OppositionHandlingPageProps> = ({ onNavig
                   inactiveZone={0.01}
                   borderWidth={3}
                 />
-                <div className="h-full p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-gray-100 dark:border-slate-800 hover:shadow-lg transition-all hover:bg-white dark:hover:bg-slate-800 hover:border-red-100 dark:hover:border-red-900 group relative">
-                  <div className="w-14 h-14 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 rounded-xl flex items-center justify-center mb-6 group-hover:bg-red-600 group-hover:text-white transition-colors">
+                <div className="h-full p-8 rounded-2xl bg-slate-50 border border-gray-100 hover:shadow-lg transition-all hover:bg-white hover:border-red-100 group relative">
+                  <div className="w-14 h-14 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-red-600 group-hover:text-white transition-colors">
                     {item.icon}
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-slate-900 dark:text-white">{item.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">{item.desc}</p>
+                  <h3 className="text-xl font-bold mb-3 text-slate-900">{item.title}</h3>
+                  <p className="text-gray-600 leading-relaxed text-sm">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -206,79 +206,79 @@ const OppositionHandlingPage: React.FC<OppositionHandlingPageProps> = ({ onNavig
       </section>
 
       {/* Form Section */}
-      <section id="opposition-form" className="py-20 bg-slate-50 dark:bg-slate-900">
+      <section id="opposition-form" className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-slate-900 dark:text-white">Opposition Handling Request</h2>
-            <p className="text-gray-600 dark:text-gray-400">Get professional legal assistance for your trademark opposition matter</p>
+            <h2 className="text-3xl font-bold mb-4 text-slate-900">Opposition Handling Request</h2>
+            <p className="text-gray-600">Get professional legal assistance for your trademark opposition matter</p>
           </div>
 
           <div className="flex flex-col lg:flex-row gap-8">
             <div ref={formRef} className="lg:w-2/3">
-              <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-8 border border-gray-100 dark:border-slate-700">
+              <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
                 
                 <form onSubmit={handleNext} className="space-y-6">
                   {step === 1 && (
                     <div className="animate-in fade-in slide-in-from-right duration-300">
                       <div className="mb-6">
-                        <h3 className="text-xl font-bold text-slate-900 dark:text-white">Client Information</h3>
-                        <p className="text-sm text-gray-500 dark:text-gray-400">Please provide your personal and contact details</p>
+                        <h3 className="text-xl font-bold text-slate-900">Client Information</h3>
+                        <p className="text-sm text-gray-500">Please provide your personal and contact details</p>
                       </div>
 
                       <div className="grid md:grid-cols-2 gap-6">
                         <div>
-                          <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Your Full Name *</label>
+                          <label className="block text-sm font-bold text-gray-700 mb-1">Your Full Name *</label>
                           <div className="relative">
                             <User className="absolute left-3 top-3 text-gray-400" size={18} />
-                            <input type="text" name="fullName" required className="w-full pl-10 pr-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="Enter your full legal name" value={formData.fullName} onChange={handleChange} />
+                            <input type="text" name="fullName" required className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="Enter your full legal name" value={formData.fullName} onChange={handleChange} />
                           </div>
                         </div>
                         <div>
-                          <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Business/Company Name</label>
+                          <label className="block text-sm font-bold text-gray-700 mb-1">Business/Company Name</label>
                           <div className="relative">
                             <Building2 className="absolute left-3 top-3 text-gray-400" size={18} />
-                            <input type="text" name="businessName" className="w-full pl-10 pr-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="Enter business name" value={formData.businessName} onChange={handleChange} />
+                            <input type="text" name="businessName" className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="Enter business name" value={formData.businessName} onChange={handleChange} />
                           </div>
                         </div>
                         <div>
-                          <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Email Address *</label>
+                          <label className="block text-sm font-bold text-gray-700 mb-1">Email Address *</label>
                           <div className="relative">
                             <Mail className="absolute left-3 top-3 text-gray-400" size={18} />
-                            <input type="email" name="email" required className="w-full pl-10 pr-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="your.email@example.com" value={formData.email} onChange={handleChange} />
+                            <input type="email" name="email" required className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="your.email@example.com" value={formData.email} onChange={handleChange} />
                           </div>
                         </div>
                         <div>
-                          <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Phone Number *</label>
+                          <label className="block text-sm font-bold text-gray-700 mb-1">Phone Number *</label>
                           <div className="relative">
                             <Phone className="absolute left-3 top-3 text-gray-400" size={18} />
-                            <input type="tel" name="phone" required className="w-full pl-10 pr-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="+91 7605890360" value={formData.phone} onChange={handleChange} />
+                            <input type="tel" name="phone" required className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="+91 7605890360" value={formData.phone} onChange={handleChange} />
                           </div>
                         </div>
                       </div>
 
                       <div className="mt-6">
-                         <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Complete Address *</label>
+                         <label className="block text-sm font-bold text-gray-700 mb-1">Complete Address *</label>
                          <div className="relative">
                             <MapPin className="absolute left-3 top-3 text-gray-400" size={18} />
-                            <input type="text" name="address" required className="w-full pl-10 pr-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="Enter your complete address" value={formData.address} onChange={handleChange} />
+                            <input type="text" name="address" required className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="Enter your complete address" value={formData.address} onChange={handleChange} />
                          </div>
                       </div>
 
                       <div className="grid md:grid-cols-3 gap-6 mt-6">
                         <div>
-                          <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">City *</label>
-                          <input type="text" name="city" required className="w-full px-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="Enter city name" value={formData.city} onChange={handleChange} />
+                          <label className="block text-sm font-bold text-gray-700 mb-1">City *</label>
+                          <input type="text" name="city" required className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="Enter city name" value={formData.city} onChange={handleChange} />
                         </div>
                         <div>
-                          <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">State *</label>
-                          <SelectNative name="state" required value={formData.state} onChange={handleChange} className="dark:bg-slate-700 dark:border-slate-600 dark:text-white">
+                          <label className="block text-sm font-bold text-gray-700 mb-1">State *</label>
+                          <SelectNative name="state" required value={formData.state} onChange={handleChange} className="">
                             <option value="">Select State</option>
                             {states.map(s => <option key={s} value={s}>{s}</option>)}
                           </SelectNative>
                         </div>
                         <div>
-                          <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">PIN Code *</label>
-                          <input type="text" name="pinCode" required className="w-full px-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="123456" value={formData.pinCode} onChange={handleChange} />
+                          <label className="block text-sm font-bold text-gray-700 mb-1">PIN Code *</label>
+                          <input type="text" name="pinCode" required className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="123456" value={formData.pinCode} onChange={handleChange} />
                         </div>
                       </div>
                     </div>
@@ -287,23 +287,23 @@ const OppositionHandlingPage: React.FC<OppositionHandlingPageProps> = ({ onNavig
                   {step === 2 && (
                     <div className="animate-in fade-in slide-in-from-right duration-300">
                       <div className="mb-6">
-                        <h3 className="text-xl font-bold text-slate-900 dark:text-white">Opposition Details</h3>
-                        <p className="text-sm text-gray-500 dark:text-gray-400">Provide details about the contested trademark</p>
+                        <h3 className="text-xl font-bold text-slate-900">Opposition Details</h3>
+                        <p className="text-sm text-gray-500">Provide details about the contested trademark</p>
                       </div>
                       
                       <div className="grid md:grid-cols-2 gap-6">
                          <div>
-                            <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Trademark Application No.</label>
-                            <input type="text" className="w-full px-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="e.g. 1234567" />
+                            <label className="block text-sm font-bold text-gray-700 mb-1">Trademark Application No.</label>
+                            <input type="text" className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="e.g. 1234567" />
                          </div>
                          <div>
-                            <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Opponent Name</label>
-                            <input type="text" className="w-full px-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="Name of party opposing/being opposed" />
+                            <label className="block text-sm font-bold text-gray-700 mb-1">Opponent Name</label>
+                            <input type="text" className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="Name of party opposing/being opposed" />
                          </div>
                       </div>
                       <div className="mt-6">
-                         <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Brief Description of Conflict</label>
-                         <textarea rows={4} className="w-full px-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="Describe the core issue..."></textarea>
+                         <label className="block text-sm font-bold text-gray-700 mb-1">Brief Description of Conflict</label>
+                         <textarea rows={4} className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="Describe the core issue..."></textarea>
                       </div>
                     </div>
                   )}
@@ -311,22 +311,22 @@ const OppositionHandlingPage: React.FC<OppositionHandlingPageProps> = ({ onNavig
                   {step === 3 && (
                      <div className="animate-in fade-in slide-in-from-right duration-300">
                       <div className="mb-6">
-                        <h3 className="text-xl font-bold text-slate-900 dark:text-white">Case Information</h3>
-                        <p className="text-sm text-gray-500 dark:text-gray-400">Final review and submission</p>
+                        <h3 className="text-xl font-bold text-slate-900">Case Information</h3>
+                        <p className="text-sm text-gray-500">Final review and submission</p>
                       </div>
-                      <div className="bg-blue-50 dark:bg-blue-900/30 p-6 rounded-xl border border-blue-100 dark:border-blue-800 mb-6">
-                         <h4 className="font-bold text-primary dark:text-blue-400 mb-2">Notice Deadline</h4>
-                         <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">Have you received an official notice from the Trademark Registry? If yes, please specify the date received.</p>
-                         <input type="date" className="w-full max-w-xs px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 dark:text-white" />
+                      <div className="bg-blue-50 p-6 rounded-xl border border-blue-100 mb-6">
+                         <h4 className="font-bold text-primary mb-2">Notice Deadline</h4>
+                         <p className="text-sm text-gray-600 mb-4">Have you received an official notice from the Trademark Registry? If yes, please specify the date received.</p>
+                         <input type="date" className="w-full max-w-xs px-4 py-2 border border-gray-300 rounded-lg bg-white" />
                       </div>
                       <div className="flex items-start gap-3">
                          <input type="checkbox" id="terms" className="mt-1" required />
-                         <label htmlFor="terms" className="text-sm text-gray-600 dark:text-gray-400">I confirm that the information provided is accurate and I agree to the terms of legal representation service.</label>
+                         <label htmlFor="terms" className="text-sm text-gray-600">I confirm that the information provided is accurate and I agree to the terms of legal representation service.</label>
                       </div>
                     </div>
                   )}
 
-                  <div className="pt-6 border-t border-gray-100 dark:border-slate-700 mt-6">
+                  <div className="pt-6 border-t border-gray-100 mt-6">
                     <ProgressIndicator 
                        currentStep={step} 
                        totalSteps={3} 
@@ -341,37 +341,37 @@ const OppositionHandlingPage: React.FC<OppositionHandlingPageProps> = ({ onNavig
 
             {/* Sidebar */}
             <div className="lg:w-1/3 space-y-6">
-              <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 border-t-4 border-red-600">
+              <div className="bg-white rounded-2xl shadow-lg p-6 border-t-4 border-red-600">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-gray-200 dark:bg-slate-600 rounded-full flex items-center justify-center text-primary dark:text-blue-400 font-bold text-xl">KA</div>
+                  <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center text-primary font-bold text-xl">KA</div>
                   <div>
-                    <h3 className="font-bold text-lg dark:text-white">KHURSHID ANWAR</h3>
-                    <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">Senior Trademark Attorney</p>
+                    <h3 className="font-bold text-lg">KHURSHID ANWAR</h3>
+                    <p className="text-sm text-gray-500 font-medium">Senior Trademark Attorney</p>
                   </div>
                 </div>
 
                 <div className="space-y-2 mb-6 text-sm">
-                  <div className="flex items-center justify-between border-b border-gray-50 dark:border-slate-700 pb-2">
-                    <span className="text-gray-600 dark:text-gray-400">Experience</span>
-                    <span className="font-bold dark:text-white">7+ Years</span>
+                  <div className="flex items-center justify-between border-b border-gray-50 pb-2">
+                    <span className="text-gray-600">Experience</span>
+                    <span className="font-bold">7+ Years</span>
                   </div>
-                  <div className="flex items-center justify-between border-b border-gray-50 dark:border-slate-700 pb-2">
-                    <span className="text-gray-600 dark:text-gray-400">Cases Handled</span>
-                    <span className="font-bold dark:text-white">Hundreds</span>
+                  <div className="flex items-center justify-between border-b border-gray-50 pb-2">
+                    <span className="text-gray-600">Cases Handled</span>
+                    <span className="font-bold">Hundreds</span>
                   </div>
-                  <div className="flex items-center justify-between border-b border-gray-50 dark:border-slate-700 pb-2">
-                    <span className="text-gray-600 dark:text-gray-400">Success Rate</span>
-                    <span className="font-bold text-green-600 dark:text-green-400">95%</span>
+                  <div className="flex items-center justify-between border-b border-gray-50 pb-2">
+                    <span className="text-gray-600">Success Rate</span>
+                    <span className="font-bold text-green-600">95%</span>
                   </div>
                    <div className="flex items-center justify-between pt-2">
-                    <span className="text-gray-600 dark:text-gray-400">Expertise</span>
-                    <span className="font-bold dark:text-white">Negotiator</span>
+                    <span className="text-gray-600">Expertise</span>
+                    <span className="font-bold">Negotiator</span>
                   </div>
                 </div>
 
-                <div className="bg-gray-50 dark:bg-slate-700 p-4 rounded-lg">
-                   <h4 className="font-bold text-sm mb-2 dark:text-white">Specializations:</h4>
-                   <ul className="text-xs space-y-1 text-gray-600 dark:text-gray-300 list-disc pl-4">
+                <div className="bg-gray-50 p-4 rounded-lg">
+                   <h4 className="font-bold text-sm mb-2">Specializations:</h4>
+                   <ul className="text-xs space-y-1 text-gray-600 list-disc pl-4">
                      <li>Trademark Opposition Defense</li>
                      <li>Opposition Filing & Strategy</li>
                      <li>Hearing Representation</li>
@@ -385,10 +385,10 @@ const OppositionHandlingPage: React.FC<OppositionHandlingPageProps> = ({ onNavig
                 <h3 className="font-bold mb-4 border-b border-gray-700 pb-2">Case Information</h3>
                 <div className="space-y-4">
                   <div className="flex gap-4">
-                    <div className="w-8 h-8 rounded bg-white/10 flex items-center justify-center text-secondary font-bold">₹</div>
+                    <div className="w-8 h-8 rounded bg-white/10 flex items-center justify-center text-secondary font-bold">Ã¢â€šÂ¹</div>
                     <div>
                       <div className="font-bold text-sm text-secondary">Standard Fee</div>
-                      <div className="text-sm">₹15,000 per case (base fee)</div>
+                      <div className="text-sm">Ã¢â€šÂ¹15,000 per case (base fee)</div>
                     </div>
                   </div>
                   <div className="flex gap-4">
@@ -415,11 +415,11 @@ const OppositionHandlingPage: React.FC<OppositionHandlingPageProps> = ({ onNavig
                 </div>
               </div>
 
-              <div className="bg-red-50 dark:bg-red-900/20 rounded-2xl shadow-lg p-6 border border-red-100 dark:border-red-900/30">
-                <h3 className="font-bold mb-2 flex items-center gap-2 text-red-700 dark:text-red-400">
+              <div className="bg-red-50 rounded-2xl shadow-lg p-6 border border-red-100">
+                <h3 className="font-bold mb-2 flex items-center gap-2 text-red-700">
                   <AlertTriangle size={20} /> Urgent Case?
                 </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                <p className="text-sm text-gray-600 mb-4">
                   If your opposition has a critical deadline approaching, contact us immediately for emergency assistance.
                 </p>
                 

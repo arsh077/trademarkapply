@@ -8,7 +8,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
   return (
-    <section className="relative bg-gradient-to-br from-slate-900 via-primary to-slate-900 dark:from-black dark:via-blue-950 dark:to-slate-950 text-white pt-16 pb-20 lg:pt-24 lg:pb-24 overflow-hidden transition-colors duration-500">
+    <section className="relative bg-gradient-to-br from-slate-900 via-primary to-slate-900 text-white pt-16 pb-20 lg:pt-24 lg:pb-24 overflow-hidden transition-colors duration-500">
       {/* Overlay Background Pattern */}
       <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
       

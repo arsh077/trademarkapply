@@ -16,17 +16,17 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   };
 
   return (
-    <footer className="bg-slate-900 dark:bg-black text-gray-300 border-t border-slate-800 dark:border-white/10 transition-colors duration-300 pt-20 pb-10">
+    <footer className="bg-slate-900 text-gray-300 border-t border-slate-800 transition-colors duration-300 pt-20 pb-10">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           
           {/* Brand Info */}
           <div>
             <div className="flex items-center gap-3 text-2xl font-bold text-white mb-6">
-              <ShieldCheck className="text-primary dark:text-white" size={32} />
+              <ShieldCheck className="text-primary" size={32} />
               <span className="tracking-tight">TrademarkApply</span>
             </div>
-            <p className="text-sm leading-relaxed mb-8 text-slate-400 dark:text-gray-500">
+            <p className="text-sm leading-relaxed mb-8 text-slate-400">
               Professional trademark registration services in India. We help businesses protect their brands with expert legal guidance.
             </p>
             <div className="space-y-3 text-[10px] font-mono text-white/60 uppercase tracking-wider">

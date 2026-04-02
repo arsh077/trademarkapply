@@ -87,16 +87,16 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
   ];
 
   return (
-    <div className="bg-white dark:bg-slate-950 transition-colors duration-300">
+    <div className="bg-white transition-colors duration-300">
       {/* Breadcrumb */}
-      <div className="bg-slate-50 dark:bg-slate-900 border-b border-gray-200 dark:border-slate-800">
+      <div className="bg-slate-50 border-b border-gray-200">
         <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
-            <button onClick={() => onNavigate('home')} className="hover:text-primary dark:hover:text-blue-400 transition-colors">Home</button>
-            <span className="mx-2">→</span>
-            <button onClick={() => onNavigate('services')} className="hover:text-primary dark:hover:text-blue-400 transition-colors">Services</button>
-            <span className="mx-2">→</span>
-            <span className="font-semibold text-primary dark:text-blue-400">Logo Design</span>
+          <div className="flex items-center text-sm text-gray-500">
+            <button onClick={() => onNavigate('home')} className="hover:text-primary transition-colors">Home</button>
+            <span className="mx-2">Ã¢â€ â€™</span>
+            <button onClick={() => onNavigate('services')} className="hover:text-primary transition-colors">Services</button>
+            <span className="mx-2">Ã¢â€ â€™</span>
+            <span className="font-semibold text-primary">Logo Design</span>
           </div>
         </div>
       </div>
@@ -140,7 +140,7 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
 
           <div className="text-center">
             <div className="inline-block bg-white/10 backdrop-blur-md rounded-full px-6 py-2 mb-8 border border-white/20">
-              <span className="text-2xl font-bold text-secondary">₹7,999</span> <span className="text-sm">All Inclusive</span>
+              <span className="text-2xl font-bold text-secondary">Ã¢â€šÂ¹7,999</span> <span className="text-sm">All Inclusive</span>
             </div>
             <div className="flex justify-center gap-8 text-sm font-semibold text-purple-200">
               <span className="flex items-center gap-2"><Clock size={16} /> Timeline: 5-7 business days</span>
@@ -151,11 +151,11 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
       </section>
 
       {/* Packages Section */}
-      <section className="py-20 bg-slate-50 dark:bg-slate-900 transition-colors">
+      <section className="py-20 bg-slate-50 transition-colors">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4 text-slate-900 dark:text-white">Choose Your Logo Design Package</h2>
-            <p className="text-gray-600 dark:text-gray-400">Select the perfect package for your business needs</p>
+            <h2 className="text-3xl font-bold mb-4 text-slate-900">Choose Your Logo Design Package</h2>
+            <p className="text-gray-600">Select the perfect package for your business needs</p>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -172,10 +172,10 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
                 inactiveZone={0.01}
                 borderWidth={3}
               />
-              <div className={`relative h-full bg-white dark:bg-slate-800 rounded-2xl p-8 border-2 transition-all ${selectedPackage === 'basic' ? 'border-primary shadow-xl' : 'border-gray-100 dark:border-slate-700 shadow-lg hover:shadow-xl'}`}>
-                <h3 className="text-xl font-bold mb-2 text-slate-800 dark:text-white">Basic Logo Package</h3>
-                <div className="text-3xl font-bold text-primary dark:text-blue-400 mb-4">₹4,999</div>
-                <p className="text-sm text-gray-500 dark:text-gray-300 mb-6 font-medium bg-gray-100 dark:bg-slate-700 inline-block px-3 py-1 rounded">3-5 business days</p>
+              <div className={`relative h-full bg-white rounded-2xl p-8 border-2 transition-all ${selectedPackage === 'basic' ? 'border-primary shadow-xl' : 'border-gray-100 shadow-lg hover:shadow-xl'}`}>
+                <h3 className="text-xl font-bold mb-2 text-slate-800">Basic Logo Package</h3>
+                <div className="text-3xl font-bold text-primary mb-4">Ã¢â€šÂ¹4,999</div>
+                <p className="text-sm text-gray-500 mb-6 font-medium bg-gray-100 inline-block px-3 py-1 rounded">3-5 business days</p>
                 
                 <ul className="space-y-3 mb-8">
                   {[
@@ -186,13 +186,13 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
                     "Basic usage guidelines",
                     "Commercial usage rights"
                   ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-sm text-gray-600 dark:text-gray-300">
+                    <li key={i} className="flex items-start gap-3 text-sm text-gray-600">
                       <CheckCircle2 size={16} className="text-green-500 mt-0.5 shrink-0" />
                       {item}
                     </li>
                   ))}
                 </ul>
-                <button className={`w-full py-3 rounded-lg font-bold transition-colors ${selectedPackage === 'basic' ? 'bg-primary text-white' : 'bg-gray-100 text-slate-800 dark:bg-slate-700 dark:text-white hover:bg-gray-200 dark:hover:bg-slate-600'}`}>
+                <button className={`w-full py-3 rounded-lg font-bold transition-colors ${selectedPackage === 'basic' ? 'bg-primary text-white' : 'bg-gray-100 text-slate-800 hover:bg-gray-200'}`}>
                   Select Package
                 </button>
               </div>
@@ -211,13 +211,13 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
                 inactiveZone={0.01}
                 borderWidth={3}
               />
-              <div className={`relative h-full bg-white dark:bg-slate-800 rounded-2xl p-8 border-2 transition-all ${selectedPackage === 'professional' ? 'border-secondary shadow-2xl' : 'border-gray-100 dark:border-slate-700 shadow-xl'}`}>
+              <div className={`relative h-full bg-white rounded-2xl p-8 border-2 transition-all ${selectedPackage === 'professional' ? 'border-secondary shadow-2xl' : 'border-gray-100 shadow-xl'}`}>
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-secondary text-primary px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide shadow-md">
                   Most Popular
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-slate-800 dark:text-white">Professional Logo Package</h3>
-                <div className="text-3xl font-bold text-primary dark:text-blue-400 mb-4">₹7,999</div>
-                <p className="text-sm text-gray-500 dark:text-gray-300 mb-6 font-medium bg-gray-100 dark:bg-slate-700 inline-block px-3 py-1 rounded">5-7 business days</p>
+                <h3 className="text-xl font-bold mb-2 text-slate-800">Professional Logo Package</h3>
+                <div className="text-3xl font-bold text-primary mb-4">Ã¢â€šÂ¹7,999</div>
+                <p className="text-sm text-gray-500 mb-6 font-medium bg-gray-100 inline-block px-3 py-1 rounded">5-7 business days</p>
                 
                 <ul className="space-y-3 mb-8">
                   {[
@@ -228,13 +228,13 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
                     "Complete brand style guidelines",
                     "Full commercial usage rights"
                   ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-sm text-gray-700 dark:text-gray-200 font-medium">
+                    <li key={i} className="flex items-start gap-3 text-sm text-gray-700 font-medium">
                       <CheckCircle2 size={16} className="text-secondary mt-0.5 shrink-0" />
                       {item}
                     </li>
                   ))}
                 </ul>
-                <button className={`w-full py-3 rounded-lg font-bold transition-colors ${selectedPackage === 'professional' ? 'bg-secondary text-primary' : 'bg-gray-100 text-slate-800 dark:bg-slate-700 dark:text-white hover:bg-gray-200 dark:hover:bg-slate-600'}`}>
+                <button className={`w-full py-3 rounded-lg font-bold transition-colors ${selectedPackage === 'professional' ? 'bg-secondary text-primary' : 'bg-gray-100 text-slate-800 hover:bg-gray-200'}`}>
                   Select Package
                 </button>
               </div>
@@ -253,10 +253,10 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
                 inactiveZone={0.01}
                 borderWidth={3}
               />
-              <div className={`relative h-full bg-white dark:bg-slate-800 rounded-2xl p-8 border-2 transition-all ${selectedPackage === 'premium' ? 'border-purple-600 shadow-xl' : 'border-gray-100 dark:border-slate-700 shadow-lg hover:shadow-xl'}`}>
-                <h3 className="text-xl font-bold mb-2 text-slate-800 dark:text-white">Premium Brand Package</h3>
-                <div className="text-3xl font-bold text-primary dark:text-blue-400 mb-4">₹12,999</div>
-                <p className="text-sm text-gray-500 dark:text-gray-300 mb-6 font-medium bg-gray-100 dark:bg-slate-700 inline-block px-3 py-1 rounded">7-10 business days</p>
+              <div className={`relative h-full bg-white rounded-2xl p-8 border-2 transition-all ${selectedPackage === 'premium' ? 'border-purple-600 shadow-xl' : 'border-gray-100 shadow-lg hover:shadow-xl'}`}>
+                <h3 className="text-xl font-bold mb-2 text-slate-800">Premium Brand Package</h3>
+                <div className="text-3xl font-bold text-primary mb-4">Ã¢â€šÂ¹12,999</div>
+                <p className="text-sm text-gray-500 mb-6 font-medium bg-gray-100 inline-block px-3 py-1 rounded">7-10 business days</p>
                 
                 <ul className="space-y-3 mb-8">
                   {[
@@ -269,13 +269,13 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
                     "Full commercial usage rights",
                     "Priority support & fast delivery"
                   ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-sm text-gray-600 dark:text-gray-300">
+                    <li key={i} className="flex items-start gap-3 text-sm text-gray-600">
                       <CheckCircle2 size={16} className="text-purple-500 mt-0.5 shrink-0" />
                       {item}
                     </li>
                   ))}
                 </ul>
-                <button className={`w-full py-3 rounded-lg font-bold transition-colors ${selectedPackage === 'premium' ? 'bg-purple-600 text-white' : 'bg-gray-100 text-slate-800 dark:bg-slate-700 dark:text-white hover:bg-gray-200 dark:hover:bg-slate-600'}`}>
+                <button className={`w-full py-3 rounded-lg font-bold transition-colors ${selectedPackage === 'premium' ? 'bg-purple-600 text-white' : 'bg-gray-100 text-slate-800 hover:bg-gray-200'}`}>
                   Select Package
                 </button>
               </div>
@@ -285,11 +285,11 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
       </section>
 
       {/* Process Steps */}
-      <section className="py-20 bg-white dark:bg-slate-950">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4 text-slate-900 dark:text-white">Our 5-Step Design Process</h2>
-            <p className="text-gray-600 dark:text-gray-400">From concept to completion, we ensure every logo is perfect</p>
+            <h2 className="text-3xl font-bold mb-4 text-slate-900">Our 5-Step Design Process</h2>
+            <p className="text-gray-600">From concept to completion, we ensure every logo is perfect</p>
           </div>
 
           <div className="grid md:grid-cols-5 gap-6">
@@ -301,15 +301,15 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
               { num: "5", title: "Final Delivery", desc: "Complete brand package with high-resolution files, style guidelines, and commercial usage rights.", icon: <Download size={24} /> }
             ].map((step, idx) => (
               <div key={idx} className="relative group">
-                <div className="bg-slate-50 dark:bg-slate-900 rounded-xl p-6 h-full border border-gray-100 dark:border-slate-800 hover:shadow-lg transition-shadow">
-                  <div className="w-12 h-12 bg-primary dark:bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform">
+                <div className="bg-slate-50 rounded-xl p-6 h-full border border-gray-100 hover:shadow-lg transition-shadow">
+                  <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform">
                     {step.num}
                   </div>
-                  <h3 className="font-bold text-lg mb-2 text-slate-900 dark:text-white">{step.title}</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">{step.desc}</p>
+                  <h3 className="font-bold text-lg mb-2 text-slate-900">{step.title}</h3>
+                  <p className="text-sm text-gray-600">{step.desc}</p>
                 </div>
                 {idx < 4 && (
-                  <div className="hidden md:block absolute top-12 -right-3 w-6 h-0.5 bg-gray-300 dark:bg-slate-700 z-10"></div>
+                  <div className="hidden md:block absolute top-12 -right-3 w-6 h-0.5 bg-gray-300 z-10"></div>
                 )}
               </div>
             ))}
@@ -318,29 +318,29 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
       </section>
 
       {/* Order Form & Summary */}
-      <section className="py-20 bg-slate-50 dark:bg-slate-900 transition-colors" id="order-form">
+      <section className="py-20 bg-slate-50 transition-colors" id="order-form">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-slate-900 dark:text-white">Order Your Logo Design</h2>
-            <p className="text-gray-600 dark:text-gray-400">Complete the form below to get started with your professional logo design</p>
+            <h2 className="text-3xl font-bold mb-4 text-slate-900">Order Your Logo Design</h2>
+            <p className="text-gray-600">Complete the form below to get started with your professional logo design</p>
           </div>
 
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Right Form */}
           <div ref={formRef} className="lg:w-2/3">
-              <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-8 border border-gray-100 dark:border-slate-700">
-                <div className="flex items-center gap-4 mb-6 pb-6 border-b border-gray-100 dark:border-slate-700">
+              <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+                <div className="flex items-center gap-4 mb-6 pb-6 border-b border-gray-100">
                   <div className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold">1</div>
                   <div>
-                    <h3 className="text-xl font-bold text-slate-900 dark:text-white">Client Information</h3>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Tell us about yourself and your business</p>
+                    <h3 className="text-xl font-bold text-slate-900">Client Information</h3>
+                    <p className="text-sm text-gray-500">Tell us about yourself and your business</p>
                   </div>
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Your Full Name *</label>
+                      <label className="block text-sm font-bold text-gray-700 mb-1">Your Full Name *</label>
                       <div className="relative">
                         <User className="absolute left-3 top-3 text-gray-400" size={18} />
                         <input 
@@ -348,13 +348,13 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
                           name="fullName"
                           required
                           placeholder="Enter your full name"
-                          className="w-full pl-10 pr-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
+                          className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
                           onChange={handleChange}
                         />
                       </div>
                     </div>
                     <div>
-                      <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Business/Company Name *</label>
+                      <label className="block text-sm font-bold text-gray-700 mb-1">Business/Company Name *</label>
                       <div className="relative">
                         <Building2 className="absolute left-3 top-3 text-gray-400" size={18} />
                         <input 
@@ -362,7 +362,7 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
                           name="businessName"
                           required
                           placeholder="Enter your business name"
-                          className="w-full pl-10 pr-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
+                          className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
                           onChange={handleChange}
                         />
                       </div>
@@ -371,7 +371,7 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Email Address *</label>
+                      <label className="block text-sm font-bold text-gray-700 mb-1">Email Address *</label>
                       <div className="relative">
                         <Mail className="absolute left-3 top-3 text-gray-400" size={18} />
                         <input 
@@ -379,13 +379,13 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
                           name="email"
                           required
                           placeholder="your.email@example.com"
-                          className="w-full pl-10 pr-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
+                          className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
                           onChange={handleChange}
                         />
                       </div>
                     </div>
                     <div>
-                      <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Phone Number *</label>
+                      <label className="block text-sm font-bold text-gray-700 mb-1">Phone Number *</label>
                       <div className="relative">
                         <Phone className="absolute left-3 top-3 text-gray-400" size={18} />
                         <input 
@@ -393,7 +393,7 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
                           name="phone"
                           required
                           placeholder="+91 7605890360"
-                          className="w-full pl-10 pr-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
+                          className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
                           onChange={handleChange}
                         />
                       </div>
@@ -401,7 +401,7 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Business Address *</label>
+                    <label className="block text-sm font-bold text-gray-700 mb-1">Business Address *</label>
                     <div className="relative">
                       <MapPin className="absolute left-3 top-3 text-gray-400" size={18} />
                       <input 
@@ -409,7 +409,7 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
                         name="address"
                         required
                         placeholder="Enter complete business address"
-                        className="w-full pl-10 pr-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
+                        className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
                         onChange={handleChange}
                       />
                     </div>
@@ -417,37 +417,37 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
 
                   <div className="grid md:grid-cols-3 gap-6">
                     <div>
-                      <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">City *</label>
+                      <label className="block text-sm font-bold text-gray-700 mb-1">City *</label>
                       <input 
                         type="text"
                         name="city"
                         required
                         placeholder="Enter city name"
-                        className="w-full px-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
+                        className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
                         onChange={handleChange}
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">State *</label>
+                      <label className="block text-sm font-bold text-gray-700 mb-1">State *</label>
                       <SelectNative 
                         name="state" 
                         required 
                         value={formData.state} 
                         onChange={handleChange}
-                        className="dark:bg-slate-700 dark:border-slate-600 dark:text-white"
+                        className=""
                       >
                         <option value="">Select State</option>
                         {states.map(s => <option key={s} value={s}>{s}</option>)}
                       </SelectNative>
                     </div>
                     <div>
-                      <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">PIN Code *</label>
+                      <label className="block text-sm font-bold text-gray-700 mb-1">PIN Code *</label>
                       <input 
                         type="text"
                         name="pinCode"
                         required
                         placeholder="123456"
-                        className="w-full px-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
+                        className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
                         onChange={handleChange}
                       />
                     </div>
@@ -465,30 +465,30 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
 
             {/* Summary Sidebar */}
             <div className="lg:w-1/3 space-y-6">
-              <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 border border-gray-100 dark:border-slate-700">
-                <h3 className="text-lg font-bold mb-4 pb-4 border-b border-gray-100 dark:border-slate-700 text-slate-900 dark:text-white">Order Summary</h3>
+              <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+                <h3 className="text-lg font-bold mb-4 pb-4 border-b border-gray-100 text-slate-900">Order Summary</h3>
                 
                 <div className="mb-6">
                   <div className="flex justify-between items-start mb-2">
-                    <span className="font-bold text-primary dark:text-blue-400">
+                    <span className="font-bold text-primary">
                       {selectedPackage === 'basic' && "Basic Logo Package"}
                       {selectedPackage === 'professional' && "Professional Logo Package"}
                       {selectedPackage === 'premium' && "Premium Brand Package"}
                     </span>
                     <span className="font-bold text-secondary text-lg">
-                      {selectedPackage === 'basic' && "₹4,999"}
-                      {selectedPackage === 'professional' && "₹7,999"}
-                      {selectedPackage === 'premium' && "₹12,999"}
+                      {selectedPackage === 'basic' && "Ã¢â€šÂ¹4,999"}
+                      {selectedPackage === 'professional' && "Ã¢â€šÂ¹7,999"}
+                      {selectedPackage === 'premium' && "Ã¢â€šÂ¹12,999"}
                     </span>
                   </div>
-                  <div className="text-xs text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-slate-700 inline-block px-2 py-1 rounded">
+                  <div className="text-xs text-gray-500 bg-gray-50 inline-block px-2 py-1 rounded">
                     {selectedPackage === 'basic' && "3-5 business days"}
                     {selectedPackage === 'professional' && "5-7 business days"}
                     {selectedPackage === 'premium' && "7-10 business days"}
                   </div>
                 </div>
 
-                <ul className="space-y-2 mb-6 text-sm text-gray-600 dark:text-gray-400">
+                <ul className="space-y-2 mb-6 text-sm text-gray-600">
                   <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-green-500" /> {selectedPackage === 'basic' ? '2-3 unique concepts' : selectedPackage === 'premium' ? '5-7 unique concepts' : '3-5 unique concepts'}</li>
                   <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-green-500" /> {selectedPackage === 'basic' ? '3 rounds revisions' : 'Unlimited revisions'}</li>
                   <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-green-500" /> Trademark clearance</li>
@@ -498,17 +498,17 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
                   {selectedPackage === 'premium' && <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-green-500" /> Business card & letterhead</li>}
                 </ul>
                 
-                <div className="bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg flex items-center gap-3">
-                  <div className="w-10 h-10 bg-primary dark:bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xs">KA</div>
+                <div className="bg-blue-50 p-4 rounded-lg flex items-center gap-3">
+                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xs">KA</div>
                   <div>
-                    <div className="text-xs font-bold text-primary dark:text-blue-300 uppercase">Expert Design Team</div>
-                    <div className="text-sm font-bold dark:text-white">Led by KHURSHID ANWAR</div>
+                    <div className="text-xs font-bold text-primary uppercase">Expert Design Team</div>
+                    <div className="text-sm font-bold">Led by KHURSHID ANWAR</div>
                   </div>
                 </div>
                 
-                <div className="flex gap-2 mt-4 text-xs text-gray-500 dark:text-gray-400">
-                  <div className="bg-gray-50 dark:bg-slate-700 px-2 py-1 rounded">Hundreds of logos created</div>
-                  <div className="bg-gray-50 dark:bg-slate-700 px-2 py-1 rounded">High satisfaction rate</div>
+                <div className="flex gap-2 mt-4 text-xs text-gray-500">
+                  <div className="bg-gray-50 px-2 py-1 rounded">Hundreds of logos created</div>
+                  <div className="bg-gray-50 px-2 py-1 rounded">High satisfaction rate</div>
                 </div>
               </div>
 
@@ -523,13 +523,13 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
                 </ul>
               </div>
 
-              <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 border-l-4 border-secondary">
-                 <h3 className="font-bold mb-2 dark:text-white">Need Help?</h3>
+              <div className="bg-white rounded-2xl shadow-lg p-6 border-l-4 border-secondary">
+                 <h3 className="font-bold mb-2">Need Help?</h3>
                  <div className="space-y-2">
-                   <a href="tel:+917605890360" className="flex items-center gap-2 text-primary dark:text-blue-400 hover:underline">
+                   <a href="tel:+917605890360" className="flex items-center gap-2 text-primary hover:underline">
                      <Phone size={16} /> +91 7605890360
                    </a>
-                   <a href="mailto:trademark.legal.01@gmail.com" className="flex items-center gap-2 text-primary dark:text-blue-400 hover:underline">
+                   <a href="mailto:trademark.legal.01@gmail.com" className="flex items-center gap-2 text-primary hover:underline">
                      <Mail size={16} /> trademark.legal.01@gmail.com
                    </a>
                  </div>

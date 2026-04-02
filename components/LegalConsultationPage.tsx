@@ -114,16 +114,16 @@ const LegalConsultationPage: React.FC<LegalConsultationPageProps> = ({ onNavigat
   };
 
   return (
-    <div className="bg-white dark:bg-slate-950 transition-colors duration-300">
+    <div className="bg-white transition-colors duration-300">
       {/* Breadcrumb */}
-      <div className="bg-slate-50 dark:bg-slate-900 border-b border-gray-200 dark:border-slate-800">
+      <div className="bg-slate-50 border-b border-gray-200">
         <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
-            <button onClick={() => onNavigate('home')} className="hover:text-primary dark:hover:text-blue-400 transition-colors">Home</button>
-            <span className="mx-2">→</span>
-            <button onClick={() => onNavigate('services')} className="hover:text-primary dark:hover:text-blue-400 transition-colors">Services</button>
-            <span className="mx-2">→</span>
-            <span className="font-semibold text-primary dark:text-blue-400">Legal Consultation</span>
+          <div className="flex items-center text-sm text-gray-500">
+            <button onClick={() => onNavigate('home')} className="hover:text-primary transition-colors">Home</button>
+            <span className="mx-2">Ã¢â€ â€™</span>
+            <button onClick={() => onNavigate('services')} className="hover:text-primary transition-colors">Services</button>
+            <span className="mx-2">Ã¢â€ â€™</span>
+            <span className="font-semibold text-primary">Legal Consultation</span>
           </div>
         </div>
       </div>
@@ -178,11 +178,11 @@ const LegalConsultationPage: React.FC<LegalConsultationPageProps> = ({ onNavigat
       </section>
 
       {/* What You Get Section */}
-      <section className="py-16 bg-white dark:bg-slate-950">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-slate-900 dark:text-white">What You Get in Your Free Consultation</h2>
-            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Comprehensive legal guidance tailored to your specific business needs</p>
+            <h2 className="text-3xl font-bold mb-4 text-slate-900">What You Get in Your Free Consultation</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">Comprehensive legal guidance tailored to your specific business needs</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -203,12 +203,12 @@ const LegalConsultationPage: React.FC<LegalConsultationPageProps> = ({ onNavigat
                   inactiveZone={0.01}
                   borderWidth={3}
                 />
-                <div className="h-full p-6 rounded-xl border border-gray-100 dark:border-slate-800 bg-white dark:bg-slate-900 hover:shadow-lg transition-all hover:border-green-100 dark:hover:border-green-900 group relative">
-                  <div className="w-12 h-12 bg-green-50 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-600 group-hover:text-white transition-colors">
+                <div className="h-full p-6 rounded-xl border border-gray-100 bg-white hover:shadow-lg transition-all hover:border-green-100 group relative">
+                  <div className="w-12 h-12 bg-green-50 text-green-600 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-600 group-hover:text-white transition-colors">
                     {item.icon}
                   </div>
-                  <h3 className="text-lg font-bold mb-3 text-slate-900 dark:text-white">{item.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+                  <h3 className="text-lg font-bold mb-3 text-slate-900">{item.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -217,78 +217,78 @@ const LegalConsultationPage: React.FC<LegalConsultationPageProps> = ({ onNavigat
       </section>
 
       {/* Booking Form Section */}
-      <section id="booking-form" className="py-20 bg-slate-50 dark:bg-slate-900">
+      <section id="booking-form" className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-8">
             
             {/* Right Form */}
           <div ref={formRef} className="lg:w-2/3">
-              <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-8 border border-gray-100 dark:border-slate-700">
-                <div className="mb-8 pb-6 border-b border-gray-100 dark:border-slate-700">
-                  <h2 className="text-2xl font-bold mb-2 text-slate-900 dark:text-white">Book Your Free Legal Consultation</h2>
-                  <p className="text-gray-600 dark:text-gray-400">Complete the form below to schedule your personalized consultation with KHURSHID ANWAR</p>
+              <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+                <div className="mb-8 pb-6 border-b border-gray-100">
+                  <h2 className="text-2xl font-bold mb-2 text-slate-900">Book Your Free Legal Consultation</h2>
+                  <p className="text-gray-600">Complete the form below to schedule your personalized consultation with KHURSHID ANWAR</p>
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-8">
                   {/* Step 1: Personal Info */}
                   <div>
                     <div className="flex items-center gap-3 mb-6">
-                      <div className="w-8 h-8 bg-primary dark:bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">1</div>
-                      <h3 className="text-lg font-bold text-slate-900 dark:text-white">Personal Information</h3>
+                      <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold">1</div>
+                      <h3 className="text-lg font-bold text-slate-900">Personal Information</h3>
                     </div>
                     
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Your Full Name *</label>
+                        <label className="block text-sm font-bold text-gray-700 mb-1">Your Full Name *</label>
                         <div className="relative">
                           <User className="absolute left-3 top-3 text-gray-400" size={18} />
-                          <input type="text" name="fullName" required className="w-full pl-10 pr-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="Enter your full name" onChange={handleChange} />
+                          <input type="text" name="fullName" required className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="Enter your full name" onChange={handleChange} />
                         </div>
                       </div>
                       <div>
-                        <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Business/Company Name</label>
+                        <label className="block text-sm font-bold text-gray-700 mb-1">Business/Company Name</label>
                         <div className="relative">
                           <Building2 className="absolute left-3 top-3 text-gray-400" size={18} />
-                          <input type="text" name="businessName" className="w-full pl-10 pr-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="Enter your business name" onChange={handleChange} />
+                          <input type="text" name="businessName" className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="Enter your business name" onChange={handleChange} />
                         </div>
                       </div>
                       <div>
-                        <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Email Address *</label>
+                        <label className="block text-sm font-bold text-gray-700 mb-1">Email Address *</label>
                         <div className="relative">
                           <Mail className="absolute left-3 top-3 text-gray-400" size={18} />
-                          <input type="email" name="email" required className="w-full pl-10 pr-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="your.email@example.com" onChange={handleChange} />
+                          <input type="email" name="email" required className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="your.email@example.com" onChange={handleChange} />
                         </div>
                       </div>
                       <div>
-                        <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Phone Number *</label>
+                        <label className="block text-sm font-bold text-gray-700 mb-1">Phone Number *</label>
                         <div className="relative">
                           <Phone className="absolute left-3 top-3 text-gray-400" size={18} />
-                          <input type="tel" name="phone" required className="w-full pl-10 pr-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="+91 7605890360" onChange={handleChange} />
+                          <input type="tel" name="phone" required className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="+91 7605890360" onChange={handleChange} />
                         </div>
                       </div>
                     </div>
                     <div className="mt-6">
-                       <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Complete Address *</label>
+                       <label className="block text-sm font-bold text-gray-700 mb-1">Complete Address *</label>
                        <div className="relative">
                           <MapPin className="absolute left-3 top-3 text-gray-400" size={18} />
-                          <input type="text" name="address" required className="w-full pl-10 pr-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="Enter your complete address" onChange={handleChange} />
+                          <input type="text" name="address" required className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="Enter your complete address" onChange={handleChange} />
                        </div>
                     </div>
                     <div className="grid md:grid-cols-3 gap-6 mt-6">
                       <div>
-                        <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">City *</label>
-                        <input type="text" name="city" required className="w-full px-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="Enter city name" onChange={handleChange} />
+                        <label className="block text-sm font-bold text-gray-700 mb-1">City *</label>
+                        <input type="text" name="city" required className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="Enter city name" onChange={handleChange} />
                       </div>
                       <div>
-                        <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">State *</label>
-                        <SelectNative name="state" required value={formData.state} onChange={handleChange} className="dark:bg-slate-700 dark:border-slate-600 dark:text-white">
+                        <label className="block text-sm font-bold text-gray-700 mb-1">State *</label>
+                        <SelectNative name="state" required value={formData.state} onChange={handleChange} className="">
                           <option value="">Select State</option>
                           {states.map(s => <option key={s} value={s}>{s}</option>)}
                         </SelectNative>
                       </div>
                       <div>
-                        <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">PIN Code *</label>
-                        <input type="text" name="pinCode" required className="w-full px-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="123456" onChange={handleChange} />
+                        <label className="block text-sm font-bold text-gray-700 mb-1">PIN Code *</label>
+                        <input type="text" name="pinCode" required className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="123456" onChange={handleChange} />
                       </div>
                     </div>
                   </div>
@@ -296,19 +296,19 @@ const LegalConsultationPage: React.FC<LegalConsultationPageProps> = ({ onNavigat
                   {/* Step 2: Consultation Details */}
                   <div>
                     <div className="flex items-center gap-3 mb-6">
-                      <div className="w-8 h-8 bg-primary dark:bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">2</div>
-                      <h3 className="text-lg font-bold text-slate-900 dark:text-white">Consultation Details</h3>
+                      <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold">2</div>
+                      <h3 className="text-lg font-bold text-slate-900">Consultation Details</h3>
                     </div>
 
                     <div className="mb-6">
-                      <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-3">Consultation Topics * (Select all that apply)</label>
+                      <label className="block text-sm font-bold text-gray-700 mb-3">Consultation Topics * (Select all that apply)</label>
                       <div className="grid md:grid-cols-2 gap-3">
                         {topicsList.map((topic, i) => (
-                          <div key={i} className={`border rounded-lg p-3 cursor-pointer transition-colors flex items-center gap-3 ${formData.topics.includes(topic) ? 'bg-blue-50 dark:bg-blue-900/30 border-primary dark:border-blue-500' : 'hover:bg-gray-50 dark:hover:bg-slate-700 border-gray-200 dark:border-slate-600'}`} onClick={() => handleTopicChange(topic)}>
-                            <div className={`w-5 h-5 rounded border flex items-center justify-center ${formData.topics.includes(topic) ? 'bg-primary dark:bg-blue-600 border-primary dark:border-blue-600 text-white' : 'border-gray-400'}`}>
+                          <div key={i} className={`border rounded-lg p-3 cursor-pointer transition-colors flex items-center gap-3 ${formData.topics.includes(topic) ? 'bg-blue-50 border-primary' : 'hover:bg-gray-50 border-gray-200'}`} onClick={() => handleTopicChange(topic)}>
+                            <div className={`w-5 h-5 rounded border flex items-center justify-center ${formData.topics.includes(topic) ? 'bg-primary border-primary text-white' : 'border-gray-400'}`}>
                               {formData.topics.includes(topic) && <CheckCircle2 size={14} />}
                             </div>
-                            <span className="text-sm dark:text-gray-300">{topic}</span>
+                            <span className="text-sm">{topic}</span>
                           </div>
                         ))}
                       </div>
@@ -316,12 +316,12 @@ const LegalConsultationPage: React.FC<LegalConsultationPageProps> = ({ onNavigat
 
                     <div className="grid md:grid-cols-2 gap-6 mb-6">
                       <div>
-                        <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Preferred Date *</label>
-                        <input type="date" name="date" required className="w-full px-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary outline-none" onChange={handleChange} />
+                        <label className="block text-sm font-bold text-gray-700 mb-1">Preferred Date *</label>
+                        <input type="date" name="date" required className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none" onChange={handleChange} />
                       </div>
                       <div>
-                        <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Preferred Time *</label>
-                        <SelectNative name="time" required value={formData.time} onChange={handleChange} className="dark:bg-slate-700 dark:border-slate-600 dark:text-white">
+                        <label className="block text-sm font-bold text-gray-700 mb-1">Preferred Time *</label>
+                        <SelectNative name="time" required value={formData.time} onChange={handleChange} className="">
                           <option value="">Select time slot</option>
                           <option value="morning">Morning (9 AM - 12 PM)</option>
                           <option value="afternoon">Afternoon (12 PM - 4 PM)</option>
@@ -331,8 +331,8 @@ const LegalConsultationPage: React.FC<LegalConsultationPageProps> = ({ onNavigat
                     </div>
 
                     <div>
-                      <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Consultation Mode *</label>
-                      <SelectNative name="mode" value={formData.mode} onChange={handleChange} className="dark:bg-slate-700 dark:border-slate-600 dark:text-white">
+                      <label className="block text-sm font-bold text-gray-700 mb-1">Consultation Mode *</label>
+                      <SelectNative name="mode" value={formData.mode} onChange={handleChange} className="">
                         <option value="Video Call">Video Call (Google Meet / Zoom - Recommended)</option>
                         <option value="Phone Call">Phone Call</option>
                         <option value="In-Person">In-Person Meeting (Kolkata Office)</option>
@@ -343,31 +343,31 @@ const LegalConsultationPage: React.FC<LegalConsultationPageProps> = ({ onNavigat
                   {/* Step 3: Business Needs */}
                   <div>
                     <div className="flex items-center gap-3 mb-6">
-                      <div className="w-8 h-8 bg-primary dark:bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">3</div>
-                      <h3 className="text-lg font-bold text-slate-900 dark:text-white">Business & Consultation Needs</h3>
+                      <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold">3</div>
+                      <h3 className="text-lg font-bold text-slate-900">Business & Consultation Needs</h3>
                     </div>
                     
                     <div className="space-y-6">
                       <div>
-                        <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Business Description *</label>
-                        <textarea name="description" required rows={3} className="w-full px-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="Describe your business, products/services, and industry" onChange={handleChange}></textarea>
+                        <label className="block text-sm font-bold text-gray-700 mb-1">Business Description *</label>
+                        <textarea name="description" required rows={3} className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="Describe your business, products/services, and industry" onChange={handleChange}></textarea>
                       </div>
                       <div>
-                        <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Specific Questions or Concerns</label>
-                        <textarea name="questions" rows={3} className="w-full px-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="List any specific questions, concerns, or issues you'd like to discuss" onChange={handleChange}></textarea>
+                        <label className="block text-sm font-bold text-gray-700 mb-1">Specific Questions or Concerns</label>
+                        <textarea name="questions" rows={3} className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="List any specific questions, concerns, or issues you'd like to discuss" onChange={handleChange}></textarea>
                       </div>
                       <div className="grid md:grid-cols-2 gap-6">
                         <div>
-                          <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Urgency Level</label>
-                          <SelectNative name="urgency" value={formData.urgency} onChange={handleChange} className="dark:bg-slate-700 dark:border-slate-600 dark:text-white">
+                          <label className="block text-sm font-bold text-gray-700 mb-1">Urgency Level</label>
+                          <SelectNative name="urgency" value={formData.urgency} onChange={handleChange} className="">
                             <option value="Normal">Normal</option>
                             <option value="High">High</option>
                             <option value="Critical">Critical</option>
                           </SelectNative>
                         </div>
                         <div>
-                          <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">How did you hear about us?</label>
-                          <SelectNative name="source" value={formData.source} onChange={handleChange} className="dark:bg-slate-700 dark:border-slate-600 dark:text-white">
+                          <label className="block text-sm font-bold text-gray-700 mb-1">How did you hear about us?</label>
+                          <SelectNative name="source" value={formData.source} onChange={handleChange} className="">
                             <option value="">Select source</option>
                             <option value="Google">Google Search</option>
                             <option value="Social Media">Social Media</option>
@@ -377,14 +377,14 @@ const LegalConsultationPage: React.FC<LegalConsultationPageProps> = ({ onNavigat
                         </div>
                       </div>
                       
-                      <div className="p-4 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
-                        <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Previous Consultation</label>
+                      <div className="p-4 bg-blue-50 rounded-lg">
+                        <label className="block text-sm font-bold text-gray-700 mb-2">Previous Consultation</label>
                         <div className="flex gap-6">
-                           <label className="flex items-center gap-2 cursor-pointer text-gray-700 dark:text-gray-300">
+                           <label className="flex items-center gap-2 cursor-pointer text-gray-700">
                              <input type="radio" name="history" value="First time" defaultChecked onChange={handleChange} />
                              <span className="text-sm">This is my first consultation</span>
                            </label>
-                           <label className="flex items-center gap-2 cursor-pointer text-gray-700 dark:text-gray-300">
+                           <label className="flex items-center gap-2 cursor-pointer text-gray-700">
                              <input type="radio" name="history" value="Returning" onChange={handleChange} />
                              <span className="text-sm">I've had consultations before</span>
                            </label>
@@ -396,7 +396,7 @@ const LegalConsultationPage: React.FC<LegalConsultationPageProps> = ({ onNavigat
                   <GlassButton type="submit" className="w-full bg-secondary text-primary font-bold shadow-lg text-lg flex items-center justify-center gap-2">
                     <Calendar size={24} /> Book My Free Consultation
                   </GlassButton>
-                  <p className="text-center text-xs text-gray-500 dark:text-gray-400">
+                  <p className="text-center text-xs text-gray-500">
                     By submitting this form, you agree to our Privacy Policy and Terms of Service. We'll contact you to confirm your consultation details.
                   </p>
                 </form>
@@ -405,31 +405,31 @@ const LegalConsultationPage: React.FC<LegalConsultationPageProps> = ({ onNavigat
 
             {/* Sidebar */}
             <div className="lg:w-1/3 space-y-6">
-              <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 border-t-4 border-primary dark:border-blue-500">
+              <div className="bg-white rounded-2xl shadow-lg p-6 border-t-4 border-primary">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-gray-200 dark:bg-slate-600 rounded-full flex items-center justify-center text-primary dark:text-blue-400 font-bold text-xl">KA</div>
+                  <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center text-primary font-bold text-xl">KA</div>
                   <div>
-                    <h3 className="font-bold text-lg dark:text-white">KHURSHID ANWAR</h3>
-                    <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">Senior Trademark Attorney</p>
+                    <h3 className="font-bold text-lg">KHURSHID ANWAR</h3>
+                    <p className="text-sm text-gray-500 font-medium">Senior Trademark Attorney</p>
                   </div>
                 </div>
                 
                 <div className="space-y-3 mb-6">
-                  <div className="flex items-center gap-3 text-sm dark:text-gray-300">
+                  <div className="flex items-center gap-3 text-sm">
                     <CheckCircle2 size={16} className="text-green-500" /> 7+ Years Experience
                   </div>
-                  <div className="flex items-center gap-3 text-sm dark:text-gray-300">
+                  <div className="flex items-center gap-3 text-sm">
                     <CheckCircle2 size={16} className="text-green-500" /> Hundreds of cases handled
                   </div>
-                  <div className="flex items-center gap-3 text-sm dark:text-gray-300">
+                  <div className="flex items-center gap-3 text-sm">
                     <CheckCircle2 size={16} className="text-green-500" /> High success rate
                   </div>
-                   <div className="flex items-center gap-3 text-sm dark:text-gray-300">
+                   <div className="flex items-center gap-3 text-sm">
                     <CheckCircle2 size={16} className="text-green-500" /> Government Certified
                   </div>
                 </div>
 
-                <p className="text-sm text-gray-600 dark:text-gray-400 italic border-t dark:border-slate-700 pt-4">
+                <p className="text-sm text-gray-600 italic border-t pt-4">
                   Expert in trademark law, brand protection, and intellectual property matters. Specialized in helping businesses navigate complex IP challenges.
                 </p>
               </div>
@@ -468,42 +468,42 @@ const LegalConsultationPage: React.FC<LegalConsultationPageProps> = ({ onNavigat
                 </div>
               </div>
 
-              <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 border border-gray-100 dark:border-slate-700">
-                <h3 className="font-bold mb-4 flex items-center gap-2 dark:text-white">
+              <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+                <h3 className="font-bold mb-4 flex items-center gap-2">
                   <AlertCircle className="text-red-500" size={20} /> Immediate Assistance
                 </h3>
                 <div className="space-y-4">
-                  <a href="tel:+917605890360" className="flex items-center gap-3 p-3 bg-gray-50 dark:bg-slate-700 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-600 transition-colors">
-                    <div className="w-10 h-10 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full flex items-center justify-center">
+                  <a href="tel:+917605890360" className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <div className="w-10 h-10 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
                       <Phone size={20} />
                     </div>
                     <div>
-                      <div className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase">Call Now</div>
-                      <div className="font-bold text-primary dark:text-blue-400">+91 7605890360</div>
+                      <div className="text-xs font-bold text-gray-500 uppercase">Call Now</div>
+                      <div className="font-bold text-primary">+91 7605890360</div>
                     </div>
                   </a>
-                  <a href="mailto:trademark.legal.01@gmail.com" className="flex items-center gap-3 p-3 bg-gray-50 dark:bg-slate-700 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-600 transition-colors">
-                    <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full flex items-center justify-center">
+                  <a href="mailto:trademark.legal.01@gmail.com" className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <div className="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
                       <Mail size={20} />
                     </div>
                     <div>
-                      <div className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase">Email Us</div>
-                      <div className="font-bold text-primary dark:text-blue-400 text-sm">trademark.legal.01@gmail.com</div>
+                      <div className="text-xs font-bold text-gray-500 uppercase">Email Us</div>
+                      <div className="font-bold text-primary text-sm">trademark.legal.01@gmail.com</div>
                     </div>
                   </a>
                 </div>
                 
-                <div className="mt-6 pt-4 border-t border-gray-100 dark:border-slate-700">
-                  <div className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase mb-2">Office Hours</div>
-                  <div className="text-sm flex justify-between mb-1 dark:text-gray-300">
+                <div className="mt-6 pt-4 border-t border-gray-100">
+                  <div className="text-xs font-bold text-gray-500 uppercase mb-2">Office Hours</div>
+                  <div className="text-sm flex justify-between mb-1">
                     <span>Mon - Fri</span>
                     <span className="font-medium">9:00 AM - 6:00 PM</span>
                   </div>
-                  <div className="text-sm flex justify-between mb-1 dark:text-gray-300">
+                  <div className="text-sm flex justify-between mb-1">
                     <span>Saturday</span>
                     <span className="font-medium">9:00 AM - 2:00 PM</span>
                   </div>
-                  <div className="text-sm flex justify-between dark:text-gray-300">
+                  <div className="text-sm flex justify-between">
                     <span>Sunday</span>
                     <span className="font-medium">By appointment only</span>
                   </div>

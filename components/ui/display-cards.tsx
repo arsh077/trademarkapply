@@ -34,10 +34,10 @@ function DisplayCard({
         <span className="relative inline-block rounded-full bg-blue-100 p-1 sm:p-2 shadow-sm">
           {icon}
         </span>
-        <p className={cn("text-sm sm:text-lg font-bold text-slate-900 dark:text-white", titleClassName)}>{title}</p>
+        <p className={cn("text-sm sm:text-lg font-bold text-slate-900", titleClassName)}>{title}</p>
       </div>
-      <p className="text-slate-700 dark:text-slate-200 text-[10px] sm:text-sm leading-relaxed line-clamp-3 sm:line-clamp-4 font-medium">{description}</p>
-      <p className="text-slate-500 dark:text-slate-400 text-[8px] sm:text-xs font-mono uppercase tracking-wider">{date}</p>
+      <p className="text-slate-700 text-[10px] sm:text-sm leading-relaxed line-clamp-3 sm:line-clamp-4 font-medium">{description}</p>
+      <p className="text-slate-500 text-[8px] sm:text-xs font-mono uppercase tracking-wider">{date}</p>
     </div>
   );
 }

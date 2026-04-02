@@ -60,15 +60,15 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage }) => {
   return (
     <header className="w-full fixed top-0 left-0 right-0 z-50 transition-all duration-300">
       {/* Navbar - Glass Effect */}
-      <nav className="bg-white/80 dark:bg-[#020202]/80 backdrop-blur-md border-b border-gray-200 dark:border-white/10 transition-colors">
+      <nav className="bg-white/80 backdrop-blur-md border-b border-gray-200 transition-colors">
         <div className="container mx-auto px-6 py-3">
           <div className="flex justify-between items-center">
             {/* Logo */}
             <a href="#" onClick={(e) => handleNavClick(e, 'home')} className="flex items-center gap-2">
-              <ShieldCheck size={32} className="text-primary dark:text-white" />
+              <ShieldCheck size={32} className="text-primary" />
               <div className="flex flex-col">
-                <span className="text-xl font-bold text-slate-900 dark:text-white leading-none tracking-tight">TrademarkApply</span>
-                <span className="text-[10px] text-slate-500 dark:text-slate-400 font-mono tracking-widest uppercase">Legal Services</span>
+                <span className="text-xl font-bold text-slate-900 leading-none tracking-tight">TrademarkApply</span>
+                <span className="text-[10px] text-slate-500 font-mono tracking-widest uppercase">Legal Services</span>
               </div>
             </a>
 
@@ -89,14 +89,14 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage }) => {
               <Switch checked={isDark} onChange={toggleTheme} />
               <button
                 onClick={() => handleNavClick(null, 'admin')}
-                className="text-slate-700 dark:text-white/60 hover:text-primary dark:hover:text-secondary transition-colors font-mono text-[10px] uppercase tracking-[0.2em]"
+                className="text-slate-700 hover:text-primary transition-colors font-mono text-[10px] uppercase tracking-[0.2em]"
               >
                 Admin
               </button>
               <a 
                 href="#consultation" 
                 onClick={(e) => { e.preventDefault(); handleNavClick(null, 'get-quote'); }}
-                className="bg-primary hover:bg-blue-800 text-white dark:bg-white dark:text-black dark:hover:bg-gray-200 px-6 py-2 rounded-full transition-all duration-300 shadow-lg font-mono text-xs font-bold uppercase tracking-wider"
+                className="bg-primary hover:bg-blue-800 text-white px-6 py-2 rounded-full transition-all duration-300 shadow-lg font-mono text-xs font-bold uppercase tracking-wider"
               >
                 Get Quote
               </a>
@@ -106,7 +106,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage }) => {
             <div className="md:hidden flex items-center gap-4">
               <Switch checked={isDark} onChange={toggleTheme} />
               <button 
-                className="text-slate-900 dark:text-white"
+                className="text-slate-900"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
                 {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -116,19 +116,19 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage }) => {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="md:hidden mt-4 pb-6 border-t border-gray-200 dark:border-white/10 pt-4 space-y-4 bg-white dark:bg-[#020202]">
+            <div className="md:hidden mt-4 pb-6 border-t border-gray-200 pt-4 space-y-4 bg-white">
                {navItems.map(item => (
                  <a 
                    key={item.name}
                    href="#" 
                    onClick={(e) => handleNavClick(e, item.url)} 
-                   className="block text-slate-700 dark:text-gray-300 hover:text-primary dark:hover:text-white font-mono uppercase tracking-widest text-sm"
+                   className="block text-slate-700 hover:text-primary font-mono uppercase tracking-widest text-sm"
                  >
                    {item.name}
                  </a>
                ))}
-              <a href="#" onClick={(e) => handleNavClick(e, 'admin')} className="block text-slate-700 dark:text-gray-300 hover:text-primary dark:hover:text-white font-mono uppercase tracking-widest text-sm">Admin</a>
-              <a href="#" onClick={(e) => handleNavClick(e, 'get-quote')} className="block text-primary dark:text-secondary font-bold mt-4">Get Quote</a>
+              <a href="#" onClick={(e) => handleNavClick(e, 'admin')} className="block text-slate-700 hover:text-primary font-mono uppercase tracking-widest text-sm">Admin</a>
+              <a href="#" onClick={(e) => handleNavClick(e, 'get-quote')} className="block text-primary font-bold mt-4">Get Quote</a>
             </div>
           )}
         </div>

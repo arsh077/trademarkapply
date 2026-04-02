@@ -93,7 +93,7 @@ function App() {
   }, [currentPage]);
 
   return (
-    <div className="font-sans text-slate-800 dark:text-slate-100 antialiased bg-gray-50 dark:bg-[#020202] transition-colors duration-300 selection:bg-primary selection:text-white dark:selection:bg-secondary dark:selection:text-black">
+    <div className="font-sans text-slate-800 antialiased bg-gray-50 transition-colors duration-300 selection:bg-primary selection:text-white">
       <GlassFilter />
       <Header onNavigate={navigateTo} currentPage={currentPage} />
       <main className="relative w-full overflow-x-hidden">

@@ -83,22 +83,22 @@ const CopyrightRegistrationPage: React.FC<CopyrightRegistrationPageProps> = ({ o
   ];
 
   return (
-    <div className="bg-white dark:bg-slate-950 transition-colors duration-300">
+    <div className="bg-white transition-colors duration-300">
       {/* Breadcrumb */}
-      <div className="bg-slate-50 dark:bg-slate-900 border-b border-gray-200 dark:border-slate-800">
+      <div className="bg-slate-50 border-b border-gray-200">
         <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
-            <button onClick={() => onNavigate('home')} className="hover:text-primary dark:hover:text-blue-400 transition-colors">Home</button>
-            <span className="mx-2">→</span>
-            <button onClick={() => onNavigate('services')} className="hover:text-primary dark:hover:text-blue-400 transition-colors">Services</button>
-            <span className="mx-2">→</span>
-            <span className="font-semibold text-primary dark:text-blue-400">Copyright Registration</span>
+          <div className="flex items-center text-sm text-gray-500">
+            <button onClick={() => onNavigate('home')} className="hover:text-primary transition-colors">Home</button>
+            <span className="mx-2">Ã¢â€ â€™</span>
+            <button onClick={() => onNavigate('services')} className="hover:text-primary transition-colors">Services</button>
+            <span className="mx-2">Ã¢â€ â€™</span>
+            <span className="font-semibold text-primary">Copyright Registration</span>
           </div>
         </div>
       </div>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-teal-900 to-cyan-700 dark:from-teal-950 dark:to-cyan-900 text-white py-12 lg:py-20 relative overflow-hidden transition-colors">
+      <section className="bg-gradient-to-br from-teal-900 to-cyan-700 text-white py-12 lg:py-20 relative overflow-hidden transition-colors">
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -115,7 +115,7 @@ const CopyrightRegistrationPage: React.FC<CopyrightRegistrationPageProps> = ({ o
               
               <div className="grid grid-cols-3 gap-4 max-w-lg mb-8">
                 <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/10 text-center">
-                  <div className="text-2xl font-bold text-secondary mb-1">₹2,999+</div>
+                  <div className="text-2xl font-bold text-secondary mb-1">Ã¢â€šÂ¹2,999+</div>
                   <div className="text-xs text-gray-200">Govt. fees</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/10 text-center">
@@ -155,11 +155,11 @@ const CopyrightRegistrationPage: React.FC<CopyrightRegistrationPageProps> = ({ o
       </section>
 
       {/* Comprehensive Services */}
-      <section className="py-20 bg-white dark:bg-slate-950">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4 text-slate-900 dark:text-white">Comprehensive Copyright Services</h2>
-            <p className="text-gray-600 dark:text-gray-400">Professional copyright registration for all types of creative works</p>
+            <h2 className="text-3xl font-bold mb-4 text-slate-900">Comprehensive Copyright Services</h2>
+            <p className="text-gray-600">Professional copyright registration for all types of creative works</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -171,12 +171,12 @@ const CopyrightRegistrationPage: React.FC<CopyrightRegistrationPageProps> = ({ o
               { icon: <Video size={32} />, title: "Cinematographic Works", desc: "Complete protection for movies, documentaries, video content, animations, commercials, educational videos, and all cinematographic works." },
               { icon: <HomeIcon size={32} />, title: "Architectural Plans", desc: "Specialized copyright services for building plans, architectural designs, interior layouts, landscape designs, technical drawings, and blueprints." },
             ].map((item, i) => (
-              <div key={i} className="p-8 rounded-2xl bg-teal-50/50 dark:bg-teal-900/10 border border-teal-100 dark:border-teal-900/30 hover:shadow-lg transition-all hover:bg-white dark:hover:bg-slate-800 hover:border-teal-200 dark:hover:border-teal-700 group">
-                <div className="w-14 h-14 bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400 rounded-xl flex items-center justify-center mb-6 group-hover:bg-teal-600 group-hover:text-white transition-colors">
+              <div key={i} className="p-8 rounded-2xl bg-teal-50/50 border border-teal-100 hover:shadow-lg transition-all hover:bg-white hover:border-teal-200 group">
+                <div className="w-14 h-14 bg-teal-100 text-teal-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-teal-600 group-hover:text-white transition-colors">
                   {item.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-slate-900 dark:text-white">{item.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">{item.desc}</p>
+                <h3 className="text-xl font-bold mb-3 text-slate-900">{item.title}</h3>
+                <p className="text-gray-600 leading-relaxed text-sm">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -184,80 +184,80 @@ const CopyrightRegistrationPage: React.FC<CopyrightRegistrationPageProps> = ({ o
       </section>
 
       {/* Form Section */}
-      <section id="copyright-form" className="py-20 bg-slate-50 dark:bg-slate-900">
+      <section id="copyright-form" className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-slate-900 dark:text-white">Copyright Registration Request</h2>
-            <p className="text-gray-600 dark:text-gray-400">Complete the comprehensive form below to register your creative work</p>
+            <h2 className="text-3xl font-bold mb-4 text-slate-900">Copyright Registration Request</h2>
+            <p className="text-gray-600">Complete the comprehensive form below to register your creative work</p>
           </div>
 
           <div className="flex flex-col lg:flex-row gap-8">
             <div ref={formRef} className="lg:w-2/3">
-              <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-8 border border-gray-100 dark:border-slate-700">
+              <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
                 
-                <div className="flex items-center gap-4 mb-6 pb-6 border-b border-gray-100 dark:border-slate-700">
+                <div className="flex items-center gap-4 mb-6 pb-6 border-b border-gray-100">
                   <div className="w-10 h-10 bg-teal-500 text-white rounded-full flex items-center justify-center font-bold">1</div>
                   <div>
-                    <h3 className="text-xl font-bold text-slate-900 dark:text-white">Author Information</h3>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Tell us about the creator and contact details</p>
+                    <h3 className="text-xl font-bold text-slate-900">Author Information</h3>
+                    <p className="text-sm text-gray-500">Tell us about the creator and contact details</p>
                   </div>
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Author/Creator Name *</label>
+                      <label className="block text-sm font-bold text-gray-700 mb-1">Author/Creator Name *</label>
                       <div className="relative">
                         <User className="absolute left-3 top-3 text-gray-400" size={18} />
-                        <input type="text" name="authorName" required className="w-full pl-10 pr-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-teal-500 outline-none" placeholder="Enter full name" value={formData.authorName} onChange={handleChange} />
+                        <input type="text" name="authorName" required className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 outline-none" placeholder="Enter full name" value={formData.authorName} onChange={handleChange} />
                       </div>
                     </div>
                     <div>
-                      <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Business/Organization Name</label>
+                      <label className="block text-sm font-bold text-gray-700 mb-1">Business/Organization Name</label>
                       <div className="relative">
                         <Building2 className="absolute left-3 top-3 text-gray-400" size={18} />
-                        <input type="text" name="businessName" className="w-full pl-10 pr-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-teal-500 outline-none" placeholder="Enter business name" value={formData.businessName} onChange={handleChange} />
+                        <input type="text" name="businessName" className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 outline-none" placeholder="Enter business name" value={formData.businessName} onChange={handleChange} />
                       </div>
                     </div>
                     <div>
-                      <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Email Address *</label>
+                      <label className="block text-sm font-bold text-gray-700 mb-1">Email Address *</label>
                       <div className="relative">
                         <Mail className="absolute left-3 top-3 text-gray-400" size={18} />
-                        <input type="email" name="email" required className="w-full pl-10 pr-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-teal-500 outline-none" placeholder="your.email@example.com" value={formData.email} onChange={handleChange} />
+                        <input type="email" name="email" required className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 outline-none" placeholder="your.email@example.com" value={formData.email} onChange={handleChange} />
                       </div>
                     </div>
                     <div>
-                      <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Phone Number *</label>
+                      <label className="block text-sm font-bold text-gray-700 mb-1">Phone Number *</label>
                       <div className="relative">
                         <Phone className="absolute left-3 top-3 text-gray-400" size={18} />
-                        <input type="tel" name="phone" required className="w-full pl-10 pr-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-teal-500 outline-none" placeholder="+91 7605890360" value={formData.phone} onChange={handleChange} />
+                        <input type="tel" name="phone" required className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 outline-none" placeholder="+91 7605890360" value={formData.phone} onChange={handleChange} />
                       </div>
                     </div>
                   </div>
 
                   <div className="mt-6">
-                      <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Complete Address *</label>
+                      <label className="block text-sm font-bold text-gray-700 mb-1">Complete Address *</label>
                       <div className="relative">
                         <MapPin className="absolute left-3 top-3 text-gray-400" size={18} />
-                        <input type="text" name="address" required className="w-full pl-10 pr-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-teal-500 outline-none" placeholder="Enter your complete address" value={formData.address} onChange={handleChange} />
+                        <input type="text" name="address" required className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 outline-none" placeholder="Enter your complete address" value={formData.address} onChange={handleChange} />
                       </div>
                   </div>
 
                   <div className="grid md:grid-cols-3 gap-6 mt-6">
                     <div>
-                      <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">City *</label>
-                      <input type="text" name="city" required className="w-full px-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-teal-500 outline-none" placeholder="Enter city name" value={formData.city} onChange={handleChange} />
+                      <label className="block text-sm font-bold text-gray-700 mb-1">City *</label>
+                      <input type="text" name="city" required className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 outline-none" placeholder="Enter city name" value={formData.city} onChange={handleChange} />
                     </div>
                     <div>
-                      <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">State *</label>
-                      <SelectNative name="state" required value={formData.state} onChange={handleChange} className="dark:bg-slate-700 dark:border-slate-600 dark:text-white">
+                      <label className="block text-sm font-bold text-gray-700 mb-1">State *</label>
+                      <SelectNative name="state" required value={formData.state} onChange={handleChange} className="">
                         <option value="">Select State</option>
                         {states.map(s => <option key={s} value={s}>{s}</option>)}
                       </SelectNative>
                     </div>
                     <div>
-                      <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">PIN Code *</label>
-                      <input type="text" name="pinCode" required className="w-full px-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-teal-500 outline-none" placeholder="123456" value={formData.pinCode} onChange={handleChange} />
+                      <label className="block text-sm font-bold text-gray-700 mb-1">PIN Code *</label>
+                      <input type="text" name="pinCode" required className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 outline-none" placeholder="123456" value={formData.pinCode} onChange={handleChange} />
                     </div>
                   </div>
 
@@ -270,24 +270,24 @@ const CopyrightRegistrationPage: React.FC<CopyrightRegistrationPageProps> = ({ o
 
             {/* Sidebar */}
             <div className="lg:w-1/3 space-y-6">
-              <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 border-t-4 border-teal-500">
+              <div className="bg-white rounded-2xl shadow-lg p-6 border-t-4 border-teal-500">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-gray-200 dark:bg-slate-600 rounded-full flex items-center justify-center text-primary dark:text-blue-400 font-bold text-xl">LS</div>
+                  <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center text-primary font-bold text-xl">LS</div>
                   <div>
-                    <h3 className="font-bold text-lg dark:text-white uppercase tracking-tight">Legal Success India</h3>
-                    <p className="text-sm text-gray-500 dark:text-gray-400 font-medium font-mono uppercase tracking-wider text-[10px]">Expert Legal Firm</p>
+                    <h3 className="font-bold text-lg uppercase tracking-tight">Legal Success India</h3>
+                    <p className="text-sm text-gray-500 font-medium font-mono uppercase tracking-wider text-[10px]">Expert Legal Firm</p>
                   </div>
                 </div>
 
                 <div className="space-y-2 mb-6 text-sm">
-                  <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400"><CheckCircle2 size={16} className="text-green-500" /> 7+ Years Experience</div>
-                  <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400"><CheckCircle2 size={16} className="text-green-500" /> Thousands of registrations</div>
-                  <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400"><CheckCircle2 size={16} className="text-green-500" /> High Success Rate</div>
+                  <div className="flex items-center gap-2 text-gray-600"><CheckCircle2 size={16} className="text-green-500" /> 7+ Years Experience</div>
+                  <div className="flex items-center gap-2 text-gray-600"><CheckCircle2 size={16} className="text-green-500" /> Thousands of registrations</div>
+                  <div className="flex items-center gap-2 text-gray-600"><CheckCircle2 size={16} className="text-green-500" /> High Success Rate</div>
                 </div>
 
-                <div className="bg-teal-50 dark:bg-teal-900/30 p-4 rounded-lg">
-                   <h4 className="font-bold text-sm mb-2 text-teal-800 dark:text-teal-300">Specializations:</h4>
-                   <ul className="text-xs space-y-1 text-gray-600 dark:text-gray-300 list-disc pl-4">
+                <div className="bg-teal-50 p-4 rounded-lg">
+                   <h4 className="font-bold text-sm mb-2 text-teal-800">Specializations:</h4>
+                   <ul className="text-xs space-y-1 text-gray-600 list-disc pl-4">
                      <li>Literary & Written Works</li>
                      <li>Software & Digital Content</li>
                      <li>Artistic & Visual Works</li>
@@ -300,10 +300,10 @@ const CopyrightRegistrationPage: React.FC<CopyrightRegistrationPageProps> = ({ o
                 <h3 className="font-bold mb-4 border-b border-gray-700 pb-2">Registration Info</h3>
                 <div className="space-y-4">
                   <div className="flex gap-4">
-                    <div className="font-bold text-secondary">💰</div>
+                    <div className="font-bold text-secondary">Ã°Å¸â€™Â°</div>
                     <div>
                       <div className="font-bold text-sm text-secondary">Service Fee</div>
-                      <div className="text-sm">₹2,999+ Government fees</div>
+                      <div className="text-sm">Ã¢â€šÂ¹2,999+ Government fees</div>
                     </div>
                   </div>
                   <div className="flex gap-4">
@@ -330,9 +330,9 @@ const CopyrightRegistrationPage: React.FC<CopyrightRegistrationPageProps> = ({ o
                 </div>
               </div>
 
-              <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 border border-gray-100 dark:border-slate-700">
-                <h3 className="font-bold mb-4 dark:text-white">Copyright Protection</h3>
-                <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
+              <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+                <h3 className="font-bold mb-4">Copyright Protection</h3>
+                <ul className="space-y-3 text-sm text-gray-600">
                   <li className="flex items-start gap-2"><CheckCircle2 size={16} className="text-green-500 mt-0.5" /> Legal ownership proof</li>
                   <li className="flex items-start gap-2"><CheckCircle2 size={16} className="text-green-500 mt-0.5" /> Infringement protection</li>
                   <li className="flex items-start gap-2"><CheckCircle2 size={16} className="text-green-500 mt-0.5" /> Commercial usage rights</li>

@@ -12,9 +12,9 @@ const SelectNative = React.forwardRef<HTMLSelectElement, SelectPropsNative>(
       <div className="relative">
         <select
           className={cn(
-            "peer inline-flex w-full cursor-pointer appearance-none items-center rounded-lg border border-gray-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm text-slate-800 dark:text-slate-200 shadow-sm shadow-black/5 transition-shadow focus:border-primary focus:outline-none focus:ring-[3px] focus:ring-primary/20 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 has-[option[disabled]:checked]:text-gray-400",
+            "peer inline-flex w-full cursor-pointer appearance-none items-center rounded-lg border border-gray-300 bg-white text-sm text-slate-800 shadow-sm shadow-black/5 transition-shadow focus:border-primary focus:outline-none focus:ring-[3px] focus:ring-primary/20 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 has-[option[disabled]:checked]:text-gray-400",
             props.multiple
-              ? "py-1 [&>*]:px-3 [&>*]:py-1 [&_option:checked]:bg-blue-50 dark:[&_option:checked]:bg-blue-900"
+              ? "py-1 [&>*]:px-3 [&>*]:py-1 [&_option:checked]:bg-blue-50"
               : "h-11 pl-4 pr-10 py-2", // Adjusted height/padding for better touch target
             className,
           )}
