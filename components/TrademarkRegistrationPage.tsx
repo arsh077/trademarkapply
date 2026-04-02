@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { 
   CheckCircle2, Clock, Calendar, FileText, Search, Shield, 
   Award, Globe, Layers, Box, Phone, Mail, User, ArrowRight,
@@ -7,13 +7,21 @@ import {
 import { SelectNative } from './ui/select-native';
 import { GlowingEffect } from './ui/glowing-effect';
 import { GlassButton } from './ui/liquid-glass';
+import { db } from '../firebase.config';
+import { collection, addDoc } from 'firebase/firestore';
 
 interface TrademarkRegistrationPageProps {
   onNavigate: (page: string) => void;
 }
 
 const TrademarkRegistrationPage: React.FC<TrademarkRegistrationPageProps> = ({ onNavigate }) => {
-  const formRef = React.useRef<HTMLDivElement>(null);
+  const formRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (formRef.current) {
+      formRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
 
   const [formData, setFormData] = useState({
     fullName: '',
@@ -30,9 +38,37 @@ const TrademarkRegistrationPage: React.FC<TrademarkRegistrationPageProps> = ({ o
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Thank you! We will contact you shortly.');
+    
+    try {
+      const lead = {
+        name: formData.fullName,
+        phone: formData.phone,
+        state: formData.state,
+        service: 'Trademark Registration',
+        createdAt: new Date().toISOString(),
+        status: 'new'
+      };
+      
+      await addDoc(collection(db, 'leads'), lead);
+      
+      const localLead = {
+        id: Date.now().toString(),
+        ...lead,
+        date: lead.createdAt
+      };
+      
+      const existingLeads = JSON.parse(localStorage.getItem('trademarkLeads') || '[]');
+      existingLeads.push(localLead);
+      localStorage.setItem('trademarkLeads', JSON.stringify(existingLeads));
+      
+      alert('Thank you! We will contact you shortly.');
+      if (onNavigate) onNavigate('thank-you');
+    } catch (error) {
+      console.error('Error saving lead:', error);
+      alert('Error submitting request. Please try again.');
+    }
   };
 
   const states = [
@@ -111,7 +147,7 @@ const TrademarkRegistrationPage: React.FC<TrademarkRegistrationPageProps> = ({ o
             </div>
 
             {/* Right Form Card */}
-            <div className="bg-white dark:bg-slate-800 text-slate-800 dark:text-white rounded-2xl shadow-2xl p-6 lg:p-8 transition-colors">
+            <div ref={formRef} className="bg-white dark:bg-slate-800 text-slate-800 dark:text-white rounded-2xl shadow-2xl p-6 lg:p-8 transition-colors">
               <div className="bg-green-50 dark:bg-green-900/30 border border-green-200 dark:border-green-800 rounded-lg p-3 mb-6 flex items-start gap-3">
                 <CheckCircle2 className="text-green-600 dark:text-green-400 shrink-0 mt-0.5" size={20} />
                 <div>

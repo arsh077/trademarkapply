@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { 
   Palette, Scale, RefreshCw, Clock, Target, CheckCircle2, 
   User, Building2, Mail, Phone, MapPin, BadgeCheck, ShieldCheck,
@@ -7,12 +7,22 @@ import {
 import { SelectNative } from './ui/select-native';
 import { GlowingEffect } from './ui/glowing-effect';
 import { GlassButton } from './ui/liquid-glass';
+import { db } from '../firebase.config';
+import { collection, addDoc } from 'firebase/firestore';
 
 interface LogoDesignPageProps {
   onNavigate: (page: string) => void;
 }
 
 const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
+  const formRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (formRef.current) {
+      formRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
+
   const [selectedPackage, setSelectedPackage] = useState('professional');
   
   const [formData, setFormData] = useState({
@@ -33,9 +43,39 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert(`Order placed for ${selectedPackage} package! We will contact you shortly.`);
+    
+    try {
+      const lead = {
+        name: formData.fullName,
+        email: formData.email,
+        phone: formData.phone,
+        businessName: formData.businessName,
+        service: `Logo Design - ${selectedPackage} Package`,
+        message: `Address: ${formData.address}, ${formData.city}, ${formData.state} - ${formData.pinCode}`,
+        createdAt: new Date().toISOString(),
+        status: 'new'
+      };
+      
+      await addDoc(collection(db, 'leads'), lead);
+      
+      const localLead = {
+        id: Date.now().toString(),
+        ...lead,
+        date: lead.createdAt
+      };
+      
+      const existingLeads = JSON.parse(localStorage.getItem('trademarkLeads') || '[]');
+      existingLeads.push(localLead);
+      localStorage.setItem('trademarkLeads', JSON.stringify(existingLeads));
+      
+      alert(`Order placed for ${selectedPackage} package! We will contact you shortly.`);
+      if (onNavigate) onNavigate('thank-you');
+    } catch (error) {
+      console.error('Error saving lead:', error);
+      alert('Error submitting request. Please try again.');
+    }
   };
 
   const states = [
@@ -286,8 +326,8 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
           </div>
 
           <div className="flex flex-col lg:flex-row gap-8">
-            {/* Form */}
-            <div className="lg:w-2/3">
+            {/* Right Form */}
+          <div ref={formRef} className="lg:w-2/3">
               <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-8 border border-gray-100 dark:border-slate-700">
                 <div className="flex items-center gap-4 mb-6 pb-6 border-b border-gray-100 dark:border-slate-700">
                   <div className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold">1</div>

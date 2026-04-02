@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { 
   Scale, Shield, ClipboardList, Clock, Phone, Calendar, 
   CheckCircle2, User, Building2, Mail, MapPin, 
@@ -8,12 +8,22 @@ import {
 import { SelectNative } from './ui/select-native';
 import { GlowingEffect } from './ui/glowing-effect';
 import { GlassButton } from './ui/liquid-glass';
+import { db } from '../firebase.config';
+import { collection, addDoc } from 'firebase/firestore';
 
 interface LegalConsultationPageProps {
   onNavigate: (page: string) => void;
 }
 
 const LegalConsultationPage: React.FC<LegalConsultationPageProps> = ({ onNavigate }) => {
+  const formRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (formRef.current) {
+      formRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
+
   const [formData, setFormData] = useState({
     fullName: '',
     businessName: '',
@@ -64,13 +74,43 @@ const LegalConsultationPage: React.FC<LegalConsultationPageProps> = ({ onNavigat
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (formData.topics.length === 0) {
       alert("Please select at least one consultation topic.");
       return;
     }
-    alert("Consultation request submitted! We will confirm your slot shortly.");
+    
+    try {
+      const lead = {
+        name: formData.fullName,
+        email: formData.email,
+        phone: formData.phone,
+        businessName: formData.businessName,
+        service: 'Legal Consultation',
+        message: `Topics: ${formData.topics.join(', ')}. Mode: ${formData.mode}, Urgency: ${formData.urgency}. Date: ${formData.date}, Time: ${formData.time}. Details: ${formData.description}`,
+        createdAt: new Date().toISOString(),
+        status: 'new'
+      };
+      
+      await addDoc(collection(db, 'leads'), lead);
+      
+      const localLead = {
+        id: Date.now().toString(),
+        ...lead,
+        date: lead.createdAt
+      };
+      
+      const existingLeads = JSON.parse(localStorage.getItem('trademarkLeads') || '[]');
+      existingLeads.push(localLead);
+      localStorage.setItem('trademarkLeads', JSON.stringify(existingLeads));
+      
+      alert("Consultation request submitted! We will confirm your slot shortly.");
+      if (onNavigate) onNavigate('thank-you');
+    } catch (error) {
+      console.error('Error saving lead:', error);
+      alert('Error submitting request. Please try again.');
+    }
   };
 
   return (
@@ -181,8 +221,8 @@ const LegalConsultationPage: React.FC<LegalConsultationPageProps> = ({ onNavigat
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-8">
             
-            {/* Form */}
-            <div className="lg:w-2/3">
+            {/* Right Form */}
+          <div ref={formRef} className="lg:w-2/3">
               <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-8 border border-gray-100 dark:border-slate-700">
                 <div className="mb-8 pb-6 border-b border-gray-100 dark:border-slate-700">
                   <h2 className="text-2xl font-bold mb-2 text-slate-900 dark:text-white">Book Your Free Legal Consultation</h2>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { 
   Shield, Scale, FileText, User, Building2, Mail, MapPin, Phone,
   CheckCircle2, AlertTriangle, Gavel, FileCheck, ArrowRight, Clock,
@@ -8,12 +8,22 @@ import ProgressIndicator from './ui/progress-indicator';
 import { SelectNative } from './ui/select-native';
 import { GlowingEffect } from './ui/glowing-effect';
 import { GlassButton } from './ui/liquid-glass';
+import { db } from '../firebase.config';
+import { collection, addDoc } from 'firebase/firestore';
 
 interface OppositionHandlingPageProps {
   onNavigate: (page: string) => void;
 }
 
 const OppositionHandlingPage: React.FC<OppositionHandlingPageProps> = ({ onNavigate }) => {
+  const formRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (formRef.current) {
+      formRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
+
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     fullName: '',
@@ -33,12 +43,41 @@ const OppositionHandlingPage: React.FC<OppositionHandlingPageProps> = ({ onNavig
     });
   };
 
-  const handleNext = (e: React.MouseEvent | React.FormEvent) => {
+  const handleNext = async (e: React.MouseEvent | React.FormEvent) => {
     e.preventDefault();
     if (step < 3) {
       setStep(step + 1);
     } else {
-      alert("Request submitted! We will analyze your opposition matter and contact you immediately.");
+      try {
+        const lead = {
+          name: formData.fullName,
+          email: formData.email,
+          phone: formData.phone,
+          businessName: formData.businessName,
+          service: 'Opposition Handling',
+          message: `Address: ${formData.address}, ${formData.city}, ${formData.state} - ${formData.pinCode}`,
+          createdAt: new Date().toISOString(),
+          status: 'new'
+        };
+        
+        await addDoc(collection(db, 'leads'), lead);
+        
+        const localLead = {
+          id: Date.now().toString(),
+          ...lead,
+          date: lead.createdAt
+        };
+        
+        const existingLeads = JSON.parse(localStorage.getItem('trademarkLeads') || '[]');
+        existingLeads.push(localLead);
+        localStorage.setItem('trademarkLeads', JSON.stringify(existingLeads));
+        
+        alert("Request submitted! We will analyze your opposition matter and contact you immediately.");
+        if (onNavigate) onNavigate('thank-you');
+      } catch (error) {
+        console.error('Error saving lead:', error);
+        alert('Error submitting request. Please try again.');
+      }
     }
   };
 
@@ -175,7 +214,7 @@ const OppositionHandlingPage: React.FC<OppositionHandlingPageProps> = ({ onNavig
           </div>
 
           <div className="flex flex-col lg:flex-row gap-8">
-            <div className="lg:w-2/3">
+            <div ref={formRef} className="lg:w-2/3">
               <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-8 border border-gray-100 dark:border-slate-700">
                 
                 <form onSubmit={handleNext} className="space-y-6">

@@ -1,15 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { 
   Calculator, CheckCircle2, Clock, DollarSign,
   User, Mail, Phone, Building2, ArrowRight
 } from 'lucide-react';
 import { GlassButton } from './ui/liquid-glass';
+import { db } from '../firebase.config';
+import { collection, addDoc } from 'firebase/firestore';
 
 interface GetQuotePageProps {
   onNavigate: (page: string) => void;
 }
 
 const GetQuotePage: React.FC<GetQuotePageProps> = ({ onNavigate }) => {
+  const formRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (formRef.current) {
+      formRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
+
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -21,9 +31,38 @@ const GetQuotePage: React.FC<GetQuotePageProps> = ({ onNavigate }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Quote request received! We will send you a personalized quote shortly.");
+    
+    try {
+      const lead = {
+        name: formData.fullName,
+        email: formData.email,
+        phone: formData.phone,
+        businessName: formData.businessName,
+        service: 'Quote Request',
+        createdAt: new Date().toISOString(),
+        status: 'new'
+      };
+      
+      await addDoc(collection(db, 'leads'), lead);
+      
+      const localLead = {
+        id: Date.now().toString(),
+        ...lead,
+        date: lead.createdAt
+      };
+      
+      const existingLeads = JSON.parse(localStorage.getItem('trademarkLeads') || '[]');
+      existingLeads.push(localLead);
+      localStorage.setItem('trademarkLeads', JSON.stringify(existingLeads));
+      
+      alert("Quote request received! We will send you a personalized quote shortly.");
+      if (onNavigate) onNavigate('thank-you');
+    } catch (error) {
+      console.error('Error saving lead:', error);
+      alert('Error submitting quote request. Please try again.');
+    }
   };
 
   const services = [
@@ -49,7 +88,7 @@ const GetQuotePage: React.FC<GetQuotePageProps> = ({ onNavigate }) => {
         <div className="flex flex-col lg:flex-row gap-16">
           
           {/* Quote Form */}
-          <div className="lg:w-1/2">
+          <div ref={formRef} className="lg:w-1/2">
             <div className="glass-panel p-8 rounded-3xl relative overflow-hidden">
               <div className="absolute top-0 right-0 p-6 opacity-5">
                 <Calculator size={120} />

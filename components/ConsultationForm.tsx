@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { CheckCircle2, Send, Sparkles } from 'lucide-react';
 import { SelectNative } from './ui/select-native';
 import { GlassButton } from './ui/liquid-glass';
@@ -10,6 +10,14 @@ interface ConsultationFormProps {
 }
 
 const ConsultationForm: React.FC<ConsultationFormProps> = ({ onNavigate }) => {
+  const formRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (formRef.current) {
+      formRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
+
   const [formData, setFormData] = useState({
     businessName: '',
     brandName: '',
@@ -20,6 +28,8 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({ onNavigate }) => {
     message: ''
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
@@ -29,6 +39,7 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({ onNavigate }) => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
     
     try {
       // Save to Firestore
@@ -76,6 +87,8 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({ onNavigate }) => {
     } catch (error) {
       console.error('Error saving lead:', error);
       alert('There was an error submitting your request. Please try again.');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -87,7 +100,7 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({ onNavigate }) => {
   ];
 
   return (
-    <section id="consultation" className="py-24 relative overflow-hidden bg-[#020202]">
+    <section ref={formRef} id="consultation" className="py-24 relative overflow-hidden bg-[#020202]">
       {/* Background Elements */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[100px] pointer-events-none" />

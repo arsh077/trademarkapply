@@ -1,16 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { 
   Copyright, BookOpen, Laptop, Palette, Music, Video, 
   Home as HomeIcon, CheckCircle2, User, Building2, Mail, 
   Phone, MapPin, ArrowRight, Shield, Clock, FileCheck
 } from 'lucide-react';
 import { SelectNative } from './ui/select-native';
+import { db } from '../firebase.config';
+import { collection, addDoc } from 'firebase/firestore';
 
 interface CopyrightRegistrationPageProps {
   onNavigate: (page: string) => void;
 }
 
 const CopyrightRegistrationPage: React.FC<CopyrightRegistrationPageProps> = ({ onNavigate }) => {
+  const formRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (formRef.current) {
+      formRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
+
   const [formData, setFormData] = useState({
     authorName: '',
     businessName: '',
@@ -29,9 +39,39 @@ const CopyrightRegistrationPage: React.FC<CopyrightRegistrationPageProps> = ({ o
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Copyright registration request submitted! We will guide you through the next steps.");
+    
+    try {
+      const lead = {
+        name: formData.authorName,
+        email: formData.email,
+        phone: formData.phone,
+        businessName: formData.businessName,
+        service: 'Copyright Registration',
+        message: `Address: ${formData.address}, ${formData.city}, ${formData.state} - ${formData.pinCode}`,
+        createdAt: new Date().toISOString(),
+        status: 'new'
+      };
+      
+      await addDoc(collection(db, 'leads'), lead);
+      
+      const localLead = {
+        id: Date.now().toString(),
+        ...lead,
+        date: lead.createdAt
+      };
+      
+      const existingLeads = JSON.parse(localStorage.getItem('trademarkLeads') || '[]');
+      existingLeads.push(localLead);
+      localStorage.setItem('trademarkLeads', JSON.stringify(existingLeads));
+      
+      alert("Copyright registration request submitted! We will guide you through the next steps.");
+      if (onNavigate) onNavigate('thank-you');
+    } catch (error) {
+      console.error('Error saving lead:', error);
+      alert('Error submitting request. Please try again.');
+    }
   };
 
   const states = [
@@ -152,7 +192,7 @@ const CopyrightRegistrationPage: React.FC<CopyrightRegistrationPageProps> = ({ o
           </div>
 
           <div className="flex flex-col lg:flex-row gap-8">
-            <div className="lg:w-2/3">
+            <div ref={formRef} className="lg:w-2/3">
               <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-8 border border-gray-100 dark:border-slate-700">
                 
                 <div className="flex items-center gap-4 mb-6 pb-6 border-b border-gray-100 dark:border-slate-700">
@@ -232,10 +272,10 @@ const CopyrightRegistrationPage: React.FC<CopyrightRegistrationPageProps> = ({ o
             <div className="lg:w-1/3 space-y-6">
               <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 border-t-4 border-teal-500">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-gray-200 dark:bg-slate-600 rounded-full flex items-center justify-center text-primary dark:text-blue-400 font-bold text-xl">KA</div>
+                  <div className="w-16 h-16 bg-gray-200 dark:bg-slate-600 rounded-full flex items-center justify-center text-primary dark:text-blue-400 font-bold text-xl">LS</div>
                   <div>
-                    <h3 className="font-bold text-lg dark:text-white">KHURSHID ANWAR</h3>
-                    <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">Copyright Registration Specialist</p>
+                    <h3 className="font-bold text-lg dark:text-white uppercase tracking-tight">Legal Success India</h3>
+                    <p className="text-sm text-gray-500 dark:text-gray-400 font-medium font-mono uppercase tracking-wider text-[10px]">Expert Legal Firm</p>
                   </div>
                 </div>
 

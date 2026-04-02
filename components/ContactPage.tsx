@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { 
   Phone, Mail, MapPin, Clock, MessageCircle, HelpCircle, 
   Car, Train, Map, Send, User, MessageSquare
@@ -6,12 +6,22 @@ import {
 import { SelectNative } from './ui/select-native';
 import { GlowingEffect } from './ui/glowing-effect';
 import { GlassButton } from './ui/liquid-glass';
+import { db } from '../firebase.config';
+import { collection, addDoc } from 'firebase/firestore';
 
 interface ContactPageProps {
   onNavigate: (page: string) => void;
 }
 
 const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
+  const formRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (formRef.current) {
+      formRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
+
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -25,9 +35,38 @@ const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Message sent! We will contact you shortly.");
+    
+    try {
+      const lead = {
+        name: formData.fullName,
+        email: formData.email,
+        phone: formData.phone,
+        service: formData.service || 'General Inquiry',
+        message: formData.message,
+        createdAt: new Date().toISOString(),
+        status: 'new'
+      };
+      
+      await addDoc(collection(db, 'leads'), lead);
+      
+      const localLead = {
+        id: Date.now().toString(),
+        ...lead,
+        date: lead.createdAt
+      };
+      
+      const existingLeads = JSON.parse(localStorage.getItem('trademarkLeads') || '[]');
+      existingLeads.push(localLead);
+      localStorage.setItem('trademarkLeads', JSON.stringify(existingLeads));
+      
+      alert("Message sent! We will contact you shortly.");
+      if (onNavigate) onNavigate('thank-you');
+    } catch (error) {
+      console.error('Error saving lead:', error);
+      alert('Error sending message. Please try again.');
+    }
   };
 
   const faqs = [
@@ -87,7 +126,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
           </div>
 
           {/* Form */}
-          <div className="lg:col-span-2">
+          <div ref={formRef} className="lg:col-span-2">
             <div className="glass-panel p-8 md:p-10 rounded-3xl">
               <h2 className="text-2xl font-bold mb-8">Send a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
