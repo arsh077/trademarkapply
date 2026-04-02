@@ -12,7 +12,7 @@ const SelectNative = React.forwardRef<HTMLSelectElement, SelectPropsNative>(
       <div className="relative">
         <select
           className={cn(
-            "peer inline-flex w-full cursor-pointer appearance-none items-center rounded-lg border border-gray-300 bg-white text-sm text-slate-800 shadow-sm shadow-black/5 transition-shadow focus:border-primary focus:outline-none focus:ring-[3px] focus:ring-primary/20 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 has-[option[disabled]:checked]:text-gray-400",
+            "peer inline-flex w-full cursor-pointer appearance-none items-center rounded-lg border border-gray-300 bg-white text-sm text-slate-800 shadow-sm shadow-black/5 transition-shadow focus:border-primary focus:outline-none focus:ring-[3px] focus:ring-primary/20 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 has-[option[disabled]:checked]:text-gray-600",
             props.multiple
               ? "py-1 [&>*]:px-3 [&>*]:py-1 [&_option:checked]:bg-blue-50"
               : "h-11 pl-4 pr-10 py-2", // Adjusted height/padding for better touch target
@@ -24,7 +24,7 @@ const SelectNative = React.forwardRef<HTMLSelectElement, SelectPropsNative>(
           {children}
         </select>
         {!props.multiple && (
-          <span className="pointer-events-none absolute inset-y-0 right-0 flex h-full w-9 items-center justify-center text-gray-400 peer-disabled:opacity-50 px-2">
+          <span className="pointer-events-none absolute inset-y-0 right-0 flex h-full w-9 items-center justify-center text-gray-600 peer-disabled:opacity-50 px-2">
             <ChevronDown size={16} strokeWidth={2} aria-hidden="true" />
           </span>
         )}

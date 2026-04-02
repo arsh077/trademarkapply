@@ -120,16 +120,16 @@ const LegalConsultationPage: React.FC<LegalConsultationPageProps> = ({ onNavigat
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center text-sm text-gray-500">
             <button onClick={() => onNavigate('home')} className="hover:text-primary transition-colors">Home</button>
-            <span className="mx-2">ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢</span>
+            <span className="mx-2">→</span>
             <button onClick={() => onNavigate('services')} className="hover:text-primary transition-colors">Services</button>
-            <span className="mx-2">ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢</span>
+            <span className="mx-2">→</span>
             <span className="font-semibold text-primary">Legal Consultation</span>
           </div>
         </div>
       </div>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-900 to-emerald-700 text-gray-900 py-12 lg:py-20 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-blue-50 via-white to-blue-100 text-gray-900 py-12 lg:py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -241,28 +241,28 @@ const LegalConsultationPage: React.FC<LegalConsultationPageProps> = ({ onNavigat
                       <div>
                         <label className="block text-sm font-bold text-gray-700 mb-1">Your Full Name *</label>
                         <div className="relative">
-                          <User className="absolute left-3 top-3 text-gray-400" size={18} />
+                          <User className="absolute left-3 top-3 text-gray-600" size={18} />
                           <input type="text" name="fullName" required className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="Enter your full name" onChange={handleChange} />
                         </div>
                       </div>
                       <div>
                         <label className="block text-sm font-bold text-gray-700 mb-1">Business/Company Name</label>
                         <div className="relative">
-                          <Building2 className="absolute left-3 top-3 text-gray-400" size={18} />
+                          <Building2 className="absolute left-3 top-3 text-gray-600" size={18} />
                           <input type="text" name="businessName" className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="Enter your business name" onChange={handleChange} />
                         </div>
                       </div>
                       <div>
                         <label className="block text-sm font-bold text-gray-700 mb-1">Email Address *</label>
                         <div className="relative">
-                          <Mail className="absolute left-3 top-3 text-gray-400" size={18} />
+                          <Mail className="absolute left-3 top-3 text-gray-600" size={18} />
                           <input type="email" name="email" required className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="your.email@example.com" onChange={handleChange} />
                         </div>
                       </div>
                       <div>
                         <label className="block text-sm font-bold text-gray-700 mb-1">Phone Number *</label>
                         <div className="relative">
-                          <Phone className="absolute left-3 top-3 text-gray-400" size={18} />
+                          <Phone className="absolute left-3 top-3 text-gray-600" size={18} />
                           <input type="tel" name="phone" required className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="+91 7605890360" onChange={handleChange} />
                         </div>
                       </div>
@@ -270,7 +270,7 @@ const LegalConsultationPage: React.FC<LegalConsultationPageProps> = ({ onNavigat
                     <div className="mt-6">
                        <label className="block text-sm font-bold text-gray-700 mb-1">Complete Address *</label>
                        <div className="relative">
-                          <MapPin className="absolute left-3 top-3 text-gray-400" size={18} />
+                          <MapPin className="absolute left-3 top-3 text-gray-600" size={18} />
                           <input type="text" name="address" required className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="Enter your complete address" onChange={handleChange} />
                        </div>
                     </div>

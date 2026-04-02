@@ -140,7 +140,7 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({ onNavigate }) => {
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid md:grid-cols-2 gap-5">
                   <div className="space-y-2">
-                    <label className="text-xs font-mono text-gray-400 uppercase tracking-widest">Business Name</label>
+                    <label className="text-xs font-mono text-gray-600 uppercase tracking-widest">Business Name</label>
                     <input 
                       type="text" 
                       name="businessName"
@@ -151,7 +151,7 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({ onNavigate }) => {
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-xs font-mono text-gray-400 uppercase tracking-widest">Brand Name</label>
+                    <label className="text-xs font-mono text-gray-600 uppercase tracking-widest">Brand Name</label>
                     <input 
                       type="text" 
                       name="brandName"
@@ -164,7 +164,7 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({ onNavigate }) => {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-mono text-gray-400 uppercase tracking-widest">Your Name</label>
+                  <label className="text-xs font-mono text-gray-600 uppercase tracking-widest">Your Name</label>
                   <input 
                     type="text" 
                     name="fullName"
@@ -177,7 +177,7 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({ onNavigate }) => {
 
                 <div className="grid md:grid-cols-2 gap-5">
                   <div className="space-y-2">
-                    <label className="text-xs font-mono text-gray-400 uppercase tracking-widest">Email</label>
+                    <label className="text-xs font-mono text-gray-600 uppercase tracking-widest">Email</label>
                     <input 
                       type="email" 
                       name="email"
@@ -188,7 +188,7 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({ onNavigate }) => {
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-xs font-mono text-gray-400 uppercase tracking-widest">Phone</label>
+                    <label className="text-xs font-mono text-gray-600 uppercase tracking-widest">Phone</label>
                     <input 
                       type="tel" 
                       name="phone"
@@ -201,7 +201,7 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({ onNavigate }) => {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-mono text-gray-400 uppercase tracking-widest">Business Type</label>
+                  <label className="text-xs font-mono text-gray-600 uppercase tracking-widest">Business Type</label>
                   <SelectNative 
                     name="businessType"
                     onChange={handleChange}
@@ -217,7 +217,7 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({ onNavigate }) => {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-mono text-gray-400 uppercase tracking-widest">Message</label>
+                  <label className="text-xs font-mono text-gray-600 uppercase tracking-widest">Message</label>
                   <textarea 
                     name="message"
                     rows={3}

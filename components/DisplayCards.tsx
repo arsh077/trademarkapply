@@ -16,7 +16,7 @@ interface DisplayCardProps {
 
 function DisplayCard({
   className,
-  icon = <Sparkles className="size-4 text-blue-300" />,
+  icon = <Sparkles className="size-4 text-blue-700" />,
   title = "Featured",
   description = "Discover amazing content",
   date = "Just now",
@@ -37,7 +37,7 @@ function DisplayCard({
         <p className={cn("text-lg font-bold text-slate-800", titleClassName)}>{title}</p>
       </div>
       <p className="text-gray-600 text-sm leading-tight line-clamp-2">{description}</p>
-      <p className="text-gray-400 text-xs">{date}</p>
+      <p className="text-gray-600 text-xs">{date}</p>
     </div>
   );
 }

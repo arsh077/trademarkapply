@@ -33,12 +33,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, pri
       </div>
       
       <h3 className="text-xl font-bold mb-3 text-slate-900 font-sans tracking-tight">{title}</h3>
-      <p className="text-gray-400 mb-8 text-sm leading-relaxed line-clamp-3 font-sans">{description}</p>
+      <p className="text-gray-600 mb-8 text-sm leading-relaxed line-clamp-3 font-sans">{description}</p>
       
       <div className="mt-auto flex justify-between items-end pt-6 border-t border-slate-100">
         <div className="flex flex-col">
            <span className="text-[10px] text-gray-600 font-mono uppercase tracking-widest mb-1">Starting from</span>
-           <span className="text-primary font-bold text-2xl">{price}</span>
+           <span className="text-secondary font-bold text-2xl">{price}</span>
         </div>
         <div className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-primary group-hover:border-primary group-hover:text-gray-900 transition-all">
           <ArrowRight size={18} />
@@ -54,12 +54,12 @@ interface ServicesProps {
 
 const Services: React.FC<ServicesProps> = ({ onNavigate }) => {
   const services = [
-    { icon: <Tag size={28} />, title: "Trademark Registration", description: "Complete trademark registration process from search to approval with government compliance.", price: "ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¹699", link: "trademark-registration" },
-    { icon: <PenTool size={28} />, title: "Logo Design", description: "Professional logo design services that complement your trademark registration.", price: "ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¹999", link: "logo-design" },
-    { icon: <Scale size={28} />, title: "Legal Consultation", description: "Expert legal advice on trademark law, disputes, and intellectual property protection.", price: "ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¹1,500/hr", link: "legal-consultation" },
-    { icon: <ShieldAlert size={28} />, title: "Opposition Handling", description: "Professional handling of trademark opposition cases with expert legal representation.", price: "ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¹5,999", link: "opposition-handling" },
-    { icon: <RefreshCw size={28} />, title: "Renewal Services", description: "Timely trademark renewal services to maintain your intellectual property rights.", price: "ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¹1,999", link: "renewal-services" },
-    { icon: <FileText size={28} />, title: "Copyright Registration", description: "Protect your creative works, literary content, and artistic creations.", price: "ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¹3,999", link: "copyright-registration" }
+    { icon: <Tag size={28} />, title: "Trademark Registration", description: "Complete trademark registration process from search to approval with government compliance.", price: "\u20B91,999", link: "trademark-registration" },
+    { icon: <PenTool size={28} />, title: "Logo Design", description: "Professional logo design services that complement your trademark registration.", price: "\u20B9999", link: "logo-design" },
+    { icon: <Scale size={28} />, title: "Legal Consultation", description: "Expert legal advice on trademark law, disputes, and intellectual property protection.", price: "\u20B91,500/hr", link: "legal-consultation" },
+    { icon: <ShieldAlert size={28} />, title: "Opposition Handling", description: "Professional handling of trademark opposition cases with expert legal representation.", price: "\u20B95,999", link: "opposition-handling" },
+    { icon: <RefreshCw size={28} />, title: "Renewal Services", description: "Timely trademark renewal services to maintain your intellectual property rights.", price: "\u20B91,999", link: "renewal-services" },
+    { icon: <FileText size={28} />, title: "Copyright Registration", description: "Protect your creative works, literary content, and artistic creations.", price: "\u20B93,999", link: "copyright-registration" }
   ];
 
   return (

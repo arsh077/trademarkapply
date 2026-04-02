@@ -8,7 +8,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
   return (
-    <section className="relative bg-gradient-to-br from-slate-900 via-primary to-slate-900 text-gray-900 pt-16 pb-20 lg:pt-24 lg:pb-24 overflow-hidden transition-colors duration-500">
+    <section className="relative bg-gradient-to-br from-blue-50 via-white to-blue-100 text-gray-900 pt-16 pb-20 lg:pt-24 lg:pb-24 overflow-hidden transition-colors duration-500">
       {/* Overlay Background Pattern */}
       <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
       
@@ -73,7 +73,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                 
                 {/* Card 1 */}
                 <div className="bg-gray-100 backdrop-blur-md p-6 rounded-2xl border border-gray-200 hover:bg-white/15 transition-colors transform translate-y-8">
-                  <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4 text-blue-300">
+                  <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4 text-blue-700">
                     <Shield size={24} />
                   </div>
                   <div className="text-3xl font-bold text-gray-900 mb-1">98%</div>
@@ -82,7 +82,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
 
                 {/* Card 2 */}
                 <div className="bg-gray-100 backdrop-blur-md p-6 rounded-2xl border border-gray-200 hover:bg-white/15 transition-colors">
-                  <div className="w-12 h-12 bg-yellow-500/20 rounded-lg flex items-center justify-center mb-4 text-yellow-300">
+                  <div className="w-12 h-12 bg-yellow-500/20 rounded-lg flex items-center justify-center mb-4 text-yellow-700">
                     <Award size={24} />
                   </div>
                   <div className="text-3xl font-bold text-gray-900 mb-1">Expert</div>
@@ -91,7 +91,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
 
                 {/* Card 3 */}
                 <div className="bg-gray-100 backdrop-blur-md p-6 rounded-2xl border border-gray-200 hover:bg-white/15 transition-colors transform translate-y-8">
-                  <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-4 text-green-300">
+                  <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-4 text-green-700">
                     <Users size={24} />
                   </div>
                   <div className="text-3xl font-bold text-gray-900 mb-1">10k+</div>

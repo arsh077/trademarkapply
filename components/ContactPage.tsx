@@ -70,7 +70,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
   };
 
   const faqs = [
-    { q: "Trademark cost?", a: "From Ã¢â€šÂ¹699 + Govt fees." },
+    { q: "Trademark cost?", a: "From ₹699 + Govt fees." },
     { q: "Time required?", a: "12-18 months typically." },
     { q: "Free consultation?", a: "Yes, first 30 mins free." },
     { q: "Status tracking?", a: "Yes, regular updates." }
@@ -106,13 +106,13 @@ const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                   <div>
                     <h3 className="text-gray-600 text-xs uppercase tracking-widest font-mono mb-1">{item.title}</h3>
                     <p className="text-gray-900 font-bold text-lg mb-1 break-all">{item.val}</p>
-                    <p className="text-gray-400 text-xs">{item.sub}</p>
+                    <p className="text-gray-600 text-xs">{item.sub}</p>
                   </div>
                 </div>
               </a>
             ))}
 
-            <div className="glass-panel p-6 rounded-2xl bg-green-900/10 border-green-500/20">
+            <div className="glass-panel p-6 rounded-2xl bg-green-50/80 border-green-500/20">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center text-green-400">
                   <MessageCircle size={24} />
@@ -132,22 +132,22 @@ const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-xs font-mono text-gray-400 uppercase">Full Name</label>
+                    <label className="text-xs font-mono text-gray-600 uppercase">Full Name</label>
                     <input type="text" name="fullName" required className="w-full bg-gray-100 border border-gray-200 rounded-lg px-4 py-3 text-gray-900 focus:border-secondary/50 focus:outline-none transition-colors" placeholder="John Doe" onChange={handleChange} />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-xs font-mono text-gray-400 uppercase">Email Address</label>
+                    <label className="text-xs font-mono text-gray-600 uppercase">Email Address</label>
                     <input type="email" name="email" required className="w-full bg-gray-100 border border-gray-200 rounded-lg px-4 py-3 text-gray-900 focus:border-secondary/50 focus:outline-none transition-colors" placeholder="john@example.com" onChange={handleChange} />
                   </div>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-xs font-mono text-gray-400 uppercase">Phone</label>
+                    <label className="text-xs font-mono text-gray-600 uppercase">Phone</label>
                     <input type="tel" name="phone" required className="w-full bg-gray-100 border border-gray-200 rounded-lg px-4 py-3 text-gray-900 focus:border-secondary/50 focus:outline-none transition-colors" placeholder="+91 7605890360" onChange={handleChange} />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-xs font-mono text-gray-400 uppercase">Service</label>
+                    <label className="text-xs font-mono text-gray-600 uppercase">Service</label>
                     <SelectNative name="service" required onChange={handleChange} className="w-full bg-gray-100 border border-gray-200 text-gray-900 h-[50px]">
                       <option value="" className="bg-white">Select Service</option>
                       <option value="Trademark" className="bg-white">Trademark Registration</option>
@@ -158,7 +158,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-mono text-gray-400 uppercase">Message</label>
+                  <label className="text-xs font-mono text-gray-600 uppercase">Message</label>
                   <textarea name="message" required rows={5} className="w-full bg-gray-100 border border-gray-200 rounded-lg px-4 py-3 text-gray-900 focus:border-secondary/50 focus:outline-none transition-colors" placeholder="How can we help you?" onChange={handleChange}></textarea>
                 </div>
 
@@ -178,7 +178,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
             {faqs.map((f, i) => (
               <div key={i} className="bg-gray-50 p-6 rounded-xl border border-gray-100">
                 <h4 className="font-bold text-gray-900 mb-2">{f.q}</h4>
-                <p className="text-gray-400 text-sm">{f.a}</p>
+                <p className="text-gray-600 text-sm">{f.a}</p>
               </div>
             ))}
           </div>

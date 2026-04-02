@@ -29,15 +29,15 @@ const AboutUsPage: React.FC<AboutUsPageProps> = ({ onNavigate }) => {
               <div className="flex gap-12 border-t border-gray-200 pt-8">
                 <div>
                   <div className="text-3xl font-bold text-gray-900 mb-1">10k+</div>
-                  <div className="text-xs text-gray-400 font-mono uppercase tracking-widest">Clients</div>
+                  <div className="text-xs text-gray-600 font-mono uppercase tracking-widest">Clients</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-gray-900 mb-1">7+</div>
-                  <div className="text-xs text-gray-400 font-mono uppercase tracking-widest">Years Exp</div>
+                  <div className="text-xs text-gray-600 font-mono uppercase tracking-widest">Years Exp</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-gray-900 mb-1">98%</div>
-                  <div className="text-xs text-gray-400 font-mono uppercase tracking-widest">Success</div>
+                  <div className="text-xs text-gray-600 font-mono uppercase tracking-widest">Success</div>
                 </div>
               </div>
             </div>
@@ -114,7 +114,7 @@ const AboutUsPage: React.FC<AboutUsPageProps> = ({ onNavigate }) => {
                   <div className={`absolute top-0 w-4 h-4 bg-white border-2 border-secondary rounded-full ${i % 2 === 0 ? '-left-[45px] md:-left-[9px]' : '-left-[45px] md:-right-[9px]'}`}></div>
                    <div className="text-4xl font-bold text-gray-600 mb-2">{item.year}</div>
                    <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
-                   <p className="text-slate-200 text-sm leading-relaxed">{item.desc}</p>
+                   <p className="text-gray-800 text-sm leading-relaxed">{item.desc}</p>
                </div>
              ))}
           </div>

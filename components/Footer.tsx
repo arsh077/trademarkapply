@@ -16,7 +16,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   };
 
   return (
-    <footer className="bg-gray-50 text-gray-300 border-t border-slate-800 transition-colors duration-300 pt-20 pb-10">
+    <footer className="bg-gray-50 text-gray-700 border-t border-slate-800 transition-colors duration-300 pt-20 pb-10">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           
@@ -70,14 +70,14 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 </a>
               ))}
             </div>
-            <button onClick={scrollToTop} className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-gray-400 hover:text-gray-900 transition-colors">
+            <button onClick={scrollToTop} className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-gray-600 hover:text-gray-900 transition-colors">
               Back to Top <ArrowUp size={14} />
             </button>
           </div>
 
         </div>
 
-        <div className="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
+        <div className="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-600">
           <p>&copy; 2025 TrademarkApply. All rights reserved.</p>
           <p>Designed by ARSHED ANWAR</p>
         </div>

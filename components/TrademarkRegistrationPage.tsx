@@ -86,16 +86,16 @@ const TrademarkRegistrationPage: React.FC<TrademarkRegistrationPageProps> = ({ o
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center text-sm text-gray-500">
             <button onClick={() => onNavigate('home')} className="hover:text-primary transition-colors">Home</button>
-            <span className="mx-2">ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢</span>
+            <span className="mx-2">→</span>
             <button onClick={() => onNavigate('services')} className="hover:text-primary transition-colors">Services</button>
-            <span className="mx-2">ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢</span>
+            <span className="mx-2">→</span>
             <span className="font-semibold text-primary">Trademark Registration</span>
           </div>
         </div>
       </div>
 
       {/* Hero Section with Form */}
-      <section className="bg-gradient-to-br from-slate-900 to-primary text-gray-900 py-12 lg:py-20 relative overflow-hidden transition-colors">
+      <section className="bg-gradient-to-br from-blue-50 via-white to-blue-100 text-gray-900 py-12 lg:py-20 relative overflow-hidden transition-colors">
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -124,7 +124,7 @@ const TrademarkRegistrationPage: React.FC<TrademarkRegistrationPageProps> = ({ o
                 </div>
               </div>
 
-              <div className="bg-blue-900/40 p-6 rounded-xl border border-blue-400/30">
+              <div className="bg-blue-100/80 p-6 rounded-xl border border-blue-400/30">
                  <h3 className="font-bold text-xl mb-4 flex items-center gap-2">
                    <Shield className="text-secondary" /> Need Expert Help?
                  </h3>
@@ -132,7 +132,7 @@ const TrademarkRegistrationPage: React.FC<TrademarkRegistrationPageProps> = ({ o
                     <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-primary font-bold text-lg">LS</div>
                     <div>
                       <div className="font-bold text-gray-900 uppercase">Legal Success India</div>
-                      <div className="text-sm text-blue-200 font-mono tracking-wider">Expert Legal Firm</div>
+                      <div className="text-sm text-blue-800 font-mono tracking-wider">Expert Legal Firm</div>
                     </div>
                  </div>
                  <div className="flex gap-4 mt-6">
@@ -152,7 +152,7 @@ const TrademarkRegistrationPage: React.FC<TrademarkRegistrationPageProps> = ({ o
                 <CheckCircle2 className="text-green-600 shrink-0 mt-0.5" size={20} />
                 <div>
                   <div className="font-bold text-green-800 text-sm">Limited-Time Offer</div>
-                  <div className="text-green-700 text-sm">Apply your 1st trademark only @<span className="font-bold">ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¹699</span></div>
+                  <div className="text-green-700 text-sm">Apply your 1st trademark only @<span className="font-bold">₹699</span></div>
                 </div>
               </div>
               
@@ -163,7 +163,7 @@ const TrademarkRegistrationPage: React.FC<TrademarkRegistrationPageProps> = ({ o
                 <div>
                   <label className="block text-xs font-bold text-gray-700 uppercase tracking-wide mb-1">Your Full Name *</label>
                   <div className="relative">
-                    <User className="absolute left-3 top-3 text-gray-400" size={18} />
+                    <User className="absolute left-3 top-3 text-gray-600" size={18} />
                     <input 
                       type="text" 
                       name="fullName"
@@ -178,7 +178,7 @@ const TrademarkRegistrationPage: React.FC<TrademarkRegistrationPageProps> = ({ o
                 <div>
                   <label className="block text-xs font-bold text-gray-700 uppercase tracking-wide mb-1">Phone Number *</label>
                   <div className="relative">
-                    <Phone className="absolute left-3 top-3 text-gray-400" size={18} />
+                    <Phone className="absolute left-3 top-3 text-gray-600" size={18} />
                     <input 
                       type="tel" 
                       name="phone"
@@ -225,7 +225,7 @@ const TrademarkRegistrationPage: React.FC<TrademarkRegistrationPageProps> = ({ o
               <div className="mt-6 pt-6 border-t border-gray-100">
                 <div className="flex justify-between items-center mb-1">
                   <span className="text-sm font-semibold text-gray-600">Professional Fees</span>
-                  <span className="text-xl font-bold text-primary">ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¹699</span>
+                  <span className="text-xl font-bold text-primary">₹699</span>
                 </div>
                 <div className="flex items-center gap-1 text-xs text-gray-500">
                   <Clock size={12} /> Process Timeline: 12-18 months
@@ -318,7 +318,7 @@ const TrademarkRegistrationPage: React.FC<TrademarkRegistrationPageProps> = ({ o
                   { id: "05", title: "Registration", desc: "Final registration and certificate", time: "2-3 months" },
                 ].map((step) => (
                   <div key={step.id} className="flex gap-6">
-                    <div className="text-4xl font-bold text-gray-200">{step.id}</div>
+                    <div className="text-4xl font-bold text-gray-800">{step.id}</div>
                     <div>
                       <h4 className="text-xl font-bold mb-1 text-primary">{step.title}</h4>
                       <p className="text-gray-600 mb-1">{step.desc}</p>

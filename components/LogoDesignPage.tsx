@@ -93,16 +93,16 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center text-sm text-gray-500">
             <button onClick={() => onNavigate('home')} className="hover:text-primary transition-colors">Home</button>
-            <span className="mx-2">ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢</span>
+            <span className="mx-2">→</span>
             <button onClick={() => onNavigate('services')} className="hover:text-primary transition-colors">Services</button>
-            <span className="mx-2">ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢</span>
+            <span className="mx-2">→</span>
             <span className="font-semibold text-primary">Logo Design</span>
           </div>
         </div>
       </div>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-900 to-primary text-gray-900 py-12 lg:py-20 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-blue-50 via-white to-blue-100 text-gray-900 py-12 lg:py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto mb-12">
@@ -140,9 +140,9 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
 
           <div className="text-center">
             <div className="inline-block bg-gray-100 backdrop-blur-md rounded-full px-6 py-2 mb-8 border border-gray-300">
-              <span className="text-2xl font-bold text-secondary">ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¹7,999</span> <span className="text-sm">All Inclusive</span>
+              <span className="text-2xl font-bold text-secondary">₹7,999</span> <span className="text-sm">All Inclusive</span>
             </div>
-            <div className="flex justify-center gap-8 text-sm font-semibold text-purple-200">
+            <div className="flex justify-center gap-8 text-sm font-semibold text-purple-800">
               <span className="flex items-center gap-2"><Clock size={16} /> Timeline: 5-7 business days</span>
               <span className="flex items-center gap-2"><Target size={16} /> Ownership: Lifetime rights</span>
             </div>
@@ -174,7 +174,7 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
               />
               <div className={`relative h-full bg-white rounded-2xl p-8 border-2 transition-all ${selectedPackage === 'basic' ? 'border-primary shadow-xl' : 'border-gray-100 shadow-lg hover:shadow-xl'}`}>
                 <h3 className="text-xl font-bold mb-2 text-slate-800">Basic Logo Package</h3>
-                <div className="text-3xl font-bold text-primary mb-4">ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¹4,999</div>
+                <div className="text-3xl font-bold text-primary mb-4">₹4,999</div>
                 <p className="text-sm text-gray-500 mb-6 font-medium bg-gray-100 inline-block px-3 py-1 rounded">3-5 business days</p>
                 
                 <ul className="space-y-3 mb-8">
@@ -216,7 +216,7 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
                   Most Popular
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-slate-800">Professional Logo Package</h3>
-                <div className="text-3xl font-bold text-primary mb-4">ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¹7,999</div>
+                <div className="text-3xl font-bold text-primary mb-4">₹7,999</div>
                 <p className="text-sm text-gray-500 mb-6 font-medium bg-gray-100 inline-block px-3 py-1 rounded">5-7 business days</p>
                 
                 <ul className="space-y-3 mb-8">
@@ -255,7 +255,7 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
               />
               <div className={`relative h-full bg-white rounded-2xl p-8 border-2 transition-all ${selectedPackage === 'premium' ? 'border-purple-600 shadow-xl' : 'border-gray-100 shadow-lg hover:shadow-xl'}`}>
                 <h3 className="text-xl font-bold mb-2 text-slate-800">Premium Brand Package</h3>
-                <div className="text-3xl font-bold text-primary mb-4">ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¹12,999</div>
+                <div className="text-3xl font-bold text-primary mb-4">₹12,999</div>
                 <p className="text-sm text-gray-500 mb-6 font-medium bg-gray-100 inline-block px-3 py-1 rounded">7-10 business days</p>
                 
                 <ul className="space-y-3 mb-8">
@@ -342,7 +342,7 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
                     <div>
                       <label className="block text-sm font-bold text-gray-700 mb-1">Your Full Name *</label>
                       <div className="relative">
-                        <User className="absolute left-3 top-3 text-gray-400" size={18} />
+                        <User className="absolute left-3 top-3 text-gray-600" size={18} />
                         <input 
                           type="text"
                           name="fullName"
@@ -356,7 +356,7 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
                     <div>
                       <label className="block text-sm font-bold text-gray-700 mb-1">Business/Company Name *</label>
                       <div className="relative">
-                        <Building2 className="absolute left-3 top-3 text-gray-400" size={18} />
+                        <Building2 className="absolute left-3 top-3 text-gray-600" size={18} />
                         <input 
                           type="text"
                           name="businessName"
@@ -373,7 +373,7 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
                     <div>
                       <label className="block text-sm font-bold text-gray-700 mb-1">Email Address *</label>
                       <div className="relative">
-                        <Mail className="absolute left-3 top-3 text-gray-400" size={18} />
+                        <Mail className="absolute left-3 top-3 text-gray-600" size={18} />
                         <input 
                           type="email"
                           name="email"
@@ -387,7 +387,7 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
                     <div>
                       <label className="block text-sm font-bold text-gray-700 mb-1">Phone Number *</label>
                       <div className="relative">
-                        <Phone className="absolute left-3 top-3 text-gray-400" size={18} />
+                        <Phone className="absolute left-3 top-3 text-gray-600" size={18} />
                         <input 
                           type="tel"
                           name="phone"
@@ -403,7 +403,7 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
                   <div>
                     <label className="block text-sm font-bold text-gray-700 mb-1">Business Address *</label>
                     <div className="relative">
-                      <MapPin className="absolute left-3 top-3 text-gray-400" size={18} />
+                      <MapPin className="absolute left-3 top-3 text-gray-600" size={18} />
                       <input 
                         type="text"
                         name="address"
@@ -476,9 +476,9 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
                       {selectedPackage === 'premium' && "Premium Brand Package"}
                     </span>
                     <span className="font-bold text-secondary text-lg">
-                      {selectedPackage === 'basic' && "ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¹4,999"}
-                      {selectedPackage === 'professional' && "ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¹7,999"}
-                      {selectedPackage === 'premium' && "ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¹12,999"}
+                      {selectedPackage === 'basic' && "₹4,999"}
+                      {selectedPackage === 'professional' && "₹7,999"}
+                      {selectedPackage === 'premium' && "₹12,999"}
                     </span>
                   </div>
                   <div className="text-xs text-gray-500 bg-gray-50 inline-block px-2 py-1 rounded">

@@ -68,7 +68,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage }) => {
               <ShieldCheck size={32} className="text-primary" />
               <div className="flex flex-col">
                 <span className="text-xl font-bold text-slate-900 leading-none tracking-tight">TrademarkApply</span>
-                <span className="text-[10px] text-gray-400 font-mono tracking-widest uppercase">Legal Services</span>
+                <span className="text-[10px] text-gray-600 font-mono tracking-widest uppercase">Legal Services</span>
               </div>
             </a>
 

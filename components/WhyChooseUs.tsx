@@ -25,7 +25,7 @@ const WhyChooseUs: React.FC = () => {
                 <item.icon size={32} />
               </div>
               <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed font-sans">
+              <p className="text-gray-600 text-sm leading-relaxed font-sans">
                 {item.desc}
               </p>
             </div>

@@ -17,7 +17,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ onNavigate }) => {
       {/* Breadcrumb & Header */}
       <div className="border-b border-gray-100 bg-white backdrop-blur-sm pt-20">
         <div className="container mx-auto px-4 py-8">
-          <div className="flex items-center text-xs font-mono text-gray-400 mb-6 uppercase tracking-widest">
+          <div className="flex items-center text-xs font-mono text-gray-600 mb-6 uppercase tracking-widest">
             <button onClick={() => onNavigate('home')} className="hover:text-gray-900 transition-colors">Home</button>
             <span className="mx-2">/</span>
             <span className="text-secondary">Services</span>
@@ -41,7 +41,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ onNavigate }) => {
             ].map((stat, i) => (
               <div key={i} className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2 font-mono">{stat.val}</div>
-                <div className="text-xs text-gray-400 uppercase tracking-widest">{stat.label}</div>
+                <div className="text-xs text-gray-600 uppercase tracking-widest">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -67,14 +67,14 @@ const ServicePage: React.FC<ServicePageProps> = ({ onNavigate }) => {
                     <p className="text-gray-600 mb-8 leading-relaxed max-w-2xl">
                       Secure your brand identity with our comprehensive registration service. We handle everything from search to certification.
                     </p>
-                    <div className="flex gap-6 text-xs font-mono text-gray-400 uppercase tracking-widest">
+                    <div className="flex gap-6 text-xs font-mono text-gray-600 uppercase tracking-widest">
                       <span className="flex items-center gap-2"><Clock size={14} className="text-secondary" /> 12-18 Months</span>
                       <span className="flex items-center gap-2"><Shield size={14} className="text-secondary" /> 10 Year Protection</span>
                     </div>
                   </div>
                   <div className="bg-gray-50 border-l border-gray-100 p-8 flex flex-col justify-center items-center text-center">
-                    <div className="text-4xl font-bold text-gray-900 mb-2">Ã¢â€šÂ¹699</div>
-                    <div className="text-xs text-gray-400 mb-8 uppercase tracking-widest">+ Govt Fees</div>
+                    <div className="text-4xl font-bold text-gray-900 mb-2">₹699</div>
+                    <div className="text-xs text-gray-600 mb-8 uppercase tracking-widest">+ Govt Fees</div>
                     <GlassButton onClick={() => onNavigate('trademark-registration')} className="bg-white text-black hover:bg-slate-200 w-full">
                       Start Filing
                     </GlassButton>
@@ -97,14 +97,14 @@ const ServicePage: React.FC<ServicePageProps> = ({ onNavigate }) => {
                     <p className="text-gray-600 mb-8 leading-relaxed max-w-2xl">
                       Professional, trademark-ready logo design services. Create a unique visual identity that is legally protectable.
                     </p>
-                    <div className="flex gap-6 text-xs font-mono text-gray-400 uppercase tracking-widest">
+                    <div className="flex gap-6 text-xs font-mono text-gray-600 uppercase tracking-widest">
                       <span className="flex items-center gap-2"><Clock size={14} className="text-purple-400" /> 5-7 Days</span>
                       <span className="flex items-center gap-2"><Target size={14} className="text-purple-400" /> Full Ownership</span>
                     </div>
                   </div>
                   <div className="bg-gray-50 border-l border-gray-100 p-8 flex flex-col justify-center items-center text-center">
-                    <div className="text-4xl font-bold text-gray-900 mb-2">Ã¢â€šÂ¹999</div>
-                    <div className="text-xs text-gray-400 mb-8 uppercase tracking-widest">Starting Price</div>
+                    <div className="text-4xl font-bold text-gray-900 mb-2">₹999</div>
+                    <div className="text-xs text-gray-600 mb-8 uppercase tracking-widest">Starting Price</div>
                     <GlassButton onClick={() => onNavigate('logo-design')} className="bg-transparent border border-gray-300 text-gray-900 hover:bg-gray-100 w-full">
                       View Packages
                     </GlassButton>
@@ -127,14 +127,14 @@ const ServicePage: React.FC<ServicePageProps> = ({ onNavigate }) => {
                     <p className="text-gray-600 mb-8 leading-relaxed max-w-2xl">
                       Expert advice on IP strategy, infringement issues, and brand protection. Get clarity on complex legal matters.
                     </p>
-                    <div className="flex gap-6 text-xs font-mono text-gray-400 uppercase tracking-widest">
+                    <div className="flex gap-6 text-xs font-mono text-gray-600 uppercase tracking-widest">
                       <span className="flex items-center gap-2"><Clock size={14} className="text-green-400" /> 30 Minutes</span>
                       <span className="flex items-center gap-2"><Zap size={14} className="text-green-400" /> Immediate</span>
                     </div>
                   </div>
                   <div className="bg-gray-50 border-l border-gray-100 p-8 flex flex-col justify-center items-center text-center">
                     <div className="text-4xl font-bold text-green-400 mb-2">FREE</div>
-                    <div className="text-xs text-gray-400 mb-8 uppercase tracking-widest">First Session</div>
+                    <div className="text-xs text-gray-600 mb-8 uppercase tracking-widest">First Session</div>
                     <GlassButton onClick={() => onNavigate('legal-consultation')} className="bg-green-500 text-black hover:bg-green-400 w-full">
                       Book Now
                     </GlassButton>
@@ -161,21 +161,21 @@ const ServicePage: React.FC<ServicePageProps> = ({ onNavigate }) => {
                 icon: Shield, 
                 title: "Opposition Handling", 
                 desc: "Defense against trademark oppositions and objections.", 
-                price: "Ã¢â€šÂ¹5,999", 
+                price: "₹5,999", 
                 link: "opposition-handling" 
               },
               { 
                 icon: RefreshCw, 
                 title: "Renewal Services", 
                 desc: "Timely renewal of your trademark for continued protection.", 
-                price: "Ã¢â€šÂ¹3,999", 
+                price: "₹3,999", 
                 link: "renewal-services" 
               },
               { 
                 icon: Copyright, 
                 title: "Copyright Registration", 
                 desc: "Protect literary, artistic, and musical works.", 
-                price: "Ã¢â€šÂ¹3,999", 
+                price: "₹3,999", 
                 link: "copyright-registration" 
               }
             ].map((item, i) => (

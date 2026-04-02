@@ -12,7 +12,7 @@ const TermsOfServicePage: React.FC<TermsOfServicePageProps> = ({ onNavigate }) =
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center text-sm text-gray-500">
             <button onClick={() => onNavigate('home')} className="hover:text-primary transition-colors">Home</button>
-            <span className="mx-2">ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢</span>
+            <span className="mx-2">→</span>
             <span className="font-semibold text-primary">Terms of Service</span>
           </div>
         </div>
@@ -26,8 +26,8 @@ const TermsOfServicePage: React.FC<TermsOfServicePageProps> = ({ onNavigate }) =
           </div>
           <p className="text-gray-700 mb-6">Comprehensive terms and conditions governing the use of TrademarkApply services. Please read these terms carefully before using our professional trademark services.</p>
           <div className="flex flex-wrap gap-6 text-sm text-gray-600 bg-gray-50 p-4 rounded-lg border border-gray-200">
-            <span>ÃƒÂ°Ã…Â¸Ã¢â‚¬Å“Ã¢â‚¬Â¦ Last Updated: September 13, 2025</span>
-            <span>ÃƒÂ¢Ã…Â¡Ã¢â‚¬â€œÃƒÂ¯Ã‚Â¸Ã‚Â Legal Expert: KHURSHID ANWAR</span>
+            <span>📅 Last Updated: September 13, 2025</span>
+            <span>⚖️ Legal Expert: KHURSHID ANWAR</span>
             <span>ÃƒÂ°Ã…Â¸Ã‚ÂÃ¢â‚¬ÂºÃƒÂ¯Ã‚Â¸Ã‚Â Governed by Indian Law</span>
           </div>
         </div>
