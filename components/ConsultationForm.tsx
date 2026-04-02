@@ -12,12 +12,6 @@ interface ConsultationFormProps {
 const ConsultationForm: React.FC<ConsultationFormProps> = ({ onNavigate }) => {
   const formRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (formRef.current) {
-      formRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, []);
-
   const [formData, setFormData] = useState({
     businessName: '',
     brandName: '',
@@ -100,7 +94,7 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({ onNavigate }) => {
   ];
 
   return (
-    <section ref={formRef} id="consultation" className="py-24 relative overflow-hidden bg-[#020202]">
+    <section id="consultation" className="py-24 relative overflow-hidden bg-[#020202]">
       {/* Background Elements */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[100px] pointer-events-none" />
