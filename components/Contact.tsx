@@ -39,8 +39,8 @@ const Contact: React.FC = () => {
               <Phone size={24} />
             </div>
             <h3 className="text-lg font-bold mb-2 text-white">Phone</h3>
-            <p className="text-white/60 mb-2 text-sm">+91 6290634766</p>
-            <a href="tel:+916290634766" className="text-secondary text-[10px] font-mono font-bold uppercase tracking-wider hover:underline">Call now</a>
+            <p className="text-white/60 mb-2 text-sm">+91 7605890360</p>
+            <a href="tel:+917605890360" className="text-secondary text-[10px] font-mono font-bold uppercase tracking-wider hover:underline">Call now</a>
           </div>
 
         </div>

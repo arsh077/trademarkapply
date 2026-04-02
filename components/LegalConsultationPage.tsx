@@ -145,7 +145,7 @@ const LegalConsultationPage: React.FC<LegalConsultationPageProps> = ({ onNavigat
                 <GlassButton onClick={() => document.getElementById('booking-form')?.scrollIntoView({ behavior: 'smooth' })} className="bg-secondary text-slate-900 font-bold hover:bg-yellow-400">
                   <Calendar size={20} /> Book Free Session
                 </GlassButton>
-                <GlassButton href="tel:+916290634766" className="bg-white/10 text-white border border-white/30 font-bold hover:bg-white/20">
+                <GlassButton href="tel:+917605890360" className="bg-white/10 text-white border border-white/30 font-bold hover:bg-white/20">
                   <Phone size={20} /> Call Now
                 </GlassButton>
               </div>
@@ -263,7 +263,7 @@ const LegalConsultationPage: React.FC<LegalConsultationPageProps> = ({ onNavigat
                         <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Phone Number *</label>
                         <div className="relative">
                           <Phone className="absolute left-3 top-3 text-gray-400" size={18} />
-                          <input type="tel" name="phone" required className="w-full pl-10 pr-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="+91 6290634766" onChange={handleChange} />
+                          <input type="tel" name="phone" required className="w-full pl-10 pr-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="+91 7605890360" onChange={handleChange} />
                         </div>
                       </div>
                     </div>
@@ -473,13 +473,13 @@ const LegalConsultationPage: React.FC<LegalConsultationPageProps> = ({ onNavigat
                   <AlertCircle className="text-red-500" size={20} /> Immediate Assistance
                 </h3>
                 <div className="space-y-4">
-                  <a href="tel:+916290634766" className="flex items-center gap-3 p-3 bg-gray-50 dark:bg-slate-700 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-600 transition-colors">
+                  <a href="tel:+917605890360" className="flex items-center gap-3 p-3 bg-gray-50 dark:bg-slate-700 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-600 transition-colors">
                     <div className="w-10 h-10 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full flex items-center justify-center">
                       <Phone size={20} />
                     </div>
                     <div>
                       <div className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase">Call Now</div>
-                      <div className="font-bold text-primary dark:text-blue-400">+91 6290634766</div>
+                      <div className="font-bold text-primary dark:text-blue-400">+91 7605890360</div>
                     </div>
                   </a>
                   <a href="mailto:trademark.legal.01@gmail.com" className="flex items-center gap-3 p-3 bg-gray-50 dark:bg-slate-700 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-600 transition-colors">

@@ -392,7 +392,7 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
                           type="tel"
                           name="phone"
                           required
-                          placeholder="+91 6290634766"
+                          placeholder="+91 7605890360"
                           className="w-full pl-10 pr-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
                           onChange={handleChange}
                         />
@@ -526,8 +526,8 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
               <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 border-l-4 border-secondary">
                  <h3 className="font-bold mb-2 dark:text-white">Need Help?</h3>
                  <div className="space-y-2">
-                   <a href="tel:+916290634766" className="flex items-center gap-2 text-primary dark:text-blue-400 hover:underline">
-                     <Phone size={16} /> +91 6290634766
+                   <a href="tel:+917605890360" className="flex items-center gap-2 text-primary dark:text-blue-400 hover:underline">
+                     <Phone size={16} /> +91 7605890360
                    </a>
                    <a href="mailto:trademark.legal.01@gmail.com" className="flex items-center gap-2 text-primary dark:text-blue-400 hover:underline">
                      <Mail size={16} /> trademark.legal.01@gmail.com

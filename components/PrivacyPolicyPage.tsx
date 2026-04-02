@@ -135,7 +135,7 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onNavigate }) => 
                 </div>
                 <div className="flex items-center gap-3">
                     <Phone className="text-primary dark:text-blue-400" size={20} />
-                    <a href="tel:+916290634766" className="text-sm hover:underline text-slate-700 dark:text-slate-300">+91 6290634766</a>
+                    <a href="tel:+917605890360" className="text-sm hover:underline text-slate-700 dark:text-slate-300">+91 7605890360</a>
                 </div>
                 <div className="flex items-center gap-3">
                     <MapPin className="text-primary dark:text-blue-400" size={20} />

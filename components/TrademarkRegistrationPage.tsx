@@ -136,7 +136,7 @@ const TrademarkRegistrationPage: React.FC<TrademarkRegistrationPageProps> = ({ o
                     </div>
                  </div>
                  <div className="flex gap-4 mt-6">
-                    <a href="tel:+916290634766" className="flex items-center gap-2 bg-white text-primary dark:bg-blue-600 dark:text-white px-4 py-2 rounded-lg font-bold hover:bg-gray-100 dark:hover:bg-blue-700 transition-colors">
+                    <a href="tel:+917605890360" className="flex items-center gap-2 bg-white text-primary dark:bg-blue-600 dark:text-white px-4 py-2 rounded-lg font-bold hover:bg-gray-100 dark:hover:bg-blue-700 transition-colors">
                       <Phone size={16} /> Call Now
                     </a>
                     <a href="mailto:trademark.legal.01@gmail.com" className="flex items-center gap-2 border border-white text-white px-4 py-2 rounded-lg font-bold hover:bg-white/10 transition-colors">

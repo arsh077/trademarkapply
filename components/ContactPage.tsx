@@ -94,7 +94,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
           {/* Sidebar */}
           <div className="space-y-6">
             {[
-              { icon: Phone, title: "Phone", val: "+91 6290634766", sub: "Mon-Sat, 9am-7pm", link: "tel:+916290634766" },
+              { icon: Phone, title: "Phone", val: "+91 7605890360", sub: "Mon-Sat, 9am-7pm", link: "tel:+917605890360" },
               { icon: Mail, title: "Email", val: "trademark.legal.01@gmail.com", sub: "24h Response Time", link: "mailto:trademark.legal.01@gmail.com" },
               { icon: MapPin, title: "Office", val: "Kolkata, West Bengal", sub: "8/5 mominpore road", link: "#" }
             ].map((item, i) => (
@@ -144,7 +144,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-xs font-mono text-slate-500 uppercase">Phone</label>
-                    <input type="tel" name="phone" required className="w-full bg-[#0a0a0a] border border-white/10 rounded-lg px-4 py-3 text-white focus:border-secondary/50 focus:outline-none transition-colors" placeholder="+91 6290634766" onChange={handleChange} />
+                    <input type="tel" name="phone" required className="w-full bg-[#0a0a0a] border border-white/10 rounded-lg px-4 py-3 text-white focus:border-secondary/50 focus:outline-none transition-colors" placeholder="+91 7605890360" onChange={handleChange} />
                   </div>
                   <div className="space-y-2">
                     <label className="text-xs font-mono text-slate-500 uppercase">Service</label>

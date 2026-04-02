@@ -208,7 +208,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ onNavigate }) => {
             <GlassButton onClick={() => onNavigate('contact')} className="bg-secondary text-black font-bold">
               Get Started
             </GlassButton>
-            <GlassButton href="tel:+916290634766" className="border border-white/20 text-white">
+            <GlassButton href="tel:+917605890360" className="border border-white/20 text-white">
               <Headphones size={18} className="mr-2" /> Talk to Expert
             </GlassButton>
           </div>

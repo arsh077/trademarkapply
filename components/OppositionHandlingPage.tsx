@@ -251,7 +251,7 @@ const OppositionHandlingPage: React.FC<OppositionHandlingPageProps> = ({ onNavig
                           <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Phone Number *</label>
                           <div className="relative">
                             <Phone className="absolute left-3 top-3 text-gray-400" size={18} />
-                            <input type="tel" name="phone" required className="w-full pl-10 pr-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="+91 6290634766" value={formData.phone} onChange={handleChange} />
+                            <input type="tel" name="phone" required className="w-full pl-10 pr-4 py-2.5 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded-lg focus:ring-2 focus:ring-primary outline-none" placeholder="+91 7605890360" value={formData.phone} onChange={handleChange} />
                           </div>
                         </div>
                       </div>
@@ -423,7 +423,7 @@ const OppositionHandlingPage: React.FC<OppositionHandlingPageProps> = ({ onNavig
                   If your opposition has a critical deadline approaching, contact us immediately for emergency assistance.
                 </p>
                 
-                <a href="tel:+916290634766" className="flex items-center justify-center gap-2 w-full bg-red-600 text-white py-3 rounded-lg font-bold hover:bg-red-700 transition-colors shadow-md">
+                <a href="tel:+917605890360" className="flex items-center justify-center gap-2 w-full bg-red-600 text-white py-3 rounded-lg font-bold hover:bg-red-700 transition-colors shadow-md">
                    <Phone size={18} /> Emergency Contact
                 </a>
                 <p className="text-center text-xs text-red-400 mt-2">Emergency assistance available subject to attorney availability</p>

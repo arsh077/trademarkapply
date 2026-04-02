@@ -75,14 +75,14 @@ const ThankYouPage: React.FC<ThankYouPageProps> = ({ onNavigate }) => {
 
           {/* Contact Info */}
           <div className="grid md:grid-cols-2 gap-4 mb-8">
-            <a href="tel:+916290634766" className="glass-panel p-4 rounded-xl hover:bg-white/10 transition-all group">
+            <a href="tel:+917605890360" className="glass-panel p-4 rounded-xl hover:bg-white/10 transition-all group">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-secondary/20 rounded-full flex items-center justify-center group-hover:bg-secondary transition-all">
                   <Phone className="text-secondary group-hover:text-black transition-all" size={18} />
                 </div>
                 <div className="text-left">
                   <p className="text-white/60 text-xs font-mono uppercase tracking-wider">Call Us</p>
-                  <p className="text-white font-bold text-sm">+91 6290634766</p>
+                  <p className="text-white font-bold text-sm">+91 7605890360</p>
                 </div>
               </div>
             </a>

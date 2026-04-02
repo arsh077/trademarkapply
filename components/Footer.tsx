@@ -31,7 +31,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </p>
             <div className="space-y-3 text-[10px] font-mono text-white/60 uppercase tracking-wider">
                <p className="flex items-center gap-3"><span className="text-secondary">EMAIL</span> trademark.legal.01@gmail.com</p>
-               <p className="flex items-center gap-3"><span className="text-secondary">PHONE</span> +91 6290634766</p>
+               <p className="flex items-center gap-3"><span className="text-secondary">PHONE</span> +91 7605890360</p>
             </div>
           </div>
 

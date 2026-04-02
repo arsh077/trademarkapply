@@ -194,7 +194,7 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({ onNavigate }) => {
                       name="phone"
                       required
                       className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-slate-600 focus:outline-none focus:border-secondary/50 focus:bg-white/10 transition-all"
-                      placeholder="+91 6290634766"
+                      placeholder="+91 7605890360"
                       onChange={handleChange}
                     />
                   </div>
