@@ -19,7 +19,7 @@ const Contact: React.FC = () => {
             </div>
             <h3 className="text-lg font-bold mb-2 dark:text-white">Address</h3>
             <p className="text-gray-600 dark:text-gray-300">
-              22/1 Momiinpore Road<br />
+              8/5 mominpore road<br />
               Kolkata 700023<br />
               West Bengal, India
             </p>

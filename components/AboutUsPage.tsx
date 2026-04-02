@@ -112,9 +112,9 @@ const AboutUsPage: React.FC<AboutUsPageProps> = ({ onNavigate }) => {
              ].map((item, i) => (
                <div key={i} className={`relative md:w-1/2 ${i % 2 === 0 ? 'md:ml-auto md:pl-12' : 'md:mr-auto md:pr-12 md:text-right'}`}>
                   <div className={`absolute top-0 w-4 h-4 bg-white dark:bg-black border-2 border-secondary rounded-full ${i % 2 === 0 ? '-left-[45px] md:-left-[9px]' : '-left-[45px] md:-right-[9px]'}`}></div>
-                  <div className="text-4xl font-bold text-slate-300 dark:text-white/30 mb-2">{item.year}</div>
-                  <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
-                  <p className="text-slate-400 text-sm">{item.desc}</p>
+                   <div className="text-4xl font-bold text-slate-400 dark:text-white/40 mb-2">{item.year}</div>
+                   <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                   <p className="text-slate-200 text-sm leading-relaxed">{item.desc}</p>
                </div>
              ))}
           </div>

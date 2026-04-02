@@ -42,8 +42,8 @@ const Reviews: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           <div className="lg:w-1/2 text-white">
             <span className="text-secondary font-bold tracking-wide uppercase text-sm mb-2 block">Client Reviews</span>
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Trusted by Businesses Across India</h2>
-            <p className="text-slate-300 text-lg mb-8 leading-relaxed">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">Trusted by Businesses <br className="hidden md:block" /> Across India</h2>
+            <p className="text-slate-200 text-lg mb-8 leading-relaxed font-light">
               Our commitment to excellence and legal expertise has earned us the trust of thousands of clients. We pride ourselves on clear communication, successful outcomes, and professional integrity.
             </p>
             <div className="flex items-center gap-2 mb-2">

@@ -93,10 +93,10 @@ const TrademarkRegistrationPage: React.FC<TrademarkRegistrationPageProps> = ({ o
                    <Shield className="text-secondary" /> Need Expert Help?
                  </h3>
                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-gray-200 dark:bg-slate-600 rounded-full flex items-center justify-center text-primary dark:text-blue-300 font-bold text-lg">KA</div>
+                    <div className="w-12 h-12 bg-gray-200 dark:bg-slate-600 rounded-full flex items-center justify-center text-primary dark:text-blue-300 font-bold text-lg">LS</div>
                     <div>
-                      <div className="font-bold">KHURSHID ANWAR</div>
-                      <div className="text-sm text-blue-200 dark:text-gray-400">Legal Expert • 7+ Years</div>
+                      <div className="font-bold text-white uppercase">Legal Success India</div>
+                      <div className="text-sm text-blue-200 dark:text-gray-400 font-mono tracking-wider">Expert Legal Firm</div>
                     </div>
                  </div>
                  <div className="flex gap-4 mt-6">

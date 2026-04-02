@@ -27,41 +27,28 @@ const GlassEffect: React.FC<GlassEffectProps> = ({
   disabled
 }) => {
   const glassStyle = {
-    boxShadow: "0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1)",
-    transitionTimingFunction: "cubic-bezier(0.175, 0.885, 0.32, 2.2)",
+    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.05)",
+    transitionTimingFunction: "cubic-bezier(0.175, 0.885, 0.32, 1.275)",
     ...style,
   };
 
   const content = (
-    <div className="relative flex w-full h-full items-center justify-center">
-      {/* Glass Layers */}
+    <div className="relative flex w-full h-full items-center justify-center py-0.5">
+      {/* Simplified Stylish Button Mechanism */}
       <div
-        className="absolute inset-0 z-0 overflow-hidden rounded-inherit pointer-events-none"
-        style={{
-          backdropFilter: "blur(3px)",
-          filter: "url(#glass-distortion)",
-          isolation: "isolate",
-        }}
+        className="absolute inset-0 z-0 bg-gradient-to-br from-white/20 to-transparent dark:from-white/10 dark:to-transparent opacity-50 group-hover:opacity-100 transition-opacity pointer-events-none"
       />
       <div
-        className="absolute inset-0 z-10 rounded-inherit pointer-events-none"
-        style={{ background: "rgba(255, 255, 255, 0.15)" }}
-      />
-      <div
-        className="absolute inset-0 z-20 rounded-inherit overflow-hidden pointer-events-none"
-        style={{
-          boxShadow:
-            "inset 2px 2px 1px 0 rgba(255, 255, 255, 0.3), inset -1px -1px 1px 1px rgba(255, 255, 255, 0.3)",
-        }}
+        className="absolute inset-0 z-10 border border-white/20 dark:border-white/10 rounded-inherit pointer-events-none shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]"
       />
 
       {/* Content */}
-      <div className="relative z-30 flex items-center justify-center gap-2">{children}</div>
+      <div className="relative z-30 flex items-center justify-center gap-2 group-hover:scale-[1.02] transition-transform duration-300">{children}</div>
     </div>
   );
 
   const containerClasses = cn(
-    "relative font-semibold overflow-hidden cursor-pointer transition-all duration-700 active:scale-95",
+    "relative font-semibold overflow-hidden cursor-pointer transition-all duration-300 active:scale-95 group rounded-xl",
     className
   );
 

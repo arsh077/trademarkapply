@@ -13,7 +13,7 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onNavigate }) => 
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-normal mb-8">
-            Welcome to TrademarkApply, owned and operated by KHURSHID ANWAR. We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our trademark registration services.
+            Welcome to TrademarkApply, owned and operated by Legal Success India. We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our trademark registration services.
           </p>
           <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-normal mb-8">
             By using our services, you consent to the data practices described in this policy. If you do not agree with the terms of this policy, please do not use our services.
@@ -125,8 +125,8 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onNavigate }) => 
                 <div className="flex items-center gap-3">
                     <User className="text-primary dark:text-blue-400" size={20} />
                     <div>
-                        <div className="font-bold text-sm text-slate-900 dark:text-white">KHURSHID ANWAR</div>
-                        <div className="text-xs text-gray-500 dark:text-gray-400">Data Protection Officer</div>
+                        <div className="font-bold text-sm text-slate-900 dark:text-white">Legal Success India</div>
+                        <div className="text-xs text-gray-500 dark:text-gray-400">Legal Firm</div>
                     </div>
                 </div>
                 <div className="flex items-center gap-3">
@@ -139,7 +139,7 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onNavigate }) => 
                 </div>
                 <div className="flex items-center gap-3">
                     <MapPin className="text-primary dark:text-blue-400" size={20} />
-                    <span className="text-sm text-slate-700 dark:text-slate-300">22/1 Momiinpore Road, Kolkata 700023</span>
+                    <span className="text-sm text-slate-700 dark:text-slate-300">8/5 mominpore road, kolkata 700023</span>
                 </div>
              </div>
           </div>

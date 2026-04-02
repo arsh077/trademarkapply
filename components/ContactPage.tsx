@@ -57,7 +57,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
             {[
               { icon: Phone, title: "Phone", val: "+91 6290634766", sub: "Mon-Sat, 9am-7pm", link: "tel:+916290634766" },
               { icon: Mail, title: "Email", val: "trademark.legal.01@gmail.com", sub: "24h Response Time", link: "mailto:trademark.legal.01@gmail.com" },
-              { icon: MapPin, title: "Office", val: "Kolkata, West Bengal", sub: "22/1 Momiinpore Road", link: "#" }
+              { icon: MapPin, title: "Office", val: "Kolkata, West Bengal", sub: "8/5 mominpore road", link: "#" }
             ].map((item, i) => (
               <a key={i} href={item.link} className="block glass-panel p-6 rounded-2xl hover:bg-white/5 transition-colors group">
                 <div className="flex items-start gap-4">
