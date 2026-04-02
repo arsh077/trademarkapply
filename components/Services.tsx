@@ -54,7 +54,7 @@ interface ServicesProps {
 
 const Services: React.FC<ServicesProps> = ({ onNavigate }) => {
   const services = [
-    { icon: <Tag size={28} />, title: "Trademark Registration", description: "Complete trademark registration process from search to approval with government compliance.", price: "₹1,999", link: "trademark-registration" },
+    { icon: <Tag size={28} />, title: "Trademark Registration", description: "Complete trademark registration process from search to approval with government compliance.", price: "₹699", link: "trademark-registration" },
     { icon: <PenTool size={28} />, title: "Logo Design", description: "Professional logo design services that complement your trademark registration.", price: "₹999", link: "logo-design" },
     { icon: <Scale size={28} />, title: "Legal Consultation", description: "Expert legal advice on trademark law, disputes, and intellectual property protection.", price: "₹1,500/hr", link: "legal-consultation" },
     { icon: <ShieldAlert size={28} />, title: "Opposition Handling", description: "Professional handling of trademark opposition cases with expert legal representation.", price: "₹5,999", link: "opposition-handling" },

@@ -57,7 +57,7 @@ export const ExperienceHero: React.FC<ExperienceHeroProps> = ({ onNavigate }) =>
              <span className="font-mono text-[11px] font-bold text-white tracking-[0.2em] uppercase">TRADEMARK.APPLY</span>
           </div>
 
-          <div className="max-w-4xl lg:-translate-y-8 pr-0 md:pr-12">
+          <div className="max-w-4xl lg:-translate-y-8 pr-0 md:pr-12 pt-16">
             <h1 className="text-[clamp(2.5rem,10vw,8rem)] font-black leading-[0.9] tracking-tighter text-white uppercase italic-none">
               SECURE <br /> <span className="text-outline">YOUR BRAND</span>
             </h1>

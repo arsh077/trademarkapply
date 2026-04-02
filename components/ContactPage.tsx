@@ -31,7 +31,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
   };
 
   const faqs = [
-    { q: "Trademark cost?", a: "From ₹1,999 + Govt fees." },
+    { q: "Trademark cost?", a: "From ₹699 + Govt fees." },
     { q: "Time required?", a: "12-18 months typically." },
     { q: "Free consultation?", a: "Yes, first 30 mins free." },
     { q: "Status tracking?", a: "Yes, regular updates." }
@@ -139,7 +139,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
             {faqs.map((f, i) => (
               <div key={i} className="bg-white/5 p-6 rounded-xl border border-white/5">
                 <h4 className="font-bold text-white mb-2">{f.q}</h4>
-                <p className="text-slate-400 text-sm">{f.a}</p>
+                <p className="text-slate-500 text-sm">{f.a}</p>
               </div>
             ))}
           </div>

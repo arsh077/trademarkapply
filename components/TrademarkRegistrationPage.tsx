@@ -13,6 +13,8 @@ interface TrademarkRegistrationPageProps {
 }
 
 const TrademarkRegistrationPage: React.FC<TrademarkRegistrationPageProps> = ({ onNavigate }) => {
+  const formRef = React.useRef<HTMLDivElement>(null);
+
   const [formData, setFormData] = useState({
     fullName: '',
     phone: '',
@@ -187,7 +189,7 @@ const TrademarkRegistrationPage: React.FC<TrademarkRegistrationPageProps> = ({ o
               <div className="mt-6 pt-6 border-t border-gray-100 dark:border-slate-700">
                 <div className="flex justify-between items-center mb-1">
                   <span className="text-sm font-semibold text-gray-600 dark:text-gray-400">Professional Fees</span>
-                  <span className="text-xl font-bold text-primary dark:text-blue-400">₹1,999</span>
+                  <span className="text-xl font-bold text-primary dark:text-blue-400">₹699</span>
                 </div>
                 <div className="flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400">
                   <Clock size={12} /> Process Timeline: 12-18 months

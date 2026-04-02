@@ -49,7 +49,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ onNavigate }) => {
       </div>
 
       {/* Main Services List */}
-      <section className="py-24">
+      <section id="services" className="py-24">
         <div className="container mx-auto px-4">
           <div className="grid gap-8">
             
