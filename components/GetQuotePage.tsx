@@ -66,7 +66,7 @@ const GetQuotePage: React.FC<GetQuotePageProps> = ({ onNavigate }) => {
   };
 
   const services = [
-    { title: "Trademark Registration", price: "₹4,999", desc: "Comprehensive Search + Filing" },
+    { title: "Trademark Registration", price: "₹699", desc: "Comprehensive Search + Filing" },
     { title: "Logo Design", price: "₹7,999", desc: "3 Concepts + TM Check" },
     { title: "Consultation", price: "FREE", desc: "Initial Strategy Session" },
     { title: "Opposition", price: "₹15k", desc: "Legal Defense Per Case" }
