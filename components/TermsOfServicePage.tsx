@@ -12,23 +12,23 @@ const TermsOfServicePage: React.FC<TermsOfServicePageProps> = ({ onNavigate }) =
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center text-sm text-gray-500">
             <button onClick={() => onNavigate('home')} className="hover:text-primary transition-colors">Home</button>
-            <span className="mx-2">â†’</span>
+            <span className="mx-2">ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢</span>
             <span className="font-semibold text-primary">Terms of Service</span>
           </div>
         </div>
       </div>
 
-      <section className="bg-slate-900 text-white py-12 reveal">
+      <section className="bg-gray-50 text-gray-900 py-12 reveal">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="flex items-center gap-3 mb-4 text-secondary">
             <Scale size={32} />
             <h1 className="text-4xl font-bold">Terms of Service</h1>
           </div>
-          <p className="text-slate-300 mb-6">Comprehensive terms and conditions governing the use of TrademarkApply services. Please read these terms carefully before using our professional trademark services.</p>
-          <div className="flex flex-wrap gap-6 text-sm text-slate-400 bg-white/5 p-4 rounded-lg border border-white/10">
-            <span>ðŸ“… Last Updated: September 13, 2025</span>
-            <span>âš–ï¸ Legal Expert: KHURSHID ANWAR</span>
-            <span>ðŸ›ï¸ Governed by Indian Law</span>
+          <p className="text-gray-700 mb-6">Comprehensive terms and conditions governing the use of TrademarkApply services. Please read these terms carefully before using our professional trademark services.</p>
+          <div className="flex flex-wrap gap-6 text-sm text-gray-600 bg-gray-50 p-4 rounded-lg border border-gray-200">
+            <span>ÃƒÂ°Ã…Â¸Ã¢â‚¬Å“Ã¢â‚¬Â¦ Last Updated: September 13, 2025</span>
+            <span>ÃƒÂ¢Ã…Â¡Ã¢â‚¬â€œÃƒÂ¯Ã‚Â¸Ã‚Â Legal Expert: KHURSHID ANWAR</span>
+            <span>ÃƒÂ°Ã…Â¸Ã‚ÂÃ¢â‚¬ÂºÃƒÂ¯Ã‚Â¸Ã‚Â Governed by Indian Law</span>
           </div>
         </div>
       </section>
@@ -115,11 +115,11 @@ const TermsOfServicePage: React.FC<TermsOfServicePageProps> = ({ onNavigate }) =
                 </ul>
               </div>
 
-              <div className="bg-slate-900 text-white p-8 rounded-2xl">
+              <div className="bg-gray-50 text-gray-900 p-8 rounded-2xl">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-6">
                   <div>
                     <h3 className="text-xl font-bold mb-2">Need Legal Help?</h3>
-                    <p className="text-slate-400 text-sm">Contact our Senior Trademark Attorney directly.</p>
+                    <p className="text-gray-600 text-sm">Contact our Senior Trademark Attorney directly.</p>
                   </div>
                   <div className="text-center md:text-right">
                     <div className="font-bold text-lg text-secondary">KHURSHID ANWAR</div>

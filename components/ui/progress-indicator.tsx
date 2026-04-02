@@ -93,7 +93,7 @@ const ProgressIndicator: React.FC<ProgressIndicatorProps> = ({
                             flex: isExpanded ? 1 : 'inherit',
                         }}
                         className={cn(
-                            "px-4 py-3 rounded-full text-white transition-colors flex-1 w-56",
+                            "px-4 py-3 rounded-full text-gray-900 transition-colors flex-1 w-56",
                             buttonClassName || "bg-[#006cff]",
                             !isExpanded && 'w-44'
                         )}

@@ -113,14 +113,14 @@ const AdminDashboard: React.FC<AdminDashboardProps> = ({ onLogout }) => {
   const services = ['Trademark Registration', 'Logo Design', 'Legal Consultation', 'Opposition Handling', 'Renewal Services', 'Copyright Registration'];
 
   return (
-    <div className="min-h-screen bg-[#020202] text-white">
+    <div className="min-h-screen bg-white text-gray-900">
       {/* Header */}
-      <header className="glass-panel border-b border-white/10 sticky top-0 z-50">
+      <header className="glass-panel border-b border-gray-200 sticky top-0 z-50">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <div>
               <h1 className="text-2xl font-bold">Admin Dashboard</h1>
-              <p className="text-white/60 text-sm font-mono uppercase tracking-wider">TrademarkApply Leads</p>
+              <p className="text-gray-900/60 text-sm font-mono uppercase tracking-wider">TrademarkApply Leads</p>
             </div>
             <button
               onClick={onLogout}
@@ -141,7 +141,7 @@ const AdminDashboard: React.FC<AdminDashboardProps> = ({ onLogout }) => {
               <Users className="text-secondary" size={24} />
               <span className="text-2xl font-bold">{leads.length}</span>
             </div>
-            <p className="text-white/60 text-sm font-mono uppercase tracking-wider">Total Leads</p>
+            <p className="text-gray-900/60 text-sm font-mono uppercase tracking-wider">Total Leads</p>
           </div>
           
           <div className="glass-panel p-6 rounded-xl">
@@ -151,7 +151,7 @@ const AdminDashboard: React.FC<AdminDashboardProps> = ({ onLogout }) => {
                 {leads.filter(l => new Date(l.date).toDateString() === new Date().toDateString()).length}
               </span>
             </div>
-            <p className="text-white/60 text-sm font-mono uppercase tracking-wider">Today</p>
+            <p className="text-gray-900/60 text-sm font-mono uppercase tracking-wider">Today</p>
           </div>
 
           <div className="glass-panel p-6 rounded-xl">
@@ -161,7 +161,7 @@ const AdminDashboard: React.FC<AdminDashboardProps> = ({ onLogout }) => {
                 {leads.filter(l => new Date(l.date) > new Date(Date.now() - 7 * 24 * 60 * 60 * 1000)).length}
               </span>
             </div>
-            <p className="text-white/60 text-sm font-mono uppercase tracking-wider">This Week</p>
+            <p className="text-gray-900/60 text-sm font-mono uppercase tracking-wider">This Week</p>
           </div>
 
           <div className="glass-panel p-6 rounded-xl">
@@ -171,7 +171,7 @@ const AdminDashboard: React.FC<AdminDashboardProps> = ({ onLogout }) => {
                 {leads.filter(l => new Date(l.date).getMonth() === new Date().getMonth()).length}
               </span>
             </div>
-            <p className="text-white/60 text-sm font-mono uppercase tracking-wider">This Month</p>
+            <p className="text-gray-900/60 text-sm font-mono uppercase tracking-wider">This Month</p>
           </div>
         </div>
 
@@ -179,22 +179,22 @@ const AdminDashboard: React.FC<AdminDashboardProps> = ({ onLogout }) => {
         <div className="glass-panel p-6 rounded-xl mb-6">
           <div className="flex flex-col md:flex-row gap-4">
             <div className="flex-1 relative">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-white/40" size={18} />
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-900/40" size={18} />
               <input
                 type="text"
                 placeholder="Search by name, email, or phone..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-white/40 focus:border-secondary/50 focus:outline-none"
+                className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 placeholder:text-gray-900/40 focus:border-secondary/50 focus:outline-none"
               />
             </div>
             
             <div className="relative">
-              <Filter className="absolute left-3 top-1/2 -translate-y-1/2 text-white/40" size={18} />
+              <Filter className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-900/40" size={18} />
               <select
                 value={filterService}
                 onChange={(e) => setFilterService(e.target.value)}
-                className="pl-10 pr-8 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:border-secondary/50 focus:outline-none appearance-none cursor-pointer"
+                className="pl-10 pr-8 py-3 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 focus:border-secondary/50 focus:outline-none appearance-none cursor-pointer"
               >
                 <option value="all">All Services</option>
                 {services.map(service => (
@@ -214,7 +214,7 @@ const AdminDashboard: React.FC<AdminDashboardProps> = ({ onLogout }) => {
             <button
               onClick={fetchLeads}
               disabled={loading}
-              className="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-bold transition-colors disabled:opacity-50"
+              className="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-gray-900 px-6 py-3 rounded-lg font-bold transition-colors disabled:opacity-50"
             >
               <RefreshCw size={18} className={loading ? 'animate-spin' : ''} />
               Refresh
@@ -226,42 +226,42 @@ const AdminDashboard: React.FC<AdminDashboardProps> = ({ onLogout }) => {
         <div className="glass-panel rounded-xl overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full">
-              <thead className="bg-white/5 border-b border-white/10">
+              <thead className="bg-gray-50 border-b border-gray-200">
                 <tr>
-                  <th className="text-left px-6 py-4 text-sm font-mono uppercase tracking-wider text-white/80">Name</th>
-                  <th className="text-left px-6 py-4 text-sm font-mono uppercase tracking-wider text-white/80">Email</th>
-                  <th className="text-left px-6 py-4 text-sm font-mono uppercase tracking-wider text-white/80">Phone</th>
-                  <th className="text-left px-6 py-4 text-sm font-mono uppercase tracking-wider text-white/80">Service</th>
-                  <th className="text-left px-6 py-4 text-sm font-mono uppercase tracking-wider text-white/80">Date</th>
-                  <th className="text-left px-6 py-4 text-sm font-mono uppercase tracking-wider text-white/80">Actions</th>
+                  <th className="text-left px-6 py-4 text-sm font-mono uppercase tracking-wider text-gray-900/80">Name</th>
+                  <th className="text-left px-6 py-4 text-sm font-mono uppercase tracking-wider text-gray-900/80">Email</th>
+                  <th className="text-left px-6 py-4 text-sm font-mono uppercase tracking-wider text-gray-900/80">Phone</th>
+                  <th className="text-left px-6 py-4 text-sm font-mono uppercase tracking-wider text-gray-900/80">Service</th>
+                  <th className="text-left px-6 py-4 text-sm font-mono uppercase tracking-wider text-gray-900/80">Date</th>
+                  <th className="text-left px-6 py-4 text-sm font-mono uppercase tracking-wider text-gray-900/80">Actions</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-white/10">
                 {loading ? (
                   <tr>
-                    <td colSpan={6} className="px-6 py-12 text-center text-white/60">
+                    <td colSpan={6} className="px-6 py-12 text-center text-gray-900/60">
                       <RefreshCw className="animate-spin inline-block mr-2" size={20} />
                       Loading leads...
                     </td>
                   </tr>
                 ) : filteredLeads.length === 0 ? (
                   <tr>
-                    <td colSpan={6} className="px-6 py-12 text-center text-white/60">
+                    <td colSpan={6} className="px-6 py-12 text-center text-gray-900/60">
                       No leads found
                     </td>
                   </tr>
                 ) : (
                   filteredLeads.map((lead) => (
-                    <tr key={lead.id} className="hover:bg-white/5 transition-colors">
-                      <td className="px-6 py-4 text-white">{lead.name}</td>
-                      <td className="px-6 py-4 text-white/80">{lead.email}</td>
-                      <td className="px-6 py-4 text-white/80">{lead.phone}</td>
+                    <tr key={lead.id} className="hover:bg-gray-50 transition-colors">
+                      <td className="px-6 py-4 text-gray-900">{lead.name}</td>
+                      <td className="px-6 py-4 text-gray-900/80">{lead.email}</td>
+                      <td className="px-6 py-4 text-gray-900/80">{lead.phone}</td>
                       <td className="px-6 py-4">
                         <span className="inline-block px-3 py-1 bg-secondary/20 text-secondary rounded-full text-xs font-mono">
                           {lead.service}
                         </span>
                       </td>
-                      <td className="px-6 py-4 text-white/60 text-sm">
+                      <td className="px-6 py-4 text-gray-900/60 text-sm">
                         {new Date(lead.date).toLocaleDateString()}
                       </td>
                       <td className="px-6 py-4">

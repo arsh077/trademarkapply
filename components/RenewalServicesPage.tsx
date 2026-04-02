@@ -101,16 +101,16 @@ const RenewalServicesPage: React.FC<RenewalServicesPageProps> = ({ onNavigate })
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center text-sm text-gray-500">
             <button onClick={() => onNavigate('home')} className="hover:text-primary transition-colors">Home</button>
-            <span className="mx-2">Ã¢â€ â€™</span>
+            <span className="mx-2">ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢</span>
             <button onClick={() => onNavigate('services')} className="hover:text-primary transition-colors">Services</button>
-            <span className="mx-2">Ã¢â€ â€™</span>
+            <span className="mx-2">ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢</span>
             <span className="font-semibold text-primary">Renewal Services</span>
           </div>
         </div>
       </div>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-orange-900 to-amber-700 text-white py-12 lg:py-20 relative overflow-hidden transition-colors">
+      <section className="bg-gradient-to-br from-orange-900 to-amber-700 text-gray-900 py-12 lg:py-20 relative overflow-hidden transition-colors">
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -126,21 +126,21 @@ const RenewalServicesPage: React.FC<RenewalServicesPageProps> = ({ onNavigate })
               </p>
               
               <div className="grid grid-cols-3 gap-4 max-w-lg mb-8">
-                <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/10 text-center">
-                  <div className="text-2xl font-bold text-secondary mb-1">Ã¢â€šÂ¹3,999+</div>
+                <div className="bg-gray-100 backdrop-blur-sm p-4 rounded-lg border border-gray-200 text-center">
+                  <div className="text-2xl font-bold text-secondary mb-1">ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¹3,999+</div>
                   <div className="text-xs text-gray-200">Govt. fees</div>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/10 text-center">
+                <div className="bg-gray-100 backdrop-blur-sm p-4 rounded-lg border border-gray-200 text-center">
                   <div className="text-2xl font-bold text-secondary mb-1">2-3</div>
                   <div className="text-xs text-gray-200">Months Timeline</div>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/10 text-center">
+                <div className="bg-gray-100 backdrop-blur-sm p-4 rounded-lg border border-gray-200 text-center">
                   <div className="text-2xl font-bold text-secondary mb-1">10 Yrs</div>
                   <div className="text-xs text-gray-200">Extension</div>
                 </div>
               </div>
 
-              <GlassButton onClick={() => document.getElementById('renewal-form')?.scrollIntoView({ behavior: 'smooth' })} className="bg-orange-500 text-white font-bold hover:bg-orange-600 shadow-lg gap-2">
+              <GlassButton onClick={() => document.getElementById('renewal-form')?.scrollIntoView({ behavior: 'smooth' })} className="bg-orange-500 text-gray-900 font-bold hover:bg-orange-600 shadow-lg gap-2">
                 <RefreshCw size={20} /> Renew Now
               </GlassButton>
             </div>
@@ -151,8 +151,8 @@ const RenewalServicesPage: React.FC<RenewalServicesPageProps> = ({ onNavigate })
                  { title: "Application Preparation", desc: "Professional application review and preparation", icon: <ClipboardList /> },
                  { title: "Status Monitoring", desc: "Continuous tracking and portfolio management", icon: <Activity /> }
                ].map((item, i) => (
-                 <div key={i} className="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20 flex items-center gap-4">
-                   <div className="bg-white/20 p-3 rounded-lg text-secondary">
+                 <div key={i} className="bg-gray-100 backdrop-blur-md p-6 rounded-xl border border-gray-300 flex items-center gap-4">
+                   <div className="bg-gray-200 p-3 rounded-lg text-secondary">
                      {item.icon}
                    </div>
                    <div>
@@ -193,7 +193,7 @@ const RenewalServicesPage: React.FC<RenewalServicesPageProps> = ({ onNavigate })
                   borderWidth={3}
                 />
                 <div className="h-full p-8 rounded-2xl bg-orange-50/50 border border-orange-100 hover:shadow-lg transition-all hover:bg-white hover:border-orange-200 group relative">
-                  <div className="w-14 h-14 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-orange-600 group-hover:text-white transition-colors">
+                  <div className="w-14 h-14 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-orange-600 group-hover:text-gray-900 transition-colors">
                     {item.icon}
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-slate-900">{item.title}</h3>
@@ -355,14 +355,14 @@ const RenewalServicesPage: React.FC<RenewalServicesPageProps> = ({ onNavigate })
                 </div>
               </div>
 
-              <div className="bg-slate-800 text-white rounded-2xl shadow-lg p-6">
+              <div className="bg-gray-100 text-gray-900 rounded-2xl shadow-lg p-6">
                 <h3 className="font-bold mb-4 border-b border-gray-700 pb-2">Renewal Information</h3>
                 <div className="space-y-4">
                   <div className="flex gap-4">
-                    <div className="font-bold text-secondary">Ã°Å¸â€™Â°</div>
+                    <div className="font-bold text-secondary">ÃƒÆ’Ã‚Â°Ãƒâ€¦Ã‚Â¸ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢Ãƒâ€šÃ‚Â°</div>
                     <div>
                       <div className="font-bold text-sm text-secondary">Service Fee</div>
-                      <div className="text-sm">Ã¢â€šÂ¹3,999+ Government fees</div>
+                      <div className="text-sm">ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¹3,999+ Government fees</div>
                     </div>
                   </div>
                   <div className="flex gap-4">

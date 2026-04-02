@@ -40,7 +40,7 @@ export const ExperienceHero: React.FC<ExperienceHeroProps> = ({ onNavigate }) =>
   }, []);
 
   return (
-    <section ref={containerRef} className="relative min-h-[90vh] w-full bg-[#020202] flex flex-col selection:bg-white selection:text-black overflow-hidden font-sans">
+    <section ref={containerRef} className="relative min-h-[90vh] w-full bg-white flex flex-col selection:bg-white selection:text-black overflow-hidden font-sans">
       {/* Animated Background */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute top-20 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse"></div>
@@ -54,14 +54,14 @@ export const ExperienceHero: React.FC<ExperienceHeroProps> = ({ onNavigate }) =>
              <div className="relative w-2.5 h-2.5 bg-secondary rounded-full">
                 <div className="absolute inset-0 bg-secondary rounded-full animate-ping opacity-30" />
              </div>
-             <span className="font-mono text-[11px] font-bold text-white tracking-[0.2em] uppercase">TRADEMARK.APPLY</span>
+             <span className="font-mono text-[11px] font-bold text-gray-900 tracking-[0.2em] uppercase">TRADEMARK.APPLY</span>
           </div>
 
           <div className="max-w-4xl lg:-translate-y-8 pr-0 md:pr-12 pt-16">
-            <h1 className="text-[clamp(2.5rem,10vw,8rem)] font-black leading-[0.9] tracking-tighter text-white uppercase italic-none">
+            <h1 className="text-[clamp(2.5rem,10vw,8rem)] font-black leading-[0.9] tracking-tighter text-gray-900 uppercase italic-none">
               SECURE <br /> <span className="text-outline">YOUR BRAND</span>
             </h1>
-            <p className="mt-6 md:mt-8 font-mono text-[10px] md:text-[11px] text-white/60 uppercase tracking-[0.2em] md:tracking-[0.35em] max-w-lg leading-relaxed">
+            <p className="mt-6 md:mt-8 font-mono text-[10px] md:text-[11px] text-gray-900/60 uppercase tracking-[0.2em] md:tracking-[0.35em] max-w-lg leading-relaxed">
               Professional Trademark Registration & Legal Protection Services for Modern Businesses.
             </p>
           </div>
@@ -71,12 +71,12 @@ export const ExperienceHero: React.FC<ExperienceHeroProps> = ({ onNavigate }) =>
             onClick={() => onNavigate('trademark-registration')}
             className="w-fit flex items-center gap-6 group lg:-translate-y-20 cursor-pointer"
           >
-             <div className="w-14 h-14 rounded-full border border-white/15 flex items-center justify-center group-hover:bg-white transition-all duration-500 overflow-hidden bg-white/5 backdrop-blur-sm">
+             <div className="w-14 h-14 rounded-full border border-white/15 flex items-center justify-center group-hover:bg-white transition-all duration-500 overflow-hidden bg-gray-50 backdrop-blur-sm">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="group-hover:stroke-black stroke-white transition-colors duration-500">
                   <path d="M7 17L17 7M17 7H8M17 7V16" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
              </div>
-             <span className="font-mono text-[11px] font-bold text-white uppercase tracking-[0.2em]">Start Registration</span>
+             <span className="font-mono text-[11px] font-bold text-gray-900 uppercase tracking-[0.2em]">Start Registration</span>
           </button>
         </div>
 
@@ -88,28 +88,28 @@ export const ExperienceHero: React.FC<ExperienceHeroProps> = ({ onNavigate }) =>
             { id: "003", title: "EXPERTISE", val: "IP Law", type: "text" }
           ].map((item) => (
             <div key={item.id} className="command-cell glass-panel p-6 sm:p-7 block opacity-1 rounded-xl">
-              <span className="font-mono text-[9px] text-white/40 uppercase tracking-widest block mb-3">{item.id} // {item.title}</span>
+              <span className="font-mono text-[9px] text-gray-900/40 uppercase tracking-widest block mb-3">{item.id} // {item.title}</span>
               {item.type === "progress" ? (
                 <div className="flex justify-between items-end mt-2">
-                  <h4 className="text-2xl sm:text-3xl font-bold text-white tracking-tighter">{item.val}</h4>
-                  <div className="h-[2px] w-20 bg-white/5 rounded-full overflow-hidden">
+                  <h4 className="text-2xl sm:text-3xl font-bold text-gray-900 tracking-tighter">{item.val}</h4>
+                  <div className="h-[2px] w-20 bg-gray-50 rounded-full overflow-hidden">
                      <div className="h-full bg-secondary w-[100%] animate-loading" />
                   </div>
                 </div>
               ) : item.type === "data" ? (
                 <div className="mt-4 flex flex-col gap-3">
-                  <div className="flex justify-between text-[10px] font-mono text-white/50">
+                  <div className="flex justify-between text-[10px] font-mono text-gray-900/50">
                     <span>Registrations</span>
                     <span>10k+</span>
                   </div>
-                  <div className="h-[1px] w-full bg-white/10" />
-                  <div className="flex justify-between text-[10px] font-mono text-white/50">
+                  <div className="h-[1px] w-full bg-gray-100" />
+                  <div className="flex justify-between text-[10px] font-mono text-gray-900/50">
                     <span>Client Rating</span>
                     <span>4.9/5</span>
                   </div>
                 </div>
               ) : (
-                <h3 className="text-sm font-medium text-white/80 mt-3 leading-snug">
+                <h3 className="text-sm font-medium text-gray-900/80 mt-3 leading-snug">
                   Transforming legal complexities into <span className="italic text-secondary">simple solutions</span>.
                 </h3>
               )}

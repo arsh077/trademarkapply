@@ -68,7 +68,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage }) => {
               <ShieldCheck size={32} className="text-primary" />
               <div className="flex flex-col">
                 <span className="text-xl font-bold text-slate-900 leading-none tracking-tight">TrademarkApply</span>
-                <span className="text-[10px] text-slate-500 font-mono tracking-widest uppercase">Legal Services</span>
+                <span className="text-[10px] text-gray-400 font-mono tracking-widest uppercase">Legal Services</span>
               </div>
             </a>
 
@@ -96,7 +96,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage }) => {
               <a 
                 href="#consultation" 
                 onClick={(e) => { e.preventDefault(); handleNavClick(null, 'get-quote'); }}
-                className="bg-primary hover:bg-blue-800 text-white px-6 py-2 rounded-full transition-all duration-300 shadow-lg font-mono text-xs font-bold uppercase tracking-wider"
+                className="bg-primary hover:bg-blue-800 text-gray-900 px-6 py-2 rounded-full transition-all duration-300 shadow-lg font-mono text-xs font-bold uppercase tracking-wider"
               >
                 Get Quote
               </a>

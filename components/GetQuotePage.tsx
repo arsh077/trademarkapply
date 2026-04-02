@@ -66,19 +66,19 @@ const GetQuotePage: React.FC<GetQuotePageProps> = ({ onNavigate }) => {
   };
 
   const services = [
-    { title: "Trademark Registration", price: "₹699", desc: "Comprehensive Search + Filing" },
-    { title: "Logo Design", price: "₹7,999", desc: "3 Concepts + TM Check" },
+    { title: "Trademark Registration", price: "Ã¢â€šÂ¹699", desc: "Comprehensive Search + Filing" },
+    { title: "Logo Design", price: "Ã¢â€šÂ¹7,999", desc: "3 Concepts + TM Check" },
     { title: "Consultation", price: "FREE", desc: "Initial Strategy Session" },
-    { title: "Opposition", price: "₹15k", desc: "Legal Defense Per Case" }
+    { title: "Opposition", price: "Ã¢â€šÂ¹15k", desc: "Legal Defense Per Case" }
   ];
 
   return (
-    <div className="bg-[#020202] min-h-screen text-white">
+    <div className="bg-white min-h-screen text-gray-900">
       {/* Header */}
-      <div className="pt-32 pb-12 px-4 border-b border-white/5 bg-gradient-to-b from-blue-900/10 to-transparent">
+      <div className="pt-32 pb-12 px-4 border-b border-gray-100 bg-gradient-to-b from-blue-900/10 to-transparent">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">Instant <span className="text-outline">Quote</span></h1>
-          <p className="text-slate-400 max-w-xl mx-auto text-lg font-light">
+          <p className="text-gray-600 max-w-xl mx-auto text-lg font-light">
             Transparent pricing for your intellectual property needs. No hidden fees.
           </p>
         </div>
@@ -97,34 +97,34 @@ const GetQuotePage: React.FC<GetQuotePageProps> = ({ onNavigate }) => {
               
               <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
                 <div className="space-y-2">
-                  <label className="text-xs font-mono text-slate-500 uppercase">Name</label>
+                  <label className="text-xs font-mono text-gray-400 uppercase">Name</label>
                   <div className="relative">
-                    <User className="absolute left-4 top-3.5 text-slate-500" size={18} />
-                    <input type="text" name="fullName" required className="w-full bg-black/50 border border-white/10 rounded-xl pl-12 pr-4 py-3 text-white focus:border-secondary/50 focus:outline-none transition-colors" placeholder="Full Name" onChange={handleChange} />
+                    <User className="absolute left-4 top-3.5 text-gray-400" size={18} />
+                    <input type="text" name="fullName" required className="w-full bg-white border border-gray-200 rounded-xl pl-12 pr-4 py-3 text-gray-900 focus:border-secondary/50 focus:outline-none transition-colors" placeholder="Full Name" onChange={handleChange} />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-mono text-slate-500 uppercase">Email</label>
+                  <label className="text-xs font-mono text-gray-400 uppercase">Email</label>
                   <div className="relative">
-                    <Mail className="absolute left-4 top-3.5 text-slate-500" size={18} />
-                    <input type="email" name="email" required className="w-full bg-black/50 border border-white/10 rounded-xl pl-12 pr-4 py-3 text-white focus:border-secondary/50 focus:outline-none transition-colors" placeholder="email@address.com" onChange={handleChange} />
+                    <Mail className="absolute left-4 top-3.5 text-gray-400" size={18} />
+                    <input type="email" name="email" required className="w-full bg-white border border-gray-200 rounded-xl pl-12 pr-4 py-3 text-gray-900 focus:border-secondary/50 focus:outline-none transition-colors" placeholder="email@address.com" onChange={handleChange} />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-mono text-slate-500 uppercase">Phone</label>
+                  <label className="text-xs font-mono text-gray-400 uppercase">Phone</label>
                   <div className="relative">
-                    <Phone className="absolute left-4 top-3.5 text-slate-500" size={18} />
-                    <input type="tel" name="phone" required className="w-full bg-black/50 border border-white/10 rounded-xl pl-12 pr-4 py-3 text-white focus:border-secondary/50 focus:outline-none transition-colors" placeholder="+91" onChange={handleChange} />
+                    <Phone className="absolute left-4 top-3.5 text-gray-400" size={18} />
+                    <input type="tel" name="phone" required className="w-full bg-white border border-gray-200 rounded-xl pl-12 pr-4 py-3 text-gray-900 focus:border-secondary/50 focus:outline-none transition-colors" placeholder="+91" onChange={handleChange} />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-mono text-slate-500 uppercase">Company (Optional)</label>
+                  <label className="text-xs font-mono text-gray-400 uppercase">Company (Optional)</label>
                   <div className="relative">
-                    <Building2 className="absolute left-4 top-3.5 text-slate-500" size={18} />
-                    <input type="text" name="businessName" className="w-full bg-black/50 border border-white/10 rounded-xl pl-12 pr-4 py-3 text-white focus:border-secondary/50 focus:outline-none transition-colors" placeholder="Company Name" onChange={handleChange} />
+                    <Building2 className="absolute left-4 top-3.5 text-gray-400" size={18} />
+                    <input type="text" name="businessName" className="w-full bg-white border border-gray-200 rounded-xl pl-12 pr-4 py-3 text-gray-900 focus:border-secondary/50 focus:outline-none transition-colors" placeholder="Company Name" onChange={handleChange} />
                   </div>
                 </div>
 
@@ -140,12 +140,12 @@ const GetQuotePage: React.FC<GetQuotePageProps> = ({ onNavigate }) => {
             <h2 className="text-2xl font-bold">Standard Pricing</h2>
             <div className="grid gap-4">
               {services.map((s, i) => (
-                <div key={i} className="flex items-center justify-between p-6 bg-white/5 rounded-2xl border border-white/5 hover:border-white/20 transition-all cursor-default group">
+                <div key={i} className="flex items-center justify-between p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:border-gray-300 transition-all cursor-default group">
                   <div>
-                    <h3 className="font-bold text-lg text-white group-hover:text-secondary transition-colors">{s.title}</h3>
-                    <p className="text-slate-500 text-sm">{s.desc}</p>
+                    <h3 className="font-bold text-lg text-gray-900 group-hover:text-secondary transition-colors">{s.title}</h3>
+                    <p className="text-gray-400 text-sm">{s.desc}</p>
                   </div>
-                  <div className="text-xl font-mono font-bold text-white">{s.price}</div>
+                  <div className="text-xl font-mono font-bold text-gray-900">{s.price}</div>
                 </div>
               ))}
             </div>
@@ -154,11 +154,11 @@ const GetQuotePage: React.FC<GetQuotePageProps> = ({ onNavigate }) => {
               <h3 className="font-bold text-blue-400 mb-4 flex items-center gap-2">
                 <CheckCircle2 size={20} /> What's Included
               </h3>
-              <ul className="space-y-3 text-sm text-slate-300">
-                <li className="flex gap-3"><span className="text-blue-500">✓</span> Professional legal assessment</li>
-                <li className="flex gap-3"><span className="text-blue-500">✓</span> Government fee calculation</li>
-                <li className="flex gap-3"><span className="text-blue-500">✓</span> Timeline estimation</li>
-                <li className="flex gap-3"><span className="text-blue-500">✓</span> Strategy recommendation</li>
+              <ul className="space-y-3 text-sm text-gray-700">
+                <li className="flex gap-3"><span className="text-blue-500">Ã¢Å“â€œ</span> Professional legal assessment</li>
+                <li className="flex gap-3"><span className="text-blue-500">Ã¢Å“â€œ</span> Government fee calculation</li>
+                <li className="flex gap-3"><span className="text-blue-500">Ã¢Å“â€œ</span> Timeline estimation</li>
+                <li className="flex gap-3"><span className="text-blue-500">Ã¢Å“â€œ</span> Strategy recommendation</li>
               </ul>
             </div>
           </div>

@@ -93,7 +93,7 @@ function App() {
   }, [currentPage]);
 
   return (
-    <div className="font-sans text-white antialiased bg-[#020202] transition-colors duration-300 selection:bg-secondary selection:text-black">
+    <div className="font-sans text-gray-900 antialiased bg-white transition-colors duration-300 selection:bg-secondary selection:text-black">
       <GlassFilter />
       
       {/* Admin Pages */}

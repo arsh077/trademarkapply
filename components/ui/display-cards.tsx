@@ -37,7 +37,7 @@ function DisplayCard({
         <p className={cn("text-sm sm:text-lg font-bold text-slate-900", titleClassName)}>{title}</p>
       </div>
       <p className="text-slate-700 text-[10px] sm:text-sm leading-relaxed line-clamp-3 sm:line-clamp-4 font-medium">{description}</p>
-      <p className="text-slate-500 text-[8px] sm:text-xs font-mono uppercase tracking-wider">{date}</p>
+      <p className="text-gray-400 text-[8px] sm:text-xs font-mono uppercase tracking-wider">{date}</p>
     </div>
   );
 }
@@ -49,10 +49,10 @@ interface DisplayCardsProps {
 export default function DisplayCards({ cards }: DisplayCardsProps) {
   const defaultCards = [
     {
-      className: "[grid-area:stack] hover:-translate-y-10 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-gray-200 before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-white/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0 shadow-xl",
+      className: "[grid-area:stack] hover:-translate-y-10 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-gray-200 before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-gray-500 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0 shadow-xl",
     },
     {
-      className: "[grid-area:stack] translate-x-12 translate-y-8 hover:-translate-y-1 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-gray-200 before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-white/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0 shadow-xl",
+      className: "[grid-area:stack] translate-x-12 translate-y-8 hover:-translate-y-1 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-gray-200 before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-gray-500 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0 shadow-xl",
     },
     {
       className: "[grid-area:stack] translate-x-24 translate-y-16 hover:translate-y-8 shadow-xl bg-white",

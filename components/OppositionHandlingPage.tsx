@@ -101,16 +101,16 @@ const OppositionHandlingPage: React.FC<OppositionHandlingPageProps> = ({ onNavig
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center text-sm text-gray-500">
             <button onClick={() => onNavigate('home')} className="hover:text-primary transition-colors">Home</button>
-            <span className="mx-2">Ã¢â€ â€™</span>
+            <span className="mx-2">ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢</span>
             <button onClick={() => onNavigate('services')} className="hover:text-primary transition-colors">Services</button>
-            <span className="mx-2">Ã¢â€ â€™</span>
+            <span className="mx-2">ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢</span>
             <span className="font-semibold text-primary">Opposition Handling</span>
           </div>
         </div>
       </div>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-900 to-red-900 text-white py-12 lg:py-20 relative overflow-hidden transition-colors">
+      <section className="bg-gradient-to-br from-slate-900 to-red-900 text-gray-900 py-12 lg:py-20 relative overflow-hidden transition-colors">
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -126,21 +126,21 @@ const OppositionHandlingPage: React.FC<OppositionHandlingPageProps> = ({ onNavig
               </p>
               
               <div className="grid grid-cols-3 gap-4 max-w-lg mb-8">
-                <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/10 text-center">
-                  <div className="text-2xl font-bold text-secondary mb-1">Ã¢â€šÂ¹15k</div>
+                <div className="bg-gray-100 backdrop-blur-sm p-4 rounded-lg border border-gray-200 text-center">
+                  <div className="text-2xl font-bold text-secondary mb-1">ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¹15k</div>
                   <div className="text-xs text-gray-300">Per Case</div>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/10 text-center">
+                <div className="bg-gray-100 backdrop-blur-sm p-4 rounded-lg border border-gray-200 text-center">
                   <div className="text-2xl font-bold text-secondary mb-1">6-12</div>
                   <div className="text-xs text-gray-300">Months Timeline</div>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/10 text-center">
+                <div className="bg-gray-100 backdrop-blur-sm p-4 rounded-lg border border-gray-200 text-center">
                   <div className="text-2xl font-bold text-secondary mb-1">Case</div>
                   <div className="text-xs text-gray-300">Dependent Result</div>
                 </div>
               </div>
 
-              <GlassButton onClick={() => document.getElementById('opposition-form')?.scrollIntoView({ behavior: 'smooth' })} className="bg-red-600 text-white font-bold hover:bg-red-700 shadow-lg flex items-center gap-2">
+              <GlassButton onClick={() => document.getElementById('opposition-form')?.scrollIntoView({ behavior: 'smooth' })} className="bg-red-600 text-gray-900 font-bold hover:bg-red-700 shadow-lg flex items-center gap-2">
                 <Shield size={20} /> Get Help
               </GlassButton>
             </div>
@@ -151,8 +151,8 @@ const OppositionHandlingPage: React.FC<OppositionHandlingPageProps> = ({ onNavig
                  { title: "Legal Strategy", desc: "Strategic approach development for best outcomes", icon: <Scale /> },
                  { title: "Expert Representation", desc: "Professional hearing representation & negotiation", icon: <Gavel /> }
                ].map((item, i) => (
-                 <div key={i} className="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20 flex items-center gap-4">
-                   <div className="bg-white/20 p-3 rounded-lg text-secondary">
+                 <div key={i} className="bg-gray-100 backdrop-blur-md p-6 rounded-xl border border-gray-300 flex items-center gap-4">
+                   <div className="bg-gray-200 p-3 rounded-lg text-secondary">
                      {item.icon}
                    </div>
                    <div>
@@ -193,7 +193,7 @@ const OppositionHandlingPage: React.FC<OppositionHandlingPageProps> = ({ onNavig
                   borderWidth={3}
                 />
                 <div className="h-full p-8 rounded-2xl bg-slate-50 border border-gray-100 hover:shadow-lg transition-all hover:bg-white hover:border-red-100 group relative">
-                  <div className="w-14 h-14 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-red-600 group-hover:text-white transition-colors">
+                  <div className="w-14 h-14 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-red-600 group-hover:text-gray-900 transition-colors">
                     {item.icon}
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-slate-900">{item.title}</h3>
@@ -381,14 +381,14 @@ const OppositionHandlingPage: React.FC<OppositionHandlingPageProps> = ({ onNavig
                 </div>
               </div>
 
-              <div className="bg-slate-800 text-white rounded-2xl shadow-lg p-6">
+              <div className="bg-gray-100 text-gray-900 rounded-2xl shadow-lg p-6">
                 <h3 className="font-bold mb-4 border-b border-gray-700 pb-2">Case Information</h3>
                 <div className="space-y-4">
                   <div className="flex gap-4">
-                    <div className="w-8 h-8 rounded bg-white/10 flex items-center justify-center text-secondary font-bold">Ã¢â€šÂ¹</div>
+                    <div className="w-8 h-8 rounded bg-gray-100 flex items-center justify-center text-secondary font-bold">ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¹</div>
                     <div>
                       <div className="font-bold text-sm text-secondary">Standard Fee</div>
-                      <div className="text-sm">Ã¢â€šÂ¹15,000 per case (base fee)</div>
+                      <div className="text-sm">ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¹15,000 per case (base fee)</div>
                     </div>
                   </div>
                   <div className="flex gap-4">
@@ -423,7 +423,7 @@ const OppositionHandlingPage: React.FC<OppositionHandlingPageProps> = ({ onNavig
                   If your opposition has a critical deadline approaching, contact us immediately for emergency assistance.
                 </p>
                 
-                <a href="tel:+917605890360" className="flex items-center justify-center gap-2 w-full bg-red-600 text-white py-3 rounded-lg font-bold hover:bg-red-700 transition-colors shadow-md">
+                <a href="tel:+917605890360" className="flex items-center justify-center gap-2 w-full bg-red-600 text-gray-900 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors shadow-md">
                    <Phone size={18} /> Emergency Contact
                 </a>
                 <p className="text-center text-xs text-red-400 mt-2">Emergency assistance available subject to attorney availability</p>

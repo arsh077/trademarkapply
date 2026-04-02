@@ -89,16 +89,16 @@ const CopyrightRegistrationPage: React.FC<CopyrightRegistrationPageProps> = ({ o
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center text-sm text-gray-500">
             <button onClick={() => onNavigate('home')} className="hover:text-primary transition-colors">Home</button>
-            <span className="mx-2">Ã¢â€ â€™</span>
+            <span className="mx-2">ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢</span>
             <button onClick={() => onNavigate('services')} className="hover:text-primary transition-colors">Services</button>
-            <span className="mx-2">Ã¢â€ â€™</span>
+            <span className="mx-2">ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢</span>
             <span className="font-semibold text-primary">Copyright Registration</span>
           </div>
         </div>
       </div>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-teal-900 to-cyan-700 text-white py-12 lg:py-20 relative overflow-hidden transition-colors">
+      <section className="bg-gradient-to-br from-teal-900 to-cyan-700 text-gray-900 py-12 lg:py-20 relative overflow-hidden transition-colors">
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -114,21 +114,21 @@ const CopyrightRegistrationPage: React.FC<CopyrightRegistrationPageProps> = ({ o
               </p>
               
               <div className="grid grid-cols-3 gap-4 max-w-lg mb-8">
-                <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/10 text-center">
-                  <div className="text-2xl font-bold text-secondary mb-1">Ã¢â€šÂ¹2,999+</div>
+                <div className="bg-gray-100 backdrop-blur-sm p-4 rounded-lg border border-gray-200 text-center">
+                  <div className="text-2xl font-bold text-secondary mb-1">ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¹2,999+</div>
                   <div className="text-xs text-gray-200">Govt. fees</div>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/10 text-center">
+                <div className="bg-gray-100 backdrop-blur-sm p-4 rounded-lg border border-gray-200 text-center">
                   <div className="text-2xl font-bold text-secondary mb-1">3-6</div>
                   <div className="text-xs text-gray-200">Months Timeline</div>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/10 text-center">
+                <div className="bg-gray-100 backdrop-blur-sm p-4 rounded-lg border border-gray-200 text-center">
                   <div className="text-2xl font-bold text-secondary mb-1">60+ Yrs</div>
                   <div className="text-xs text-gray-200">Protection</div>
                 </div>
               </div>
 
-              <button onClick={() => document.getElementById('copyright-form')?.scrollIntoView({ behavior: 'smooth' })} className="bg-teal-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-teal-600 transition-colors shadow-lg flex items-center gap-2">
+              <button onClick={() => document.getElementById('copyright-form')?.scrollIntoView({ behavior: 'smooth' })} className="bg-teal-500 text-gray-900 px-8 py-3 rounded-lg font-bold hover:bg-teal-600 transition-colors shadow-lg flex items-center gap-2">
                 <Copyright size={20} /> Register Work
               </button>
             </div>
@@ -139,8 +139,8 @@ const CopyrightRegistrationPage: React.FC<CopyrightRegistrationPageProps> = ({ o
                  { title: "Software & Code", desc: "Applications, source code, and digital works", icon: <Laptop /> },
                  { title: "Artistic Works", desc: "Designs, graphics, and visual creations", icon: <Palette /> }
                ].map((item, i) => (
-                 <div key={i} className="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20 flex items-center gap-4">
-                   <div className="bg-white/20 p-3 rounded-lg text-secondary">
+                 <div key={i} className="bg-gray-100 backdrop-blur-md p-6 rounded-xl border border-gray-300 flex items-center gap-4">
+                   <div className="bg-gray-200 p-3 rounded-lg text-secondary">
                      {item.icon}
                    </div>
                    <div>
@@ -172,7 +172,7 @@ const CopyrightRegistrationPage: React.FC<CopyrightRegistrationPageProps> = ({ o
               { icon: <HomeIcon size={32} />, title: "Architectural Plans", desc: "Specialized copyright services for building plans, architectural designs, interior layouts, landscape designs, technical drawings, and blueprints." },
             ].map((item, i) => (
               <div key={i} className="p-8 rounded-2xl bg-teal-50/50 border border-teal-100 hover:shadow-lg transition-all hover:bg-white hover:border-teal-200 group">
-                <div className="w-14 h-14 bg-teal-100 text-teal-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-teal-600 group-hover:text-white transition-colors">
+                <div className="w-14 h-14 bg-teal-100 text-teal-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-teal-600 group-hover:text-gray-900 transition-colors">
                   {item.icon}
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-slate-900">{item.title}</h3>
@@ -196,7 +196,7 @@ const CopyrightRegistrationPage: React.FC<CopyrightRegistrationPageProps> = ({ o
               <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
                 
                 <div className="flex items-center gap-4 mb-6 pb-6 border-b border-gray-100">
-                  <div className="w-10 h-10 bg-teal-500 text-white rounded-full flex items-center justify-center font-bold">1</div>
+                  <div className="w-10 h-10 bg-teal-500 text-gray-900 rounded-full flex items-center justify-center font-bold">1</div>
                   <div>
                     <h3 className="text-xl font-bold text-slate-900">Author Information</h3>
                     <p className="text-sm text-gray-500">Tell us about the creator and contact details</p>
@@ -261,7 +261,7 @@ const CopyrightRegistrationPage: React.FC<CopyrightRegistrationPageProps> = ({ o
                     </div>
                   </div>
 
-                  <button type="submit" className="w-full bg-teal-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-teal-600 transition-colors shadow-lg flex items-center justify-center gap-2 mt-6">
+                  <button type="submit" className="w-full bg-teal-500 text-gray-900 px-8 py-3 rounded-lg font-bold hover:bg-teal-600 transition-colors shadow-lg flex items-center justify-center gap-2 mt-6">
                     Continue to Work Details <ArrowRight size={20} />
                   </button>
                 </form>
@@ -296,14 +296,14 @@ const CopyrightRegistrationPage: React.FC<CopyrightRegistrationPageProps> = ({ o
                 </div>
               </div>
 
-              <div className="bg-slate-800 text-white rounded-2xl shadow-lg p-6">
+              <div className="bg-gray-100 text-gray-900 rounded-2xl shadow-lg p-6">
                 <h3 className="font-bold mb-4 border-b border-gray-700 pb-2">Registration Info</h3>
                 <div className="space-y-4">
                   <div className="flex gap-4">
-                    <div className="font-bold text-secondary">Ã°Å¸â€™Â°</div>
+                    <div className="font-bold text-secondary">ÃƒÆ’Ã‚Â°Ãƒâ€¦Ã‚Â¸ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢Ãƒâ€šÃ‚Â°</div>
                     <div>
                       <div className="font-bold text-sm text-secondary">Service Fee</div>
-                      <div className="text-sm">Ã¢â€šÂ¹2,999+ Government fees</div>
+                      <div className="text-sm">ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¹2,999+ Government fees</div>
                     </div>
                   </div>
                   <div className="flex gap-4">

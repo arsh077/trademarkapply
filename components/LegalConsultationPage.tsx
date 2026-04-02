@@ -120,16 +120,16 @@ const LegalConsultationPage: React.FC<LegalConsultationPageProps> = ({ onNavigat
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center text-sm text-gray-500">
             <button onClick={() => onNavigate('home')} className="hover:text-primary transition-colors">Home</button>
-            <span className="mx-2">Ã¢â€ â€™</span>
+            <span className="mx-2">ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢</span>
             <button onClick={() => onNavigate('services')} className="hover:text-primary transition-colors">Services</button>
-            <span className="mx-2">Ã¢â€ â€™</span>
+            <span className="mx-2">ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢</span>
             <span className="font-semibold text-primary">Legal Consultation</span>
           </div>
         </div>
       </div>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-900 to-emerald-700 text-white py-12 lg:py-20 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-green-900 to-emerald-700 text-gray-900 py-12 lg:py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -145,24 +145,24 @@ const LegalConsultationPage: React.FC<LegalConsultationPageProps> = ({ onNavigat
                 <GlassButton onClick={() => document.getElementById('booking-form')?.scrollIntoView({ behavior: 'smooth' })} className="bg-secondary text-slate-900 font-bold hover:bg-yellow-400">
                   <Calendar size={20} /> Book Free Session
                 </GlassButton>
-                <GlassButton href="tel:+917605890360" className="bg-white/10 text-white border border-white/30 font-bold hover:bg-white/20">
+                <GlassButton href="tel:+917605890360" className="bg-gray-100 text-gray-900 border border-gray-300 font-bold hover:bg-gray-200">
                   <Phone size={20} /> Call Now
                 </GlassButton>
               </div>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20">
+              <div className="bg-gray-100 backdrop-blur-md p-6 rounded-xl border border-gray-300">
                 <Shield className="text-secondary mb-3" size={32} />
                 <h3 className="font-bold mb-1">Brand Protection</h3>
                 <p className="text-xs text-green-100">Strategy & Analysis</p>
               </div>
-              <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20">
+              <div className="bg-gray-100 backdrop-blur-md p-6 rounded-xl border border-gray-300">
                 <Scale className="text-secondary mb-3" size={32} />
                 <h3 className="font-bold mb-1">Risk Assessment</h3>
                 <p className="text-xs text-green-100">Legal Compliance</p>
               </div>
-              <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20">
+              <div className="bg-gray-100 backdrop-blur-md p-6 rounded-xl border border-gray-300">
                 <ClipboardList className="text-secondary mb-3" size={32} />
                 <h3 className="font-bold mb-1">Strategic Planning</h3>
                 <p className="text-xs text-green-100">Personalized Roadmap</p>
@@ -204,7 +204,7 @@ const LegalConsultationPage: React.FC<LegalConsultationPageProps> = ({ onNavigat
                   borderWidth={3}
                 />
                 <div className="h-full p-6 rounded-xl border border-gray-100 bg-white hover:shadow-lg transition-all hover:border-green-100 group relative">
-                  <div className="w-12 h-12 bg-green-50 text-green-600 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-600 group-hover:text-white transition-colors">
+                  <div className="w-12 h-12 bg-green-50 text-green-600 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-600 group-hover:text-gray-900 transition-colors">
                     {item.icon}
                   </div>
                   <h3 className="text-lg font-bold mb-3 text-slate-900">{item.title}</h3>
@@ -233,7 +233,7 @@ const LegalConsultationPage: React.FC<LegalConsultationPageProps> = ({ onNavigat
                   {/* Step 1: Personal Info */}
                   <div>
                     <div className="flex items-center gap-3 mb-6">
-                      <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold">1</div>
+                      <div className="w-8 h-8 bg-primary text-gray-900 rounded-full flex items-center justify-center font-bold">1</div>
                       <h3 className="text-lg font-bold text-slate-900">Personal Information</h3>
                     </div>
                     
@@ -296,7 +296,7 @@ const LegalConsultationPage: React.FC<LegalConsultationPageProps> = ({ onNavigat
                   {/* Step 2: Consultation Details */}
                   <div>
                     <div className="flex items-center gap-3 mb-6">
-                      <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold">2</div>
+                      <div className="w-8 h-8 bg-primary text-gray-900 rounded-full flex items-center justify-center font-bold">2</div>
                       <h3 className="text-lg font-bold text-slate-900">Consultation Details</h3>
                     </div>
 
@@ -305,7 +305,7 @@ const LegalConsultationPage: React.FC<LegalConsultationPageProps> = ({ onNavigat
                       <div className="grid md:grid-cols-2 gap-3">
                         {topicsList.map((topic, i) => (
                           <div key={i} className={`border rounded-lg p-3 cursor-pointer transition-colors flex items-center gap-3 ${formData.topics.includes(topic) ? 'bg-blue-50 border-primary' : 'hover:bg-gray-50 border-gray-200'}`} onClick={() => handleTopicChange(topic)}>
-                            <div className={`w-5 h-5 rounded border flex items-center justify-center ${formData.topics.includes(topic) ? 'bg-primary border-primary text-white' : 'border-gray-400'}`}>
+                            <div className={`w-5 h-5 rounded border flex items-center justify-center ${formData.topics.includes(topic) ? 'bg-primary border-primary text-gray-900' : 'border-gray-400'}`}>
                               {formData.topics.includes(topic) && <CheckCircle2 size={14} />}
                             </div>
                             <span className="text-sm">{topic}</span>
@@ -343,7 +343,7 @@ const LegalConsultationPage: React.FC<LegalConsultationPageProps> = ({ onNavigat
                   {/* Step 3: Business Needs */}
                   <div>
                     <div className="flex items-center gap-3 mb-6">
-                      <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold">3</div>
+                      <div className="w-8 h-8 bg-primary text-gray-900 rounded-full flex items-center justify-center font-bold">3</div>
                       <h3 className="text-lg font-bold text-slate-900">Business & Consultation Needs</h3>
                     </div>
                     
@@ -434,7 +434,7 @@ const LegalConsultationPage: React.FC<LegalConsultationPageProps> = ({ onNavigat
                 </p>
               </div>
 
-              <div className="bg-slate-800 text-white rounded-2xl shadow-lg p-6">
+              <div className="bg-gray-100 text-gray-900 rounded-2xl shadow-lg p-6">
                 <h3 className="font-bold mb-4 border-b border-gray-700 pb-2">Consultation Details</h3>
                 <div className="space-y-4">
                   <div className="flex gap-4">

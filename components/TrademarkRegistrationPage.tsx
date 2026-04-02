@@ -86,16 +86,16 @@ const TrademarkRegistrationPage: React.FC<TrademarkRegistrationPageProps> = ({ o
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center text-sm text-gray-500">
             <button onClick={() => onNavigate('home')} className="hover:text-primary transition-colors">Home</button>
-            <span className="mx-2">â†’</span>
+            <span className="mx-2">ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢</span>
             <button onClick={() => onNavigate('services')} className="hover:text-primary transition-colors">Services</button>
-            <span className="mx-2">â†’</span>
+            <span className="mx-2">ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢</span>
             <span className="font-semibold text-primary">Trademark Registration</span>
           </div>
         </div>
       </div>
 
       {/* Hero Section with Form */}
-      <section className="bg-gradient-to-br from-slate-900 to-primary text-white py-12 lg:py-20 relative overflow-hidden transition-colors">
+      <section className="bg-gradient-to-br from-slate-900 to-primary text-gray-900 py-12 lg:py-20 relative overflow-hidden transition-colors">
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -110,15 +110,15 @@ const TrademarkRegistrationPage: React.FC<TrademarkRegistrationPageProps> = ({ o
               </p>
 
               <div className="grid grid-cols-3 gap-6 mb-10">
-                <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/10 text-center">
+                <div className="bg-gray-100 backdrop-blur-sm p-4 rounded-lg border border-gray-200 text-center">
                   <div className="text-3xl font-bold text-secondary mb-1">500+</div>
                   <div className="text-xs text-blue-100">Successful Applications</div>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/10 text-center">
+                <div className="bg-gray-100 backdrop-blur-sm p-4 rounded-lg border border-gray-200 text-center">
                   <div className="text-3xl font-bold text-secondary mb-1">7+</div>
                   <div className="text-xs text-blue-100">Years Experience</div>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/10 text-center">
+                <div className="bg-gray-100 backdrop-blur-sm p-4 rounded-lg border border-gray-200 text-center">
                   <div className="text-3xl font-bold text-secondary mb-1">12-18</div>
                   <div className="text-xs text-blue-100">Months Process</div>
                 </div>
@@ -131,7 +131,7 @@ const TrademarkRegistrationPage: React.FC<TrademarkRegistrationPageProps> = ({ o
                  <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-primary font-bold text-lg">LS</div>
                     <div>
-                      <div className="font-bold text-white uppercase">Legal Success India</div>
+                      <div className="font-bold text-gray-900 uppercase">Legal Success India</div>
                       <div className="text-sm text-blue-200 font-mono tracking-wider">Expert Legal Firm</div>
                     </div>
                  </div>
@@ -139,7 +139,7 @@ const TrademarkRegistrationPage: React.FC<TrademarkRegistrationPageProps> = ({ o
                     <a href="tel:+917605890360" className="flex items-center gap-2 bg-white text-primary px-4 py-2 rounded-lg font-bold hover:bg-gray-100 transition-colors">
                       <Phone size={16} /> Call Now
                     </a>
-                    <a href="mailto:trademark.legal.01@gmail.com" className="flex items-center gap-2 border border-white text-white px-4 py-2 rounded-lg font-bold hover:bg-white/10 transition-colors">
+                    <a href="mailto:trademark.legal.01@gmail.com" className="flex items-center gap-2 border border-white text-gray-900 px-4 py-2 rounded-lg font-bold hover:bg-gray-100 transition-colors">
                       <Mail size={16} /> Email
                     </a>
                  </div>
@@ -152,7 +152,7 @@ const TrademarkRegistrationPage: React.FC<TrademarkRegistrationPageProps> = ({ o
                 <CheckCircle2 className="text-green-600 shrink-0 mt-0.5" size={20} />
                 <div>
                   <div className="font-bold text-green-800 text-sm">Limited-Time Offer</div>
-                  <div className="text-green-700 text-sm">Apply your 1st trademark only @<span className="font-bold">â‚¹699</span></div>
+                  <div className="text-green-700 text-sm">Apply your 1st trademark only @<span className="font-bold">ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¹699</span></div>
                 </div>
               </div>
               
@@ -225,7 +225,7 @@ const TrademarkRegistrationPage: React.FC<TrademarkRegistrationPageProps> = ({ o
               <div className="mt-6 pt-6 border-t border-gray-100">
                 <div className="flex justify-between items-center mb-1">
                   <span className="text-sm font-semibold text-gray-600">Professional Fees</span>
-                  <span className="text-xl font-bold text-primary">â‚¹699</span>
+                  <span className="text-xl font-bold text-primary">ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¹699</span>
                 </div>
                 <div className="flex items-center gap-1 text-xs text-gray-500">
                   <Clock size={12} /> Process Timeline: 12-18 months
@@ -286,7 +286,7 @@ const TrademarkRegistrationPage: React.FC<TrademarkRegistrationPageProps> = ({ o
                   borderWidth={3}
                 />
                 <div className="h-full p-6 rounded-xl border border-gray-100 hover:shadow-lg transition-all hover:border-blue-100 group bg-white relative">
-                  <div className="w-14 h-14 bg-blue-50 text-primary rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+                  <div className="w-14 h-14 bg-blue-50 text-primary rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-gray-900 transition-colors">
                     {item.icon}
                   </div>
                   <h3 className="text-xl font-bold mb-2 text-slate-900">{item.title}</h3>
@@ -355,7 +355,7 @@ const TrademarkRegistrationPage: React.FC<TrademarkRegistrationPageProps> = ({ o
                 
                 <div className="mt-10 p-6 bg-slate-50 rounded-xl border border-dashed border-gray-300 text-center">
                   <p className="text-gray-600 mb-4">Ready to start your trademark journey?</p>
-                  <GlassButton onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})} className="bg-primary text-white font-bold hover:bg-blue-800 transition-colors w-full sm:w-auto">
+                  <GlassButton onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})} className="bg-primary text-gray-900 font-bold hover:bg-blue-800 transition-colors w-full sm:w-auto">
                     Start Application Now
                   </GlassButton>
                 </div>

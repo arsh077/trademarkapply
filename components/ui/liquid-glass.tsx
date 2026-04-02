@@ -39,7 +39,7 @@ const GlassEffect: React.FC<GlassEffectProps> = ({
         className="absolute inset-0 z-0 bg-gradient-to-br from-white/20 to-transparent opacity-50 group-hover:opacity-100 transition-opacity pointer-events-none"
       />
       <div
-        className="absolute inset-0 z-10 border border-white/20 rounded-inherit pointer-events-none shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]"
+        className="absolute inset-0 z-10 border border-gray-300 rounded-inherit pointer-events-none shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]"
       />
 
       {/* Content */}

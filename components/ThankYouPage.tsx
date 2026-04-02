@@ -13,7 +13,7 @@ const ThankYouPage: React.FC<ThankYouPageProps> = ({ onNavigate }) => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#020202] flex items-center justify-center p-4 relative overflow-hidden">
+    <div className="min-h-screen bg-white flex items-center justify-center p-4 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute top-20 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse"></div>
@@ -38,16 +38,16 @@ const ThankYouPage: React.FC<ThankYouPageProps> = ({ onNavigate }) => {
             <Sparkles size={14} /> Success
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
             Thank You!
           </h1>
           
-          <p className="text-xl text-white/80 mb-6">
+          <p className="text-xl text-gray-900/80 mb-6">
             Your request has been received successfully
           </p>
 
-          <div className="bg-white/5 border border-white/10 rounded-xl p-6 mb-8">
-            <p className="text-white/70 text-sm leading-relaxed">
+          <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-8">
+            <p className="text-gray-900/70 text-sm leading-relaxed">
               Our team will review your information and get back to you within <span className="text-secondary font-bold">24 hours</span>. 
               We're excited to help you protect your brand!
             </p>
@@ -55,7 +55,7 @@ const ThankYouPage: React.FC<ThankYouPageProps> = ({ onNavigate }) => {
 
           {/* What's Next */}
           <div className="text-left mb-8">
-            <h3 className="text-lg font-bold text-white mb-4 font-mono uppercase tracking-wider">What Happens Next?</h3>
+            <h3 className="text-lg font-bold text-gray-900 mb-4 font-mono uppercase tracking-wider">What Happens Next?</h3>
             <div className="space-y-3">
               {[
                 { step: '1', text: 'Our expert will review your submission' },
@@ -67,7 +67,7 @@ const ThankYouPage: React.FC<ThankYouPageProps> = ({ onNavigate }) => {
                   <div className="w-8 h-8 rounded-full bg-secondary/20 flex items-center justify-center text-secondary font-bold text-sm flex-shrink-0 group-hover:bg-secondary group-hover:text-black transition-all">
                     {item.step}
                   </div>
-                  <p className="text-white/70 text-sm pt-1">{item.text}</p>
+                  <p className="text-gray-900/70 text-sm pt-1">{item.text}</p>
                 </div>
               ))}
             </div>
@@ -75,26 +75,26 @@ const ThankYouPage: React.FC<ThankYouPageProps> = ({ onNavigate }) => {
 
           {/* Contact Info */}
           <div className="grid md:grid-cols-2 gap-4 mb-8">
-            <a href="tel:+917605890360" className="glass-panel p-4 rounded-xl hover:bg-white/10 transition-all group">
+            <a href="tel:+917605890360" className="glass-panel p-4 rounded-xl hover:bg-gray-100 transition-all group">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-secondary/20 rounded-full flex items-center justify-center group-hover:bg-secondary transition-all">
                   <Phone className="text-secondary group-hover:text-black transition-all" size={18} />
                 </div>
                 <div className="text-left">
-                  <p className="text-white/60 text-xs font-mono uppercase tracking-wider">Call Us</p>
-                  <p className="text-white font-bold text-sm">+91 7605890360</p>
+                  <p className="text-gray-900/60 text-xs font-mono uppercase tracking-wider">Call Us</p>
+                  <p className="text-gray-900 font-bold text-sm">+91 7605890360</p>
                 </div>
               </div>
             </a>
 
-            <a href="mailto:trademark.legal.01@gmail.com" className="glass-panel p-4 rounded-xl hover:bg-white/10 transition-all group">
+            <a href="mailto:trademark.legal.01@gmail.com" className="glass-panel p-4 rounded-xl hover:bg-gray-100 transition-all group">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-secondary/20 rounded-full flex items-center justify-center group-hover:bg-secondary transition-all">
                   <Mail className="text-secondary group-hover:text-black transition-all" size={18} />
                 </div>
                 <div className="text-left">
-                  <p className="text-white/60 text-xs font-mono uppercase tracking-wider">Email Us</p>
-                  <p className="text-white font-bold text-sm">trademark.legal.01@gmail.com</p>
+                  <p className="text-gray-900/60 text-xs font-mono uppercase tracking-wider">Email Us</p>
+                  <p className="text-gray-900 font-bold text-sm">trademark.legal.01@gmail.com</p>
                 </div>
               </div>
             </a>
@@ -113,7 +113,7 @@ const ThankYouPage: React.FC<ThankYouPageProps> = ({ onNavigate }) => {
 
             <button
               onClick={() => onNavigate('services')}
-              className="flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 text-white border border-white/20 px-8 py-3 rounded-full font-bold transition-all duration-300"
+              className="flex items-center justify-center gap-2 bg-gray-50 hover:bg-gray-100 text-gray-900 border border-gray-300 px-8 py-3 rounded-full font-bold transition-all duration-300"
             >
               Explore Services
             </button>

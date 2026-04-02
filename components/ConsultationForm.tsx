@@ -94,7 +94,7 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({ onNavigate }) => {
   ];
 
   return (
-    <section id="consultation" className="py-24 relative overflow-hidden bg-[#020202]">
+    <section id="consultation" className="py-24 relative overflow-hidden bg-white">
       {/* Background Elements */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[100px] pointer-events-none" />
@@ -104,59 +104,59 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({ onNavigate }) => {
           
           {/* Left Side Info */}
           <div className="lg:w-1/2 pt-8">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-secondary text-xs font-mono uppercase tracking-widest mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-50 border border-gray-200 text-secondary text-xs font-mono uppercase tracking-widest mb-6">
               <Sparkles size={12} /> Free Consultation
             </div>
-            <h2 className="text-4xl lg:text-6xl font-bold mb-6 text-white tracking-tight">
+            <h2 className="text-4xl lg:text-6xl font-bold mb-6 text-gray-900 tracking-tight">
               Protect Your <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-yellow-200">Legacy</span>
             </h2>
-            <p className="text-slate-400 text-lg mb-8 leading-relaxed max-w-md font-sans">
+            <p className="text-gray-600 text-lg mb-8 leading-relaxed max-w-md font-sans">
               Speak with our trademark experts to understand the best strategy for protecting your brand.
             </p>
             
             <div className="space-y-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center gap-4 group">
-                  <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-black transition-all duration-300">
+                  <div className="w-10 h-10 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-black transition-all duration-300">
                     <CheckCircle2 size={18} />
                   </div>
-                  <span className="text-lg text-slate-300 font-sans">{benefit}</span>
+                  <span className="text-lg text-gray-700 font-sans">{benefit}</span>
                 </div>
               ))}
             </div>
 
             <div className="mt-12 p-6 glass-panel rounded-xl">
-               <p className="text-sm text-slate-400 font-mono">"Protecting your brand identity is the first step towards building a lasting business legacy."</p>
+               <p className="text-sm text-gray-600 font-mono">"Protecting your brand identity is the first step towards building a lasting business legacy."</p>
             </div>
           </div>
 
           {/* Right Side Form */}
           <div className="lg:w-1/2 w-full">
             <div className="glass-panel p-8 md:p-10 rounded-3xl relative">
-              <h3 className="text-2xl font-bold mb-8 text-white font-sans flex items-center gap-3">
-                Request Consultation <span className="h-px flex-1 bg-white/10"></span>
+              <h3 className="text-2xl font-bold mb-8 text-gray-900 font-sans flex items-center gap-3">
+                Request Consultation <span className="h-px flex-1 bg-gray-100"></span>
               </h3>
               
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid md:grid-cols-2 gap-5">
                   <div className="space-y-2">
-                    <label className="text-xs font-mono text-slate-500 uppercase tracking-widest">Business Name</label>
+                    <label className="text-xs font-mono text-gray-400 uppercase tracking-widest">Business Name</label>
                     <input 
                       type="text" 
                       name="businessName"
                       required
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-slate-600 focus:outline-none focus:border-secondary/50 focus:bg-white/10 transition-all"
+                      className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 placeholder:text-slate-600 focus:outline-none focus:border-secondary/50 focus:bg-gray-100 transition-all"
                       placeholder="e.g. Acme Corp"
                       onChange={handleChange}
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-xs font-mono text-slate-500 uppercase tracking-widest">Brand Name</label>
+                    <label className="text-xs font-mono text-gray-400 uppercase tracking-widest">Brand Name</label>
                     <input 
                       type="text" 
                       name="brandName"
                       required
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-slate-600 focus:outline-none focus:border-secondary/50 focus:bg-white/10 transition-all"
+                      className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 placeholder:text-slate-600 focus:outline-none focus:border-secondary/50 focus:bg-gray-100 transition-all"
                       placeholder="e.g. Acme"
                       onChange={handleChange}
                     />
@@ -164,12 +164,12 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({ onNavigate }) => {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-mono text-slate-500 uppercase tracking-widest">Your Name</label>
+                  <label className="text-xs font-mono text-gray-400 uppercase tracking-widest">Your Name</label>
                   <input 
                     type="text" 
                     name="fullName"
                     required
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-slate-600 focus:outline-none focus:border-secondary/50 focus:bg-white/10 transition-all"
+                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 placeholder:text-slate-600 focus:outline-none focus:border-secondary/50 focus:bg-gray-100 transition-all"
                     placeholder="John Doe"
                     onChange={handleChange}
                   />
@@ -177,23 +177,23 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({ onNavigate }) => {
 
                 <div className="grid md:grid-cols-2 gap-5">
                   <div className="space-y-2">
-                    <label className="text-xs font-mono text-slate-500 uppercase tracking-widest">Email</label>
+                    <label className="text-xs font-mono text-gray-400 uppercase tracking-widest">Email</label>
                     <input 
                       type="email" 
                       name="email"
                       required
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-slate-600 focus:outline-none focus:border-secondary/50 focus:bg-white/10 transition-all"
+                      className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 placeholder:text-slate-600 focus:outline-none focus:border-secondary/50 focus:bg-gray-100 transition-all"
                       placeholder="john@example.com"
                       onChange={handleChange}
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-xs font-mono text-slate-500 uppercase tracking-widest">Phone</label>
+                    <label className="text-xs font-mono text-gray-400 uppercase tracking-widest">Phone</label>
                     <input 
                       type="tel" 
                       name="phone"
                       required
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-slate-600 focus:outline-none focus:border-secondary/50 focus:bg-white/10 transition-all"
+                      className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 placeholder:text-slate-600 focus:outline-none focus:border-secondary/50 focus:bg-gray-100 transition-all"
                       placeholder="+91 7605890360"
                       onChange={handleChange}
                     />
@@ -201,27 +201,27 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({ onNavigate }) => {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-mono text-slate-500 uppercase tracking-widest">Business Type</label>
+                  <label className="text-xs font-mono text-gray-400 uppercase tracking-widest">Business Type</label>
                   <SelectNative 
                     name="businessType"
                     onChange={handleChange}
-                    className="bg-white/5 border-white/10 text-white w-full h-12"
+                    className="bg-gray-50 border-gray-200 text-gray-900 w-full h-12"
                   >
-                    <option value="" className="bg-slate-900 text-slate-400">Select Business Type</option>
-                    <option value="Proprietorship" className="bg-slate-900 text-white">Proprietorship</option>
-                    <option value="Partnership" className="bg-slate-900 text-white">Partnership</option>
-                    <option value="LLP" className="bg-slate-900 text-white">LLP</option>
-                    <option value="Private Limited" className="bg-slate-900 text-white">Private Limited</option>
-                    <option value="Individual" className="bg-slate-900 text-white">Individual</option>
+                    <option value="" className="bg-gray-50 text-gray-600">Select Business Type</option>
+                    <option value="Proprietorship" className="bg-gray-50 text-gray-900">Proprietorship</option>
+                    <option value="Partnership" className="bg-gray-50 text-gray-900">Partnership</option>
+                    <option value="LLP" className="bg-gray-50 text-gray-900">LLP</option>
+                    <option value="Private Limited" className="bg-gray-50 text-gray-900">Private Limited</option>
+                    <option value="Individual" className="bg-gray-50 text-gray-900">Individual</option>
                   </SelectNative>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-mono text-slate-500 uppercase tracking-widest">Message</label>
+                  <label className="text-xs font-mono text-gray-400 uppercase tracking-widest">Message</label>
                   <textarea 
                     name="message"
                     rows={3}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder:text-slate-600 focus:outline-none focus:border-secondary/50 focus:bg-white/10 transition-all"
+                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 placeholder:text-slate-600 focus:outline-none focus:border-secondary/50 focus:bg-gray-100 transition-all"
                     placeholder="Tell us about your requirements..."
                     onChange={handleChange}
                   ></textarea>

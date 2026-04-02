@@ -93,16 +93,16 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center text-sm text-gray-500">
             <button onClick={() => onNavigate('home')} className="hover:text-primary transition-colors">Home</button>
-            <span className="mx-2">Ã¢â€ â€™</span>
+            <span className="mx-2">ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢</span>
             <button onClick={() => onNavigate('services')} className="hover:text-primary transition-colors">Services</button>
-            <span className="mx-2">Ã¢â€ â€™</span>
+            <span className="mx-2">ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢</span>
             <span className="font-semibold text-primary">Logo Design</span>
           </div>
         </div>
       </div>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-900 to-primary text-white py-12 lg:py-20 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-purple-900 to-primary text-gray-900 py-12 lg:py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto mb-12">
@@ -115,22 +115,22 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
-            <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20 text-center">
-              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 text-secondary">
+            <div className="bg-gray-100 backdrop-blur-md p-6 rounded-xl border border-gray-300 text-center">
+              <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-4 text-secondary">
                 <Palette size={24} />
               </div>
               <h3 className="font-bold text-lg mb-2">Professional Design</h3>
               <p className="text-sm text-purple-100">3-5 unique concepts by expert designers</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20 text-center">
-              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 text-secondary">
+            <div className="bg-gray-100 backdrop-blur-md p-6 rounded-xl border border-gray-300 text-center">
+              <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-4 text-secondary">
                 <Scale size={24} />
               </div>
               <h3 className="font-bold text-lg mb-2">Trademark Cleared</h3>
               <p className="text-sm text-purple-100">Comprehensive legal clearance included</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20 text-center">
-              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 text-secondary">
+            <div className="bg-gray-100 backdrop-blur-md p-6 rounded-xl border border-gray-300 text-center">
+              <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-4 text-secondary">
                 <RefreshCw size={24} />
               </div>
               <h3 className="font-bold text-lg mb-2">Unlimited Revisions</h3>
@@ -139,8 +139,8 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
           </div>
 
           <div className="text-center">
-            <div className="inline-block bg-white/10 backdrop-blur-md rounded-full px-6 py-2 mb-8 border border-white/20">
-              <span className="text-2xl font-bold text-secondary">Ã¢â€šÂ¹7,999</span> <span className="text-sm">All Inclusive</span>
+            <div className="inline-block bg-gray-100 backdrop-blur-md rounded-full px-6 py-2 mb-8 border border-gray-300">
+              <span className="text-2xl font-bold text-secondary">ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¹7,999</span> <span className="text-sm">All Inclusive</span>
             </div>
             <div className="flex justify-center gap-8 text-sm font-semibold text-purple-200">
               <span className="flex items-center gap-2"><Clock size={16} /> Timeline: 5-7 business days</span>
@@ -174,7 +174,7 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
               />
               <div className={`relative h-full bg-white rounded-2xl p-8 border-2 transition-all ${selectedPackage === 'basic' ? 'border-primary shadow-xl' : 'border-gray-100 shadow-lg hover:shadow-xl'}`}>
                 <h3 className="text-xl font-bold mb-2 text-slate-800">Basic Logo Package</h3>
-                <div className="text-3xl font-bold text-primary mb-4">Ã¢â€šÂ¹4,999</div>
+                <div className="text-3xl font-bold text-primary mb-4">ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¹4,999</div>
                 <p className="text-sm text-gray-500 mb-6 font-medium bg-gray-100 inline-block px-3 py-1 rounded">3-5 business days</p>
                 
                 <ul className="space-y-3 mb-8">
@@ -192,7 +192,7 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
                     </li>
                   ))}
                 </ul>
-                <button className={`w-full py-3 rounded-lg font-bold transition-colors ${selectedPackage === 'basic' ? 'bg-primary text-white' : 'bg-gray-100 text-slate-800 hover:bg-gray-200'}`}>
+                <button className={`w-full py-3 rounded-lg font-bold transition-colors ${selectedPackage === 'basic' ? 'bg-primary text-gray-900' : 'bg-gray-100 text-slate-800 hover:bg-gray-200'}`}>
                   Select Package
                 </button>
               </div>
@@ -216,7 +216,7 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
                   Most Popular
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-slate-800">Professional Logo Package</h3>
-                <div className="text-3xl font-bold text-primary mb-4">Ã¢â€šÂ¹7,999</div>
+                <div className="text-3xl font-bold text-primary mb-4">ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¹7,999</div>
                 <p className="text-sm text-gray-500 mb-6 font-medium bg-gray-100 inline-block px-3 py-1 rounded">5-7 business days</p>
                 
                 <ul className="space-y-3 mb-8">
@@ -255,7 +255,7 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
               />
               <div className={`relative h-full bg-white rounded-2xl p-8 border-2 transition-all ${selectedPackage === 'premium' ? 'border-purple-600 shadow-xl' : 'border-gray-100 shadow-lg hover:shadow-xl'}`}>
                 <h3 className="text-xl font-bold mb-2 text-slate-800">Premium Brand Package</h3>
-                <div className="text-3xl font-bold text-primary mb-4">Ã¢â€šÂ¹12,999</div>
+                <div className="text-3xl font-bold text-primary mb-4">ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¹12,999</div>
                 <p className="text-sm text-gray-500 mb-6 font-medium bg-gray-100 inline-block px-3 py-1 rounded">7-10 business days</p>
                 
                 <ul className="space-y-3 mb-8">
@@ -275,7 +275,7 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
                     </li>
                   ))}
                 </ul>
-                <button className={`w-full py-3 rounded-lg font-bold transition-colors ${selectedPackage === 'premium' ? 'bg-purple-600 text-white' : 'bg-gray-100 text-slate-800 hover:bg-gray-200'}`}>
+                <button className={`w-full py-3 rounded-lg font-bold transition-colors ${selectedPackage === 'premium' ? 'bg-purple-600 text-gray-900' : 'bg-gray-100 text-slate-800 hover:bg-gray-200'}`}>
                   Select Package
                 </button>
               </div>
@@ -302,7 +302,7 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
             ].map((step, idx) => (
               <div key={idx} className="relative group">
                 <div className="bg-slate-50 rounded-xl p-6 h-full border border-gray-100 hover:shadow-lg transition-shadow">
-                  <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-primary text-gray-900 rounded-full flex items-center justify-center text-xl font-bold mb-4 group-hover:scale-110 transition-transform">
                     {step.num}
                   </div>
                   <h3 className="font-bold text-lg mb-2 text-slate-900">{step.title}</h3>
@@ -330,7 +330,7 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
           <div ref={formRef} className="lg:w-2/3">
               <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
                 <div className="flex items-center gap-4 mb-6 pb-6 border-b border-gray-100">
-                  <div className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold">1</div>
+                  <div className="w-10 h-10 bg-primary text-gray-900 rounded-full flex items-center justify-center font-bold">1</div>
                   <div>
                     <h3 className="text-xl font-bold text-slate-900">Client Information</h3>
                     <p className="text-sm text-gray-500">Tell us about yourself and your business</p>
@@ -476,9 +476,9 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
                       {selectedPackage === 'premium' && "Premium Brand Package"}
                     </span>
                     <span className="font-bold text-secondary text-lg">
-                      {selectedPackage === 'basic' && "Ã¢â€šÂ¹4,999"}
-                      {selectedPackage === 'professional' && "Ã¢â€šÂ¹7,999"}
-                      {selectedPackage === 'premium' && "Ã¢â€šÂ¹12,999"}
+                      {selectedPackage === 'basic' && "ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¹4,999"}
+                      {selectedPackage === 'professional' && "ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¹7,999"}
+                      {selectedPackage === 'premium' && "ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¹12,999"}
                     </span>
                   </div>
                   <div className="text-xs text-gray-500 bg-gray-50 inline-block px-2 py-1 rounded">
@@ -499,7 +499,7 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
                 </ul>
                 
                 <div className="bg-blue-50 p-4 rounded-lg flex items-center gap-3">
-                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xs">KA</div>
+                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-gray-900 font-bold text-xs">KA</div>
                   <div>
                     <div className="text-xs font-bold text-primary uppercase">Expert Design Team</div>
                     <div className="text-sm font-bold">Led by KHURSHID ANWAR</div>
@@ -512,7 +512,7 @@ const LogoDesignPage: React.FC<LogoDesignPageProps> = ({ onNavigate }) => {
                 </div>
               </div>
 
-              <div className="bg-slate-800 text-white rounded-2xl shadow-lg p-6">
+              <div className="bg-gray-100 text-gray-900 rounded-2xl shadow-lg p-6">
                 <h3 className="font-bold mb-4">Our Guarantees</h3>
                 <ul className="space-y-3 text-sm">
                   <li className="flex items-center gap-3"><RefreshCw size={18} className="text-secondary" /> Unlimited revisions until satisfaction</li>

@@ -12,7 +12,7 @@ const Reviews: React.FC = () => {
       iconClassName: "text-secondary",
       titleClassName: "text-slate-900",
       className:
-        "[grid-area:stack] hover:-translate-y-10 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-gray-200 before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-white/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0 shadow-xl z-10 hidden sm:flex",
+        "[grid-area:stack] hover:-translate-y-10 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-gray-200 before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-gray-500 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0 shadow-xl z-10 hidden sm:flex",
     },
     {
       icon: <CheckCircle2 className="size-4 text-secondary" />,
@@ -22,7 +22,7 @@ const Reviews: React.FC = () => {
       iconClassName: "text-secondary",
       titleClassName: "text-slate-900",
       className:
-        "[grid-area:stack] translate-x-6 translate-y-4 sm:translate-x-12 sm:translate-y-8 hover:-translate-y-1 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-gray-200 before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-white/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0 shadow-xl z-20",
+        "[grid-area:stack] translate-x-6 translate-y-4 sm:translate-x-12 sm:translate-y-8 hover:-translate-y-1 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-gray-200 before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-gray-500 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0 shadow-xl z-20",
     },
     {
       icon: <UserCheck className="size-4 text-secondary" />,
@@ -37,10 +37,10 @@ const Reviews: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-slate-900 overflow-hidden transition-colors duration-300">
+    <section className="py-20 bg-gray-50 overflow-hidden transition-colors duration-300">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-          <div className="lg:w-1/2 text-white">
+          <div className="lg:w-1/2 text-gray-900">
             <span className="text-secondary font-bold tracking-wide uppercase text-sm mb-2 block">Client Reviews</span>
             <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">Trusted by Businesses <br className="hidden md:block" /> Across India</h2>
             <p className="text-slate-200 text-lg mb-8 leading-relaxed font-light">
@@ -56,7 +56,7 @@ const Reviews: React.FC = () => {
                </div>
                <span className="font-bold text-xl">4.9/5</span>
             </div>
-            <p className="text-sm text-slate-400">Based on Google Reviews</p>
+            <p className="text-sm text-gray-600">Based on Google Reviews</p>
           </div>
           
           <div className="lg:w-1/2 flex justify-center py-10 lg:py-0">

@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
-        darkMode: 'class',
+        darkMode: false,
         theme: {
           container: {
             center: true,
@@ -51,11 +51,7 @@
       }
     </script>
     <script>
-      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark')
-      } else {
-        document.documentElement.classList.remove('dark')
-      }
+      document.documentElement.classList.remove('dark');
     </script>
     <style>
       .reveal {
@@ -94,18 +90,15 @@
       .rocker input:checked + .switch-left::before { background-color: transparent; }
       .rocker input:checked + .switch-left + .switch-right::before { background-color: #ccc; }
       
-      /* New Glass Panel Theme Utility */
+      /* Glass Panel - Light Theme */
       .glass-panel {
-        background: rgba(255, 255, 255, 0.03);
+        background: rgba(255, 255, 255, 0.8);
         backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-      }
-      .dark .glass-panel {
-        background: rgba(0, 0, 0, 0.4);
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        box-shadow: 0 2px 16px rgba(0,0,0,0.06);
       }
       .text-outline {
-        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+        -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3);
         color: transparent;
       }
     </style>
